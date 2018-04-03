@@ -1,0 +1,376 @@
+2018-03-23 23:03:48,708 :: INFO :: STARTING
+2018-03-23 23:04:06,591 :: INFO :: unshortenedUrlsCount=1236
+2018-03-23 23:04:06,591 :: INFO :: totalShortenedUrls=2350
+2018-03-23 23:04:06,591 :: INFO :: ratio of already unshortened urls: 0.5259574468085106
+2018-03-23 23:04:06,591 :: INFO :: alreadySnshortenedDict:
+{
+	nyti.ms: 44,
+	wp.me: 3,
+	bitly.com: 1,
+	po.st: 5,
+	eepurl.com: 13,
+	flic.kr: 1,
+	j.mp: 3,
+	ow.ly: 165,
+	digg.com: 1,
+	lnkd.in: 37,
+	tinyurl.com: 17,
+	bit.ly: 895,
+	goo.gl: 48,
+	tcrn.ch: 3
+}
+2018-03-23 23:04:06,591 :: INFO :: notAlreadyShortenedDict:
+{
+	nyti.ms: 938,
+	lnkd.in: 3,
+	eepurl.com: 1,
+	j.mp: 1,
+	po.st: 3,
+	ow.ly: 21,
+	tinyurl.com: 5,
+	bit.ly: 126,
+	goo.gl: 15,
+	is.gd: 1
+}
+2018-03-23 23:04:06,591 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:04:32,327 :: INFO :: unshortenedUrlsCount=3641
+2018-03-23 23:04:32,327 :: INFO :: totalShortenedUrls=5850
+2018-03-23 23:04:32,327 :: INFO :: ratio of already unshortened urls: 0.6223931623931624
+2018-03-23 23:04:32,328 :: INFO :: alreadySnshortenedDict:
+{
+	nyti.ms: 49,
+	wp.me: 35,
+	bitly.com: 1,
+	tiny.cc: 2,
+	po.st: 8,
+	eepurl.com: 22,
+	bit.do: 1,
+	post.ly: 2,
+	flic.kr: 5,
+	j.mp: 7,
+	ow.ly: 444,
+	digg.com: 1,
+	lnkd.in: 38,
+	tinyurl.com: 143,
+	bit.ly: 2329,
+	goo.gl: 551,
+	tcrn.ch: 3
+}
+2018-03-23 23:04:32,328 :: INFO :: notAlreadyShortenedDict:
+{
+	nyti.ms: 1183,
+	lnkd.in: 4,
+	wp.me: 3,
+	eepurl.com: 1,
+	j.mp: 1,
+	po.st: 3,
+	ow.ly: 109,
+	tinyurl.com: 17,
+	bit.ly: 836,
+	goo.gl: 51,
+	is.gd: 1
+}
+2018-03-23 23:04:32,328 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:05:29,627 :: INFO :: STARTING
+2018-03-23 23:05:30,859 :: INFO :: unshortenedUrlsCount=4
+2018-03-23 23:05:30,859 :: INFO :: totalShortenedUrls=4
+2018-03-23 23:05:30,859 :: INFO :: ratio of already unshortened urls: 1.0
+2018-03-23 23:05:30,859 :: INFO :: alreadyShortenedDict:
+{
+	nyti.ms: 2,
+	bit.ly: 2
+}
+2018-03-23 23:05:30,860 :: INFO :: notAlreadyShortenedDict:
+{
+}
+2018-03-23 23:05:30,860 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:07:12,131 :: INFO :: STARTING
+2018-03-23 23:07:13,357 :: INFO :: unshortenedUrlsCount=4
+2018-03-23 23:07:13,357 :: INFO :: totalShortenedUrls=4
+2018-03-23 23:07:13,357 :: INFO :: ratio of already unshortened urls: 1.0
+2018-03-23 23:07:13,357 :: INFO :: alreadyShortenedDict:
+{
+	nyti.ms: 2,
+	bit.ly: 2
+}
+2018-03-23 23:07:13,358 :: INFO :: notAlreadyShortenedDict:
+{
+}
+2018-03-23 23:07:13,358 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:07:22,457 :: INFO :: unshortenedUrlsCount=811
+2018-03-23 23:07:22,457 :: INFO :: totalShortenedUrls=915
+2018-03-23 23:07:22,457 :: INFO :: ratio of already unshortened urls: 0.8863387978142077
+2018-03-23 23:07:22,458 :: INFO :: alreadyShortenedDict:
+{
+	goo.gl: 24,
+	nyti.ms: 44,
+	bit.ly: 589,
+	j.mp: 1,
+	po.st: 1,
+	flic.kr: 1,
+	digg.com: 1,
+	lnkd.in: 33,
+	tinyurl.com: 14,
+	wp.me: 2,
+	eepurl.com: 11,
+	ow.ly: 90
+}
+2018-03-23 23:07:22,458 :: INFO :: notAlreadyShortenedDict:
+{
+	tinyurl.com: 3,
+	bit.ly: 15,
+	nyti.ms: 81,
+	goo.gl: 1,
+	ow.ly: 4
+}
+2018-03-23 23:07:22,458 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:08:31,409 :: INFO :: STARTING
+2018-03-23 23:08:32,539 :: INFO :: unshortenedUrlsCount=4
+2018-03-23 23:08:32,540 :: INFO :: totalShortenedUrls=4
+2018-03-23 23:08:32,540 :: INFO :: ratio of already unshortened urls: 1.0
+2018-03-23 23:08:32,540 :: INFO :: alreadyShortenedDict:
+{
+	bit.ly: 2,
+	nyti.ms: 2
+}
+2018-03-23 23:08:32,540 :: INFO :: notAlreadyShortenedDict:
+{
+}
+2018-03-23 23:08:32,540 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:08:40,705 :: INFO :: unshortenedUrlsCount=811
+2018-03-23 23:08:40,705 :: INFO :: totalShortenedUrls=915
+2018-03-23 23:08:40,705 :: INFO :: ratio of already unshortened urls: 0.8863387978142077
+2018-03-23 23:08:40,706 :: INFO :: alreadyShortenedDict:
+{
+	bit.ly: 589,
+	digg.com: 1,
+	eepurl.com: 11,
+	flic.kr: 1,
+	goo.gl: 24,
+	j.mp: 1,
+	lnkd.in: 33,
+	nyti.ms: 44,
+	ow.ly: 90,
+	po.st: 1,
+	tinyurl.com: 14,
+	wp.me: 2
+}
+2018-03-23 23:08:40,706 :: INFO :: notAlreadyShortenedDict:
+{
+	bit.ly: 15,
+	goo.gl: 1,
+	nyti.ms: 81,
+	ow.ly: 4,
+	tinyurl.com: 3
+}
+2018-03-23 23:08:40,706 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:09:39,563 :: INFO :: STARTING
+2018-03-23 23:09:40,781 :: INFO :: unshortenedUrlsCount=4
+2018-03-23 23:09:40,781 :: INFO :: totalShortenedUrls=4
+2018-03-23 23:09:40,781 :: INFO :: ratio of already unshortened urls: 1.0
+2018-03-23 23:09:40,781 :: INFO :: alreadyShortenedDict:
+[
+	('nyti.ms', 2),
+	('bit.ly', 2)
+]
+2018-03-23 23:09:40,781 :: INFO :: notAlreadyShortenedDict:
+[]
+2018-03-23 23:09:40,781 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:09:49,099 :: INFO :: unshortenedUrlsCount=811
+2018-03-23 23:09:49,099 :: INFO :: totalShortenedUrls=915
+2018-03-23 23:09:49,099 :: INFO :: ratio of already unshortened urls: 0.8863387978142077
+2018-03-23 23:09:49,099 :: INFO :: alreadyShortenedDict:
+[
+	('po.st', 1),
+	('flic.kr', 1),
+	('digg.com', 1),
+	('j.mp', 1),
+	('wp.me', 2),
+	('eepurl.com', 11),
+	('tinyurl.com', 14),
+	('goo.gl', 24),
+	('lnkd.in', 33),
+	('nyti.ms', 44),
+	('ow.ly', 90),
+	('bit.ly', 589)
+]
+2018-03-23 23:09:49,099 :: INFO :: notAlreadyShortenedDict:
+[
+	('goo.gl', 1),
+	('tinyurl.com', 3),
+	('ow.ly', 4),
+	('bit.ly', 15),
+	('nyti.ms', 81)
+]
+2018-03-23 23:09:49,099 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:10:14,653 :: INFO :: STARTING
+2018-03-23 23:10:15,829 :: INFO :: unshortenedUrlsCount=4
+2018-03-23 23:10:15,829 :: INFO :: totalShortenedUrls=4
+2018-03-23 23:10:15,830 :: INFO :: ratio of already unshortened urls: 1.0
+2018-03-23 23:10:15,830 :: INFO :: alreadyShortenedDict:
+[
+	('nyti.ms', 2),
+	('bit.ly', 2)
+]
+2018-03-23 23:10:15,830 :: INFO :: notAlreadyShortenedDict:
+[]
+2018-03-23 23:10:15,830 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:10:23,409 :: INFO :: unshortenedUrlsCount=811
+2018-03-23 23:10:23,409 :: INFO :: totalShortenedUrls=915
+2018-03-23 23:10:23,409 :: INFO :: ratio of already unshortened urls: 0.8863387978142077
+2018-03-23 23:10:23,410 :: INFO :: alreadyShortenedDict:
+[
+	('bit.ly', 589),
+	('ow.ly', 90),
+	('nyti.ms', 44),
+	('lnkd.in', 33),
+	('goo.gl', 24),
+	('tinyurl.com', 14),
+	('eepurl.com', 11),
+	('wp.me', 2),
+	('digg.com', 1),
+	('j.mp', 1),
+	('po.st', 1),
+	('flic.kr', 1)
+]
+2018-03-23 23:10:23,410 :: INFO :: notAlreadyShortenedDict:
+[
+	('nyti.ms', 81),
+	('bit.ly', 15),
+	('ow.ly', 4),
+	('tinyurl.com', 3),
+	('goo.gl', 1)
+]
+2018-03-23 23:10:23,410 :: INFO :: 
+
+
+
+
+
+
+
+
+
+
+2018-03-23 23:47:58,841 :: INFO :: STARTING
+2018-03-23 23:48:00,222 :: INFO :: unshortenedUrlsCount=4
+2018-03-23 23:48:00,222 :: INFO :: totalShortenedUrls=4
+2018-03-23 23:48:00,223 :: INFO :: ratio of already unshortened urls: 1.0
+2018-03-23 23:48:00,223 :: INFO :: alreadyShortenedDict:
+[
+	('nyti.ms', 2),
+	('bit.ly', 2)
+]
+2018-03-23 23:48:00,223 :: INFO :: notAlreadyShortenedDict:
+[]
+2018-03-23 23:48:00,223 :: INFO :: 
+
+
+
+
+
+
+
+
+
+

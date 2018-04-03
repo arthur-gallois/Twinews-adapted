@@ -1,0 +1,191 @@
+[INFO  - 2018-03-19T14:23:35.652Z] GhostDriver - Main - running on port 45391
+[INFO  - 2018-03-19T14:23:36.546Z] Session [1c99b0d0-2b81-11e8-89b5-c59910386823] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36","webSecurityEnabled":true}
+[INFO  - 2018-03-19T14:23:36.546Z] Session [1c99b0d0-2b81-11e8-89b5-c59910386823] - page.customHeaders:  - {"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","Accept-Language":"en-US,en;q=0.5"}
+[INFO  - 2018-03-19T14:23:36.546Z] Session [1c99b0d0-2b81-11e8-89b5-c59910386823] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.customHeaders.Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","phantomjs.page.customHeaders.Accept-Language":"en-US,en;q=0.5","phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"}
+[INFO  - 2018-03-19T14:23:36.547Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 1c99b0d0-2b81-11e8-89b5-c59910386823
+[ERROR - 2018-03-19T14:23:36.556Z] RouterReqHand - _handle.error - {"name":"Missing Command Parameter","message":"{\"headers\":{\"Accept\":\"application/json\",\"Accept-Encoding\":\"identity\",\"Connection\":\"close\",\"Content-Length\":\"72\",\"Content-Type\":\"application/json;charset=UTF-8\",\"Host\":\"127.0.0.1:35241\",\"User-Agent\":\"Python http auth\"},\"httpVersion\":\"1.1\",\"method\":\"POST\",\"post\":\"{\\\"pageLoad\\\": 30000, \\\"sessionId\\\": \\\"1c99b0d0-2b81-11e8-89b5-c59910386823\\\"}\",\"url\":\"/timeouts\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"timeouts\",\"directory\":\"/\",\"path\":\"/timeouts\",\"relative\":\"/timeouts\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/timeouts\",\"queryKey\":{},\"chunks\":[\"timeouts\"]},\"urlOriginal\":\"/session/1c99b0d0-2b81-11e8-89b5-c59910386823/timeouts\"}","line":546,"sourceURL":"phantomjs://code/session_request_handler.js","stack":"_postTimeout@phantomjs://code/session_request_handler.js:546:73\n_handle@phantomjs://code/session_request_handler.js:148:25\n_reroute@phantomjs://code/request_handler.js:61:20\n_handle@phantomjs://code/router_request_handler.js:78:46"}
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:23:42.829Z] Session [1c9962b0-2b81-11e8-a071-236492e467c6] - page.onError - msg: ReferenceError: Can't find variable: Set
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:23:42.829Z] Session [1c9962b0-2b81-11e8-a071-236492e467c6] - page.onError - stack:
+  ./node_modules/react-dom/cjs/react-dom.production.min.js (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:26)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  ./node_modules/react-dom/index.js (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:26)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  ./js/lib/helpers/ReactRenderClient.js (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  ./js/article_index.js (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/article.bundle.js:1)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  (anonymous function) (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/article.bundle.js:6)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  webpackJsonp (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:23:43.118Z] Session [1c9962b0-2b81-11e8-a071-236492e467c6] - page.onError - msg: ReferenceError: Can't find variable: TR3
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:23:43.118Z] Session [1c9962b0-2b81-11e8-a071-236492e467c6] - page.onError - stack:
+  global code (https://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter:1)
+  replaceChild (:0)
+  $c (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:100)
+  xd (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:99)
+  Uc (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:97)
+  Hb (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:95)
+  write (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:94)
+  c (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:101)
+  b (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:101)
+  (anonymous function) (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:102)
+  Jc (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:94)
+  write (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:94)
+  $b (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:98)
+  (anonymous function) (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:97)
+  xd (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:99)
+  Uc (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:97)
+  Hb (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:95)
+  write (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:94)
+  $b (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:98)
+  (anonymous function) (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:97)
+  (anonymous function) (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:99)
+  onload (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:23:43.119Z] Session [1c9962b0-2b81-11e8-a071-236492e467c6] - page.onError - msg: [object Object]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:23:43.119Z] Session [1c9962b0-2b81-11e8-a071-236492e467c6] - page.onError - stack:
+  error (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:93)
+  onerror (https://www.googletagmanager.com/gtm.js?id=GTM-W9SLGS:101)
+  replaceChild (:0)
+ [ERROR - 2018-03-19T14:23:44.945Z] Session [1c9962b0-2b81-11e8-b1ae-455ad9d94e63] - page.onError - msg: ReferenceError: Can't find variable: Promise
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:[ERROR - 2018-03-19T14:23:52.936Z] Session [1c99b0d0-2b81-11e8-89b5-c59910386823] - page.onError - msg: ReferenceError: Can't find variable: Set
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:23:52.936Z] Session [1c99b0d0-2b81-11e8-89b5-c59910386823] - page.onError - stack:
+  ./node_modules/react-dom/cjs/react-dom.production.min.js (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:26)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  ./node_modules/react-dom/index.js (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:26)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  ./js/lib/helpers/ReactRenderClient.js (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  ./js/article_index.js (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/article.bundle.js:1)
+  t (https://static.reuters.com/resources_v2/react/release/wire_mar-8fc83c62/common.bundle.js:1)
+  (anonymous function) (https://static.reuters.[ERROR - 2018-03-19T14:24:01.811Z] Session [1c9962b0-2b81-11e8-b1ae-455ad9d94e63] - page.onError - msg: TypeError: null is not an object (evaluating 'wapoCookie.match')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:24:01.811Z] Session [1c9962b0-2b81-11e8-b1ae-455ad9d94e63] - page.onError - stack:
+  (anonymous function) (https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html?utm_term=.77d2a93f68b4:4)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:24:02.658Z] Session [1c9962b0-2b81-11e8-b1ae-455ad9d94e63] - page.onError - msg: ReferenceError: Can't find variable: swiffy
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-03-19T14:24:02.658Z] Session [1c9962b0-2b81-11e8-b1ae-455ad9d94e63] - page.onError - stack:
+  global code (https://s0.2mdn.net/5095325/1478112487333/cars.com_FewClicks_160x600.html:66)
+
+  phantomjs://platform/console++.js:263 in error
+[INFO  - 2018-03-19T14:28:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T14:33:35.656Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T14:38:35.656Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T14:43:35.656Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T14:48:35.656Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T14:53:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T14:58:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:03:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:08:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:13:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:18:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:23:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:28:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:33:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:38:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:43:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:48:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:53:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T15:58:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:03:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:08:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:13:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:18:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:23:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:28:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:33:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:38:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:43:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:48:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:53:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:58:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:03:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:08:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:13:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:18:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:23:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:28:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:33:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:38:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:43:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:48:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:53:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:58:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:03:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:08:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:13:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:18:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:23:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:28:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+58:35.649Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:03:35.649Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:08:35.649Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:13:35.649Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:18:35.650Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:23:35.649Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:28:35.649Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:33:35.649Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:38:35.649Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:43:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:48:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:53:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:58:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:03:35.657Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:08:35.658Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:13:35.658Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:18:35.658Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:23:35.658Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:28:35.658Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:12:22.441Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:17:22.440Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:22:22.441Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:27:22.442Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:32:22.441Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+ NOW
+[INFO  - 2018-03-19T16:13:36.433Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:18:36.433Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:23:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:28:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:33:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:38:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:43:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:48:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:53:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T16:58:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:03:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:08:36.439Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:13:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:18:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:23:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:28:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:33:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:38:36.439Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:43:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:48:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:53:36.439Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T17:58:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:03:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:08:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:13:36.438Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:18:36.439Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:23:36.439Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-03-19T18:28:36.439Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW

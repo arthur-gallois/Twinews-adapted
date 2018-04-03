@@ -1,0 +1,1842 @@
+2018-03-29 01:06:03,303 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:12:34,178 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:12:34,179 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 01:12:34,179 :: INFO :: New params:
+{
+	browserCount: 2,
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	}
+}
+2018-03-29 01:12:34,179 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	107.150.70.6	-
+0	196.16.11.165	-
+0	198.12.121.233	
+0	104.160.30.179	
+0	198.12.121.216	
+0	104.144.153.56	
+0	104.160.13.170	
+
+2018-03-29 01:18:00,390 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:18:00,391 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 01:18:00,391 :: INFO :: New params:
+{
+	browserCount: 2,
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	}
+}
+2018-03-29 01:18:00,391 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.144.153.56	-
+0	198.12.121.233	-
+0	198.12.121.216	
+0	107.150.70.6	
+0	104.160.13.170	
+0	104.160.30.179	
+0	196.16.11.165	
+
+2018-03-29 01:20:34,637 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:20:34,638 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 01:20:34,638 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-29 01:20:34,639 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.160.30.179	-
+0	198.12.121.216	-
+0	104.144.153.56	
+0	104.160.13.170	
+0	107.150.70.6	
+0	198.12.121.233	
+0	196.16.11.165	
+
+2018-03-29 01:24:02,721 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:24:02,722 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 01:24:02,724 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2
+}
+2018-03-29 01:24:02,725 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.233	-
+0	104.160.13.170	-
+0	107.150.70.6	
+0	104.160.30.179	
+0	104.144.153.56	
+0	198.12.121.216	
+0	196.16.11.165	
+
+2018-03-29 01:25:02,099 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:25:02,100 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 01:25:02,100 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	browserCount: 2,
+	parallelRequests: 2
+}
+2018-03-29 01:25:02,101 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	107.150.70.6	-
+0	104.160.30.179	-
+0	198.12.121.216	
+0	196.16.11.165	
+0	104.160.13.170	
+0	198.12.121.233	
+0	104.144.153.56	
+
+2018-03-29 01:25:56,413 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:25:56,414 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 01:25:56,414 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	browserCount: 2
+}
+2018-03-29 01:25:56,414 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.160.30.179	-
+0	198.12.121.233	-
+0	104.144.153.56	
+0	196.16.11.165	
+0	104.160.13.170	
+0	107.150.70.6	
+0	198.12.121.216	
+
+2018-03-29 01:26:59,227 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:26:59,228 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 01:26:59,228 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-29 01:26:59,229 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.216	-
+0	104.144.153.56	-
+0	107.150.70.6	
+0	196.16.11.165	
+0	104.160.30.179	
+0	198.12.121.233	
+0	104.160.13.170	
+
+2018-03-29 01:27:35,951 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 01:27:35,952 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 01:27:35,953 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	}
+}
+2018-03-29 01:27:35,954 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	107.150.70.6	-
+0	196.16.11.165	-
+0	198.12.121.233	
+0	198.12.121.216	
+0	104.160.30.179	
+0	104.144.153.56	
+0	104.160.13.170	
+
+2018-03-29 13:44:47,321 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:44:47,322 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 13:44:47,322 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2
+}
+2018-03-29 13:44:47,323 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.233	-
+0	198.12.121.216	-
+0	104.160.13.170	
+0	196.16.11.165	
+0	104.144.153.56	
+0	107.150.70.6	
+0	104.160.30.179	
+
+2018-03-29 13:46:10,826 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:46:10,827 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 13:46:10,827 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-29 13:46:10,828 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	107.150.70.6	-
+0	196.16.11.165	-
+0	104.144.153.56	
+0	198.12.121.233	
+0	104.160.30.179	
+0	198.12.121.216	
+0	104.160.13.170	
+
+2018-03-29 13:48:56,783 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:48:56,784 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 13:48:56,785 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	browserCount: 2,
+	parallelRequests: 2
+}
+2018-03-29 13:48:56,786 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	196.16.11.165	-
+0	104.160.30.179	-
+0	104.160.13.170	
+0	198.12.121.216	
+0	198.12.121.233	
+0	107.150.70.6	
+0	104.144.153.56	
+
+2018-03-29 13:49:53,830 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:49:53,831 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 13:49:53,832 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2,
+	parallelRequests: 2
+}
+2018-03-29 13:49:53,832 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.233	-
+0	107.150.70.6	-
+0	104.160.13.170	
+0	196.16.11.165	
+0	104.144.153.56	
+0	198.12.121.216	
+0	104.160.30.179	
+
+2018-03-29 13:52:54,114 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:52:54,114 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 13:52:54,114 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2
+}
+2018-03-29 13:52:54,115 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.144.153.56	-
+0	198.12.121.233	-
+0	196.16.11.165	
+0	104.160.30.179	
+0	104.160.13.170	
+0	107.150.70.6	
+0	198.12.121.216	
+
+2018-03-29 13:52:55,415 :: INFO :: Estelle-47 just slept 1.2686695 seconds because it's the first request for this browser.
+2018-03-29 13:52:55,419 :: INFO :: Sophie-53 just slept 1.2733097 seconds because it's the first request for this browser.
+2018-03-29 13:52:57,061 :: INFO :: Estelle-47 just slept 1.64428079 seconds before requesting /
+2018-03-29 13:52:57,066 :: ERROR :: Getting / error. invalid url '/': no schema supplied. perhaps you meant http:///?
+2018-03-29 13:52:57,070 :: INFO :: refused (500) from Estelle-47 (104.144.153.56) /
+2018-03-29 13:52:57,119 :: INFO :: Sophie-53 just slept 1.69802071 seconds before requesting "
+2018-03-29 13:52:57,514 :: INFO :: refused (503) from Sophie-53 (198.12.121.233) http://"/
+2018-03-29 13:52:58,369 :: INFO :: Estelle-47 just slept 1.29644275 seconds before requesting h
+2018-03-29 13:52:58,572 :: INFO :: refused (503) from Estelle-47 (104.144.153.56) http://h/
+2018-03-29 13:52:59,494 :: INFO :: Sophie-53 just slept 1.97647291 seconds before requesting o
+2018-03-29 13:52:59,813 :: INFO :: refused (503) from Sophie-53 (198.12.121.233) http://o/
+2018-03-29 13:53:00,567 :: INFO :: Estelle-47 just slept 1.99206165 seconds before requesting m
+2018-03-29 13:53:00,770 :: INFO :: refused (503) from Estelle-47 (104.144.153.56) http://m/
+2018-03-29 13:53:01,687 :: INFO :: Sophie-53 just slept 1.87097063 seconds before requesting e
+2018-03-29 13:53:01,800 :: INFO :: Estelle-47 just slept 1.02775474 seconds before requesting a
+2018-03-29 13:53:02,005 :: INFO :: refused (503) from Sophie-53 (198.12.121.233) http://e/
+2018-03-29 13:53:02,007 :: INFO :: refused (503) from Estelle-47 (104.144.153.56) http://a/
+2018-03-29 13:53:03,373 :: INFO :: Estelle-47 just slept 1.36393509 seconds before requesting j
+2018-03-29 13:53:03,573 :: INFO :: refused (503) from Estelle-47 (104.144.153.56) http://j/
+2018-03-29 13:53:03,732 :: INFO :: Sophie-53 just slept 1.72456872 seconds before requesting y
+2018-03-29 13:53:35,967 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:53:35,967 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 13:53:35,968 :: INFO :: New params:
+{
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	parallelRequests: 2
+}
+2018-03-29 13:53:35,968 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	196.16.11.165	-
+0	104.144.153.56	-
+0	198.12.121.233	
+0	107.150.70.6	
+0	104.160.30.179	
+0	198.12.121.216	
+0	104.160.13.170	
+
+2018-03-29 13:53:37,308 :: INFO :: Laurent-18 just slept 1.27388235 seconds because it's the first request for this browser.
+2018-03-29 13:53:37,983 :: INFO :: Éric-46 just slept 1.94809264 seconds because it's the first request for this browser.
+2018-03-29 13:53:39,012 :: INFO :: Éric-46 just slept 1.0270846 seconds before requesting http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 13:53:39,218 :: INFO :: Laurent-18 just slept 1.90705664 seconds before requesting http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 13:53:39,982 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'srcapAll'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.srcapAll()
+AttributeError: 'NewsScraper' object has no attribute 'srcapAll'
+
+2018-03-29 13:53:39,991 :: INFO :: success (200) from Éric-46 (196.16.11.165) http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 13:53:41,577 :: INFO :: Éric-46 just slept 1.58349142 seconds before requesting https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 13:53:42,581 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'srcapAll'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.srcapAll()
+AttributeError: 'NewsScraper' object has no attribute 'srcapAll'
+
+2018-03-29 13:53:42,586 :: INFO :: success (200) from Laurent-18 (104.144.153.56) http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 13:53:43,689 :: INFO :: Laurent-18 just slept 1.10030021 seconds before requesting http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 13:53:44,089 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'srcapAll'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.srcapAll()
+AttributeError: 'NewsScraper' object has no attribute 'srcapAll'
+
+2018-03-29 13:53:44,093 :: INFO :: success (200) from Éric-46 (196.16.11.165) https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 13:54:40,360 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:54:51,805 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:54:51,806 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 13:54:51,807 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	browserCount: 2
+}
+2018-03-29 13:54:51,807 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.144.153.56	-
+0	107.150.70.6	-
+0	196.16.11.165	
+0	198.12.121.233	
+0	198.12.121.216	
+0	104.160.13.170	
+0	104.160.30.179	
+
+2018-03-29 13:54:53,266 :: INFO :: Arnaud-40 just slept 1.38504098 seconds because it's the first request for this browser.
+2018-03-29 13:54:53,715 :: INFO :: Rémi-7 just slept 1.83400979 seconds because it's the first request for this browser.
+2018-03-29 13:54:54,391 :: INFO :: Arnaud-40 just slept 1.12351755 seconds before requesting http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 13:54:55,405 :: INFO :: Rémi-7 just slept 1.68843678 seconds before requesting http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 13:54:56,004 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'TypeError'>
+Exception: scrap() missing 1 required positional argument: 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.scrapAll()
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 41, in scrapAll
+    currentScrap = self.scrap(*args, **kwargs, scrapLib=current)
+TypeError: scrap() missing 1 required positional argument: 'html'
+
+2018-03-29 13:54:56,032 :: INFO :: success (200) from Arnaud-40 (107.150.70.6) http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 13:54:56,366 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'TypeError'>
+Exception: scrap() missing 1 required positional argument: 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.scrapAll()
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 41, in scrapAll
+    currentScrap = self.scrap(*args, **kwargs, scrapLib=current)
+TypeError: scrap() missing 1 required positional argument: 'html'
+
+2018-03-29 13:54:56,372 :: INFO :: success (200) from Rémi-7 (104.144.153.56) http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 13:54:57,087 :: INFO :: Arnaud-40 just slept 1.0486375 seconds before requesting https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 13:54:58,009 :: INFO :: Rémi-7 just slept 1.63480024 seconds before requesting http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 13:54:59,164 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'TypeError'>
+Exception: scrap() missing 1 required positional argument: 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.scrapAll()
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 41, in scrapAll
+    currentScrap = self.scrap(*args, **kwargs, scrapLib=current)
+TypeError: scrap() missing 1 required positional argument: 'html'
+
+2018-03-29 13:54:59,166 :: INFO :: success (200) from Rémi-7 (104.144.153.56) http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 13:55:00,226 :: INFO :: Rémi-7 just slept 1.05660557 seconds before requesting http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 13:55:00,558 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'TypeError'>
+Exception: scrap() missing 1 required positional argument: 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.scrapAll()
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 41, in scrapAll
+    currentScrap = self.scrap(*args, **kwargs, scrapLib=current)
+TypeError: scrap() missing 1 required positional argument: 'html'
+
+2018-03-29 13:55:00,563 :: INFO :: success (200) from Arnaud-40 (107.150.70.6) https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 13:55:01,311 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'TypeError'>
+Exception: scrap() missing 1 required positional argument: 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.scrapAll()
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 41, in scrapAll
+    currentScrap = self.scrap(*args, **kwargs, scrapLib=current)
+TypeError: scrap() missing 1 required positional argument: 'html'
+
+2018-03-29 13:55:01,315 :: INFO :: success (200) from Rémi-7 (104.144.153.56) http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 13:55:01,854 :: INFO :: Arnaud-40 just slept 1.28924064 seconds before requesting https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 13:55:02,499 :: INFO :: Rémi-7 just slept 1.18233468 seconds before requesting http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 13:55:03,293 :: ERROR :: Exception location: addToNewscrawl newsScraper.srcapAll
+Exception type: <class 'TypeError'>
+Exception: scrap() missing 1 required positional argument: 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsCrawler/newscrawler/crawler.py", line 94, in addToNewscrawl
+    data["scrap"] = newsScraper.scrapAll()
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 41, in scrapAll
+    currentScrap = self.scrap(*args, **kwargs, scrapLib=current)
+TypeError: scrap() missing 1 required positional argument: 'html'
+
+2018-03-29 13:55:03,297 :: INFO :: success (200) from Arnaud-40 (107.150.70.6) https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 13:56:30,150 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:56:34,401 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 13:56:34,401 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 13:56:34,402 :: INFO :: New params:
+{
+	browserCount: 2,
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	}
+}
+2018-03-29 13:56:34,402 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.160.30.179	-
+0	104.144.153.56	-
+0	198.12.121.233	
+0	196.16.11.165	
+0	107.150.70.6	
+0	198.12.121.216	
+0	104.160.13.170	
+
+2018-03-29 13:56:35,573 :: INFO :: Morgane-1 just slept 1.10099093 seconds because it's the first request for this browser.
+2018-03-29 13:56:36,379 :: INFO :: Thomas-12 just slept 1.90592405 seconds because it's the first request for this browser.
+2018-03-29 13:56:37,516 :: INFO :: Morgane-1 just slept 1.9409281 seconds before requesting http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 13:56:37,929 :: INFO :: Thomas-12 just slept 1.54771799 seconds before requesting http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 13:56:39,513 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 73, in scrap
+    article = NewsPlease.from_html(self.html)
+AttributeError: 'NewsScraper' object has no attribute 'html'
+
+2018-03-29 13:56:39,513 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 92, in scrap
+    doc = Document(self.html)
+AttributeError: 'NewsScraper' object has no attribute 'html'
+
+2018-03-29 13:56:39,516 :: INFO :: success (200) from Morgane-1 (104.160.30.179) http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 13:56:39,876 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 73, in scrap
+    article = NewsPlease.from_html(self.html)
+AttributeError: 'NewsScraper' object has no attribute 'html'
+
+2018-03-29 13:56:39,877 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 92, in scrap
+    doc = Document(self.html)
+AttributeError: 'NewsScraper' object has no attribute 'html'
+
+2018-03-29 13:56:39,880 :: INFO :: success (200) from Thomas-12 (104.144.153.56) http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 13:56:41,627 :: INFO :: Thomas-12 just slept 1.74454679 seconds before requesting http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 13:56:41,836 :: INFO :: Morgane-1 just slept 1.95383989 seconds before requesting https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 13:56:43,400 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 73, in scrap
+    article = NewsPlease.from_html(self.html)
+AttributeError: 'NewsScraper' object has no attribute 'html'
+
+2018-03-29 13:56:43,401 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 92, in scrap
+    doc = Document(self.html)
+AttributeError: 'NewsScraper' object has no attribute 'html'
+
+2018-03-29 13:56:43,404 :: INFO :: success (200) from Morgane-1 (104.160.30.179) https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 13:56:43,461 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 73, in scrap
+    article = NewsPlease.from_html(self.html)
+AttributeError: 'NewsScraper' object has no attribute 'html'
+
+2018-03-29 13:56:43,462 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'AttributeError'>
+Exception: 'NewsScraper' object has no attribute 'html'
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 92, in scrap
+    doc = Document(self.html)
+AttributeError: 'NewsScraper' object has no attribute 'html'
+
+2018-03-29 13:56:43,465 :: INFO :: success (200) from Thomas-12 (104.144.153.56) http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 14:02:03,084 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:07:20,021 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:07:20,022 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-29 14:07:20,022 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.144.153.56	-
+0	104.160.13.170	-
+0	196.16.11.165	
+0	107.150.70.6	
+0	198.12.121.216	
+0	104.160.30.179	
+0	198.12.121.233	
+
+2018-03-29 14:07:21,847 :: INFO :: Romain-78 just slept 1.72832944 seconds because it's the first request for this browser.
+2018-03-29 14:07:21,912 :: INFO :: Matthieu-49 just slept 1.79321656 seconds because it's the first request for this browser.
+2018-03-29 14:07:23,473 :: INFO :: Romain-78 just slept 1.62409949 seconds before requesting http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:07:23,691 :: INFO :: Matthieu-49 just slept 1.77798453 seconds before requesting http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 14:07:25,470 :: INFO :: success (200) from Romain-78 (104.144.153.56) http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:07:26,563 :: INFO :: Romain-78 just slept 1.09087281 seconds before requesting https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 14:07:27,288 :: INFO :: success (200) from Matthieu-49 (104.160.13.170) http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 14:07:28,787 :: INFO :: success (200) from Romain-78 (104.144.153.56) https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 14:07:28,977 :: INFO :: Matthieu-49 just slept 1.68689706 seconds before requesting http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 14:07:29,927 :: INFO :: Romain-78 just slept 1.13830277 seconds before requesting http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 14:07:30,802 :: INFO :: success (200) from Matthieu-49 (104.160.13.170) http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 14:07:31,663 :: INFO :: success (200) from Romain-78 (104.144.153.56) http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 14:07:32,308 :: INFO :: Matthieu-49 just slept 1.50382296 seconds before requesting https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 14:07:32,694 :: INFO :: Romain-78 just slept 1.02937229 seconds before requesting http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 14:07:34,470 :: INFO :: success (200) from Matthieu-49 (104.160.13.170) https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 14:07:34,912 :: INFO :: success (200) from Romain-78 (104.144.153.56) http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 14:07:36,535 :: INFO :: Romain-78 just slept 1.6199892 seconds before requesting https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 14:07:36,594 :: INFO :: Matthieu-49 just slept 1.68099222 seconds before requesting https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 14:07:38,110 :: INFO :: invalid (200) from Romain-78 (104.144.153.56) https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 14:07:38,474 :: INFO :: success (200) from Matthieu-49 (104.160.13.170) https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 14:07:39,573 :: INFO :: Matthieu-49 just slept 1.09663394 seconds before requesting https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:07:40,017 :: INFO :: Romain-78 just slept 1.90416505 seconds before requesting https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 14:07:41,848 :: INFO :: success (200) from Matthieu-49 (104.160.13.170) https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:07:42,366 :: INFO :: success (200) from Romain-78 (104.144.153.56) https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 14:07:43,416 :: INFO :: Matthieu-49 just slept 1.04866156 seconds before requesting https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 14:12:54,894 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:12:57,201 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:12:57,201 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	}
+}
+2018-03-29 14:12:57,202 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.144.153.56	-
+0	104.160.13.170	-
+0	198.12.121.233	
+0	196.16.11.165	
+0	198.12.121.216	
+0	107.150.70.6	
+0	104.160.30.179	
+
+2018-03-29 14:12:58,291 :: INFO :: Justine-11 just slept 1.00973697 seconds because it's the first request for this browser.
+2018-03-29 14:12:58,366 :: INFO :: Mathilde-42 just slept 1.08494217 seconds because it's the first request for this browser.
+2018-03-29 14:12:59,479 :: INFO :: Mathilde-42 just slept 1.11172078 seconds before requesting https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 14:12:59,986 :: INFO :: Justine-11 just slept 1.69279583 seconds before requesting https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 14:13:00,400 :: INFO :: invalid (200) from Mathilde-42 (104.144.153.56) https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 14:13:02,340 :: INFO :: Mathilde-42 just slept 1.93744749 seconds before requesting http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:13:02,520 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'UnboundLocalError'>
+Exception: local variable 'result' referenced before assignment
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 101, in scrap
+    return result
+UnboundLocalError: local variable 'result' referenced before assignment
+
+2018-03-29 14:13:02,526 :: INFO :: success (200) from Justine-11 (104.160.13.170) https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 14:13:04,322 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'UnboundLocalError'>
+Exception: local variable 'result' referenced before assignment
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 101, in scrap
+    return result
+UnboundLocalError: local variable 'result' referenced before assignment
+
+2018-03-29 14:13:04,324 :: INFO :: success (200) from Mathilde-42 (104.144.153.56) http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:13:04,423 :: INFO :: Justine-11 just slept 1.89452193 seconds before requesting http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 14:13:06,080 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'UnboundLocalError'>
+Exception: local variable 'result' referenced before assignment
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 101, in scrap
+    return result
+UnboundLocalError: local variable 'result' referenced before assignment
+
+2018-03-29 14:13:06,082 :: INFO :: success (200) from Justine-11 (104.160.13.170) http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 14:13:06,217 :: INFO :: Mathilde-42 just slept 1.89002609 seconds before requesting http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:13:07,296 :: ERROR :: Exception location: scrap(self, scrapLib=SCRAPLIB.newspaper)
+Exception type: <class 'UnboundLocalError'>
+Exception: local variable 'result' referenced before assignment
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/NewsTools/newstools/newsscraper.py", line 101, in scrap
+    return result
+UnboundLocalError: local variable 'result' referenced before assignment
+
+2018-03-29 14:13:07,298 :: INFO :: success (200) from Mathilde-42 (104.144.153.56) http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:13:08,039 :: INFO :: Justine-11 just slept 1.95508654 seconds before requesting https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 14:14:48,782 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:14:59,380 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:14:59,382 :: INFO :: New params:
+{
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	parallelRequests: 2
+}
+2018-03-29 14:14:59,383 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	196.16.11.165	-
+0	104.160.30.179	-
+0	104.160.13.170	
+0	104.144.153.56	
+0	198.12.121.233	
+0	107.150.70.6	
+0	198.12.121.216	
+
+2018-03-29 14:15:06,119 :: INFO :: Jacqueline-26 just slept 1.55580869 seconds because it's the first request for this browser.
+2018-03-29 14:15:06,129 :: INFO :: Laura-49 just slept 1.56582971 seconds because it's the first request for this browser.
+2018-03-29 14:15:07,498 :: INFO :: Laura-49 just slept 1.36702274 seconds before requesting https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 14:15:07,807 :: INFO :: Jacqueline-26 just slept 1.68383167 seconds before requesting https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 14:16:57,887 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:17:00,368 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:17:00,369 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	}
+}
+2018-03-29 14:17:00,371 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.160.13.170	-
+0	104.144.153.56	-
+0	104.160.30.179	
+0	198.12.121.233	
+0	196.16.11.165	
+0	198.12.121.216	
+0	107.150.70.6	
+
+2018-03-29 14:17:01,453 :: INFO :: Marion-84 just slept 1.00133363 seconds because it's the first request for this browser.
+2018-03-29 14:17:02,238 :: INFO :: Bernadette-74 just slept 1.78570597 seconds because it's the first request for this browser.
+2018-03-29 14:17:02,851 :: INFO :: Marion-84 just slept 1.39710868 seconds before requesting https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 14:17:03,770 :: INFO :: Bernadette-74 just slept 1.53075496 seconds before requesting https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 14:17:05,274 :: INFO :: success (200) from Marion-84 (104.144.153.56) https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 14:17:05,445 :: INFO :: success (200) from Bernadette-74 (104.160.13.170) https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 14:17:06,801 :: INFO :: Bernadette-74 just slept 1.35401403 seconds before requesting https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 14:17:07,000 :: INFO :: Marion-84 just slept 1.55344034 seconds before requesting http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 14:17:07,767 :: INFO :: success (200) from Marion-84 (104.144.153.56) http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 14:17:08,448 :: INFO :: success (200) from Bernadette-74 (104.160.13.170) https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 14:17:09,098 :: INFO :: Marion-84 just slept 1.32917907 seconds before requesting http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 14:23:48,014 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:23:49,920 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:23:49,922 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-29 14:23:49,922 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.233	-
+0	104.144.153.56	-
+0	198.12.121.216	
+0	104.160.30.179	
+0	104.160.13.170	
+0	196.16.11.165	
+0	107.150.70.6	
+
+2018-03-29 14:23:49,926 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:23:49,929 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 14:23:49,931 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 14:23:49,932 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 14:23:49,933 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 14:23:49,933 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 14:23:49,934 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 14:23:49,935 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 14:23:49,940 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 14:23:49,942 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 14:23:49,945 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:23:49,947 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 14:23:49,948 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:23:49,949 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 14:23:49,950 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:23:49,950 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 14:23:49,952 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 14:23:49,953 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 14:23:49,954 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 14:23:54,451 :: INFO :: success (200) from Loïc-98 (104.144.153.56) http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 14:23:54,523 :: INFO :: success (200) from Daniel-90 (198.12.121.233) https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-29 14:23:58,345 :: INFO :: success (200) from Loïc-98 (104.144.153.56) http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/
+2018-03-29 14:23:58,516 :: INFO :: success (200) from Daniel-90 (198.12.121.233) https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-29 14:24:01,702 :: INFO :: success (200) from Daniel-90 (198.12.121.233) http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-29 14:24:41,943 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:24:43,976 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:24:43,976 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	}
+}
+2018-03-29 14:24:43,977 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.216	-
+0	107.150.70.6	-
+0	198.12.121.233	
+0	104.144.153.56	
+0	104.160.13.170	
+0	196.16.11.165	
+0	104.160.30.179	
+
+2018-03-29 14:24:43,980 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:24:43,982 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 14:24:43,983 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 14:24:43,984 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 14:24:43,985 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 14:24:43,987 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 14:24:43,989 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 14:24:43,990 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 14:24:43,994 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 14:24:43,996 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 14:24:44,001 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:24:44,004 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 14:24:44,005 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:24:44,006 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 14:24:44,007 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:24:44,008 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 14:24:44,010 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 14:24:44,011 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 14:24:44,012 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 14:24:44,012 :: INFO :: This url is already in newscrawl: http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 14:24:44,013 :: INFO :: This url is already in newscrawl: https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-29 14:24:44,014 :: INFO :: This url is already in newscrawl: http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/
+2018-03-29 14:24:44,015 :: INFO :: This url is already in newscrawl: https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-29 14:24:44,017 :: INFO :: This url is already in newscrawl: http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-29 14:24:49,735 :: INFO :: success (200) from Jean-Claude-7 (107.150.70.6) http://www.presidency.ucsb.edu/ws/index.php?pid=14392&st=&st1=
+2018-03-29 14:24:49,865 :: INFO :: success (200) from Muriel-100 (198.12.121.216) http://mashable.com/2017/01/14/niagara-falls-runs-dry/?utm_cid=hp-h-7#g4HW5mbDX5qj
+2018-03-29 14:24:52,647 :: INFO :: refused (403) from Muriel-100 (198.12.121.216) https://hotair.com/archives/2017/01/15/latest-hot-rumor-trump-to-boot-the-press-corps-from-the-white-house/
+2018-03-29 14:24:53,912 :: INFO :: success (200) from Jean-Claude-7 (107.150.70.6) https://www.huffingtonpost.com/entry/cornell-william-brooks-donald-trump_us_587a8a9ae4b09281d0eb4a51?ncid=engmodushpmg00000004
+2018-03-29 14:24:57,861 :: INFO :: success (200) from Muriel-100 (198.12.121.216) http://news.sky.com/story/hunt-to-get-15m-payout-from-hotcourses-sale-amid-nhs-crisis-10730426
+2018-03-29 14:24:59,683 :: INFO :: success (200) from Jean-Claude-7 (107.150.70.6) https://www.huffingtonpost.com/entry/mike-coffman-pushback-obamacare-repeal_us_587b8ca4e4b09281d0eb5f7c?ncid=engmodushpmg00000004
+2018-03-29 14:25:01,386 :: INFO :: success (200) from Muriel-100 (198.12.121.216) http://www.express.co.uk/showbiz/tv-radio/754491/Celebrity-Big-Brother-2017-Calum-Best-evicted-next-one-way-ticket-James-Jordan-CBB
+2018-03-29 14:25:03,684 :: INFO :: success (200) from Jean-Claude-7 (107.150.70.6) http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/
+2018-03-29 14:25:05,029 :: INFO :: success (200) from Muriel-100 (198.12.121.216) https://www.policeone.com/patrol-issues/articles/279911006-Ponch-and-Jon-are-back-in-CHiPs-movie-trailer/?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:25:06,840 :: INFO :: success (200) from Jean-Claude-7 (107.150.70.6) http://www.star-telegram.com/news/state/texas/article126536929.html
+2018-03-29 14:27:38,344 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:27:40,252 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:27:40,252 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	browserCount: 2
+}
+2018-03-29 14:27:40,253 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.160.30.179	-
+0	104.144.153.56	-
+0	198.12.121.216	
+0	196.16.11.165	
+0	198.12.121.233	
+0	104.160.13.170	
+0	107.150.70.6	
+
+2018-03-29 14:27:40,256 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:27:40,258 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 14:27:40,259 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 14:27:40,260 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 14:27:40,260 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 14:27:40,261 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 14:27:40,262 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 14:27:40,263 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 14:27:40,266 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 14:27:40,268 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 14:27:40,271 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:27:40,273 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 14:27:40,274 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:27:40,275 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 14:27:40,276 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:27:40,277 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 14:27:40,279 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 14:27:40,280 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 14:27:40,281 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 14:27:40,281 :: INFO :: This url is already in newscrawl: http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 14:27:40,282 :: INFO :: This url is already in newscrawl: https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-29 14:27:40,283 :: INFO :: This url is already in newscrawl: http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/
+2018-03-29 14:27:40,285 :: INFO :: This url is already in newscrawl: https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-29 14:27:40,286 :: INFO :: This url is already in newscrawl: http://mashable.com/2017/01/14/niagara-falls-runs-dry/?utm_cid=hp-h-7#g4HW5mbDX5qj
+2018-03-29 14:27:40,286 :: INFO :: This url is already in newscrawl: http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-29 14:27:40,287 :: INFO :: This url is already in newscrawl: http://www.presidency.ucsb.edu/ws/index.php?pid=14392&st=&st1=
+2018-03-29 14:27:40,288 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/cornell-william-brooks-donald-trump_us_587a8a9ae4b09281d0eb4a51?ncid=engmodushpmg00000004
+2018-03-29 14:27:40,290 :: INFO :: This url is already in newscrawl: http://news.sky.com/story/hunt-to-get-15m-payout-from-hotcourses-sale-amid-nhs-crisis-10730426
+2018-03-29 14:27:40,291 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/mike-coffman-pushback-obamacare-repeal_us_587b8ca4e4b09281d0eb5f7c?ncid=engmodushpmg00000004
+2018-03-29 14:27:40,291 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/showbiz/tv-radio/754491/Celebrity-Big-Brother-2017-Calum-Best-evicted-next-one-way-ticket-James-Jordan-CBB
+2018-03-29 14:27:40,292 :: INFO :: This url is already in newscrawl: http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/
+2018-03-29 14:27:40,292 :: INFO :: This url is already in newscrawl: https://www.policeone.com/patrol-issues/articles/279911006-Ponch-and-Jon-are-back-in-CHiPs-movie-trailer/?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:27:40,293 :: INFO :: This url is already in newscrawl: http://www.star-telegram.com/news/state/texas/article126536929.html
+2018-03-29 14:27:44,891 :: INFO :: success (200) from Marc-84 (104.160.30.179) https://hotair.com/archives/2017/01/15/latest-hot-rumor-trump-to-boot-the-press-corps-from-the-white-house/
+2018-03-29 14:27:45,815 :: INFO :: success (200) from Valentin-28 (104.144.153.56) http://bit.ly/2DVd8jm
+2018-03-29 14:27:48,635 :: INFO :: success (200) from Marc-84 (104.160.30.179) http://www.express.co.uk/news/uk/754196/army-housing-soldiers-hotels-taxpayers-accommodation-crisis
+2018-03-29 14:27:49,667 :: INFO :: success (200) from Valentin-28 (104.144.153.56) https://www.yahoo.com/news/germanys-merkel-warns-trump-against-protectionism-140002428.html
+2018-03-29 14:29:56,189 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:30:56,614 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:31:42,079 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:32:42,669 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:33:48,458 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:33:48,494 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:34:40,488 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:34:43,977 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:34:43,978 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-29 14:34:43,979 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	107.150.70.6	-
+0	104.144.153.56	-
+0	104.160.13.170	
+0	198.12.121.233	
+0	104.160.30.179	
+0	198.12.121.216	
+0	196.16.11.165	
+
+2018-03-29 14:35:22,240 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:36:55,794 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:37:31,695 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:37:36,072 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:37:36,075 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-29 14:37:36,075 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	196.16.11.165	-
+0	104.160.30.179	-
+0	104.144.153.56	
+0	104.160.13.170	
+0	198.12.121.233	
+0	107.150.70.6	
+0	198.12.121.216	
+
+2018-03-29 14:37:41,529 :: ERROR :: Exception location: Crawler.fillQueue():
+2018-03-29 14:37:41,533 :: ERROR :: 'function' object has no attribute 'has'
+2018-03-29 14:38:05,017 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:38:09,352 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:38:09,353 :: INFO :: New params:
+{
+	browserCount: 2,
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	}
+}
+2018-03-29 14:38:09,354 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.216	-
+0	104.160.30.179	-
+0	196.16.11.165	
+0	104.160.13.170	
+0	107.150.70.6	
+0	104.144.153.56	
+0	198.12.121.233	
+
+2018-03-29 14:39:19,904 :: INFO :: Previous params score: 0
+2018-03-29 14:39:19,905 :: INFO :: Now we explore...
+2018-03-29 14:39:19,906 :: INFO :: New params:
+{
+	browserCount: 2,
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	}
+}
+2018-03-29 14:39:50,436 :: INFO :: Previous params score: 0
+2018-03-29 14:39:50,437 :: INFO :: Now we explore...
+2018-03-29 14:39:50,438 :: INFO :: New params:
+{
+	browserCount: 2,
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	}
+}
+2018-03-29 14:39:57,577 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 14:39:57,577 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 14:39:57,577 :: INFO :: New params:
+{
+	browserCount: 2,
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	}
+}
+2018-03-29 14:39:57,578 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.216	-
+0	104.144.153.56	-
+0	198.12.121.233	
+0	104.160.30.179	
+0	104.160.13.170	
+0	107.150.70.6	
+0	196.16.11.165	
+
+2018-03-29 14:39:57,581 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-29 14:39:57,587 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 14:40:03,325 :: INFO :: success (200) from Francis-26 (198.12.121.216) http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 14:40:05,099 :: INFO :: success (200) from Louis-73 (104.144.153.56) http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 15:43:00,836 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 15:43:00,837 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 15:43:00,837 :: INFO :: New params:
+{
+	browserCount: 2,
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	}
+}
+2018-03-29 15:43:00,837 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	196.16.11.165	-
+0	104.144.153.56	-
+0	104.160.30.179	
+0	198.12.121.216	
+0	198.12.121.233	
+0	107.150.70.6	
+0	104.160.13.170	
+
+2018-03-29 15:43:00,841 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-29 15:43:00,842 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 15:43:00,843 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 15:43:00,848 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 15:43:05,595 :: INFO :: success (200) from Florian-57 (196.16.11.165) http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 15:43:07,468 :: INFO :: success (200) from Nicolas-86 (104.144.153.56) https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 15:43:08,727 :: INFO :: success (200) from Florian-57 (196.16.11.165) http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 15:43:10,336 :: INFO :: success (200) from Nicolas-86 (104.144.153.56) https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 15:43:11,509 :: INFO :: success (200) from Florian-57 (196.16.11.165) http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 17:39:00,690 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 17:39:00,691 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 17:39:00,691 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2
+}
+2018-03-29 17:39:00,692 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.216	-
+0	196.16.11.165	-
+0	198.12.121.233	
+0	104.144.153.56	
+0	104.160.13.170	
+0	107.150.70.6	
+0	104.160.30.179	
+
+2018-03-29 17:39:00,696 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-29 17:39:00,697 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 17:39:00,699 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 17:39:00,700 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 17:39:00,701 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 17:39:00,702 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 17:39:00,703 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 17:39:00,705 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 17:39:00,711 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 17:39:05,081 :: INFO :: success (200) from Chloe-93 (196.16.11.165) https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 17:39:05,342 :: INFO :: success (200) from Benjamin-50 (198.12.121.216) https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 17:39:07,431 :: INFO :: success (200) from Chloe-93 (196.16.11.165) https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 17:39:09,663 :: INFO :: success (200) from Benjamin-50 (198.12.121.216) https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 17:39:09,928 :: INFO :: success (200) from Chloe-93 (196.16.11.165) http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 17:39:11,923 :: ERROR :: Getting http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky timeout. httpconnectionpool(host='198.12.121.216', port=80): read timed out. (read timeout=1)
+2018-03-29 17:39:12,117 :: INFO :: success (200) from Chloe-93 (196.16.11.165) http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 17:39:14,299 :: INFO :: success (200) from Chloe-93 (196.16.11.165) https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 17:39:17,380 :: INFO :: success (200) from Chloe-93 (196.16.11.165) https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 17:39:18,481 :: ERROR :: Getting http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky timeout. httpconnectionpool(host='198.12.121.216', port=55555): read timed out. (read timeout=1)
+2018-03-29 17:39:18,490 :: ERROR :: Exception location: returner(result)
+Exception type: <class 'KeyError'>
+Exception: 'crawlingElement'
+Traceback (most recent call last):
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 1198, in getresponse
+    response.begin()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/socket.py", line 576, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='198.12.121.216', port=80): Read timed out. (read timeout=1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebBrowser/hjwebbrowser/httpbrowser.py", line 234, in privateGet
+    headers=self.header,
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='198.12.121.216', port=80): Read timed out. (read timeout=1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebBrowser/hjwebbrowser/httpbrowser.py", line 178, in returner
+    self.htmlCallback(result, self)
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebCrawler/webcrawler/crawler.py", line 1020, in htmlCallback
+    crawlingElement = data["crawlingElement"]
+KeyError: 'crawlingElement'
+
+2018-03-29 17:39:18,490 :: INFO :: timeout (408) from Benjamin-50 (198.12.121.216) http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 18:37:24,692 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 18:37:24,693 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 18:37:24,694 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		alpha: 0.99,
+		beta: NormalizedLawBeta.LOG
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-29 18:37:24,694 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.160.13.170	-
+0	107.150.70.6	-
+0	104.144.153.56	
+0	198.12.121.233	
+0	198.12.121.216	
+0	196.16.11.165	
+0	104.160.30.179	
+
+2018-03-29 18:37:24,699 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-29 18:37:24,700 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:37:24,701 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 18:37:24,702 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 18:37:24,703 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 18:37:24,704 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 18:37:24,705 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 18:37:24,706 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 18:37:24,707 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 18:37:24,711 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 18:37:24,713 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 18:37:24,715 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:37:24,717 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 18:37:24,718 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:37:24,723 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:37:24,724 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 18:37:24,726 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 18:37:30,536 :: INFO :: success (200) from Marion-94 (104.160.13.170) http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 18:37:34,063 :: INFO :: success (200) from Marion-94 (104.160.13.170) https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 18:37:37,243 :: INFO :: success (200) from Marion-94 (104.160.13.170) http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 18:37:40,545 :: INFO :: success (200) from Marion-94 (104.160.13.170) https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-29 18:40:01,406 :: ERROR :: Getting http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky timeout. httpconnectionpool(host='107.150.70.6', port=80): read timed out. (read timeout=1)
+2018-03-29 18:40:10,423 :: ERROR :: The request to http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky failed. We retry on an other proxy port.
+2018-03-29 18:44:21,632 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 18:44:21,632 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 18:44:21,632 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2,
+	parallelRequests: 2
+}
+2018-03-29 18:44:21,633 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.160.30.179	-
+0	107.150.70.6	-
+0	198.12.121.233	
+0	196.16.11.165	
+0	104.160.13.170	
+0	198.12.121.216	
+0	104.144.153.56	
+
+2018-03-29 18:44:21,635 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-29 18:44:21,635 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:44:21,636 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 18:44:21,636 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 18:44:21,637 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 18:44:21,637 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 18:44:21,638 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 18:44:21,639 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 18:44:21,639 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 18:44:21,641 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 18:44:21,642 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 18:44:21,643 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:44:21,645 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 18:44:21,645 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:44:21,646 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 18:44:21,646 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:44:21,647 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 18:44:21,648 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 18:44:21,648 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 18:44:21,649 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 18:44:21,649 :: INFO :: This url is already in newscrawl: http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 18:44:21,650 :: INFO :: This url is already in newscrawl: https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-29 18:44:25,747 :: INFO :: success (200) from Marion-30 (104.160.30.179) https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-29 18:44:26,555 :: ERROR :: Getting http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/ timeout. httpsconnectionpool(host='www.telegraph.co.uk', port=443): read timed out. (read timeout=1)
+2018-03-29 18:44:26,556 :: ERROR :: The request to http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/ failed. We retry on an other proxy port.
+2018-03-29 18:44:28,815 :: INFO :: success (200) from Marion-30 (104.160.30.179) http://mashable.com/2017/01/14/niagara-falls-runs-dry/?utm_cid=hp-h-7#g4HW5mbDX5qj
+2018-03-29 18:44:30,964 :: INFO :: success (200) from Marion-30 (104.160.30.179) http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-29 18:44:34,135 :: INFO :: success (200) from Marion-30 (104.160.30.179) http://www.presidency.ucsb.edu/ws/index.php?pid=14392&st=&st1=
+2018-03-29 18:44:38,653 :: INFO :: success (200) from Jacqueline-29 (107.150.70.6) https://www.huffingtonpost.com/entry/cornell-william-brooks-donald-trump_us_587a8a9ae4b09281d0eb4a51?ncid=engmodushpmg00000004
+2018-03-29 18:44:41,585 :: INFO :: success (200) from Marion-30 (104.160.30.179) https://hotair.com/archives/2017/01/15/latest-hot-rumor-trump-to-boot-the-press-corps-from-the-white-house/
+2018-03-29 18:44:44,043 :: INFO :: success (200) from Jacqueline-29 (107.150.70.6) http://news.sky.com/story/hunt-to-get-15m-payout-from-hotcourses-sale-amid-nhs-crisis-10730426
+2018-03-29 18:44:47,426 :: INFO :: success (200) from Marion-30 (104.160.30.179) https://www.huffingtonpost.com/entry/mike-coffman-pushback-obamacare-repeal_us_587b8ca4e4b09281d0eb5f7c?ncid=engmodushpmg00000004
+2018-03-29 18:44:50,776 :: INFO :: success (200) from Jacqueline-29 (107.150.70.6) http://www.express.co.uk/showbiz/tv-radio/754491/Celebrity-Big-Brother-2017-Calum-Best-evicted-next-one-way-ticket-James-Jordan-CBB
+2018-03-29 18:44:53,727 :: ERROR :: Getting http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/ timeout. httpconnectionpool(host='104.160.30.179', port=80): read timed out. (read timeout=1)
+2018-03-29 18:44:53,728 :: ERROR :: The request to http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/ failed. We retry on an other proxy port.
+2018-03-29 18:45:49,554 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 18:45:49,555 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 18:45:49,555 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2,
+	parallelRequests: 2
+}
+2018-03-29 18:45:49,555 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.216	-
+0	196.16.11.165	-
+0	107.150.70.6	
+0	104.160.30.179	
+0	104.160.13.170	
+0	104.144.153.56	
+0	198.12.121.233	
+
+2018-03-29 18:45:49,557 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-29 18:45:49,558 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:45:49,558 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 18:45:49,559 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 18:45:49,559 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 18:45:49,560 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 18:45:49,560 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 18:45:49,561 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 18:45:49,561 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 18:45:49,564 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 18:45:49,565 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 18:45:49,567 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:45:49,568 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 18:45:49,569 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:45:49,570 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 18:45:49,570 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:45:49,571 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 18:45:49,572 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 18:45:49,573 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 18:45:49,574 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 18:45:49,574 :: INFO :: This url is already in newscrawl: http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 18:45:49,575 :: INFO :: This url is already in newscrawl: https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-29 18:45:49,575 :: INFO :: This url is already in newscrawl: http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/
+2018-03-29 18:45:49,576 :: INFO :: This url is already in newscrawl: https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-29 18:45:49,577 :: INFO :: This url is already in newscrawl: http://mashable.com/2017/01/14/niagara-falls-runs-dry/?utm_cid=hp-h-7#g4HW5mbDX5qj
+2018-03-29 18:45:49,578 :: INFO :: This url is already in newscrawl: http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-29 18:45:49,578 :: INFO :: This url is already in newscrawl: http://www.presidency.ucsb.edu/ws/index.php?pid=14392&st=&st1=
+2018-03-29 18:45:49,579 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/cornell-william-brooks-donald-trump_us_587a8a9ae4b09281d0eb4a51?ncid=engmodushpmg00000004
+2018-03-29 18:45:49,579 :: INFO :: This url is already in newscrawl: https://hotair.com/archives/2017/01/15/latest-hot-rumor-trump-to-boot-the-press-corps-from-the-white-house/
+2018-03-29 18:45:49,580 :: INFO :: This url is already in newscrawl: http://news.sky.com/story/hunt-to-get-15m-payout-from-hotcourses-sale-amid-nhs-crisis-10730426
+2018-03-29 18:45:49,581 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/mike-coffman-pushback-obamacare-repeal_us_587b8ca4e4b09281d0eb5f7c?ncid=engmodushpmg00000004
+2018-03-29 18:45:49,581 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/showbiz/tv-radio/754491/Celebrity-Big-Brother-2017-Calum-Best-evicted-next-one-way-ticket-James-Jordan-CBB
+2018-03-29 18:45:53,439 :: INFO :: refused (403) from Julie-37 (198.12.121.216) http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/
+2018-03-29 18:45:54,917 :: INFO :: success (200) from Jean-François-18 (196.16.11.165) https://www.policeone.com/patrol-issues/articles/279911006-Ponch-and-Jon-are-back-in-CHiPs-movie-trailer/?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:45:56,072 :: INFO :: success (200) from Julie-37 (198.12.121.216) http://www.star-telegram.com/news/state/texas/article126536929.html
+2018-03-29 18:45:56,863 :: INFO :: success (200) from Jean-François-18 (196.16.11.165) http://www.express.co.uk/news/uk/754196/army-housing-soldiers-hotels-taxpayers-accommodation-crisis
+2018-03-29 18:45:59,739 :: INFO :: success (200) from Jean-François-18 (196.16.11.165) http://www.hindustantimes.com/india-news/singham-redux-mp-town-protests-transfer-of-ips-officer-who-busted-hawala-racket/story-H2r6eRSVirSexihx2eTReI.html
+2018-03-29 18:46:00,028 :: INFO :: success (200) from Julie-37 (198.12.121.216) https://www.yahoo.com/news/germanys-merkel-warns-trump-against-protectionism-140002428.html
+2018-03-29 18:46:01,527 :: INFO :: error404 (404) from Jean-François-18 (196.16.11.165) http://www.cbc.ca/1.3935762-
+2018-03-29 18:46:03,058 :: ERROR :: Getting http://insider.foxnews.com/2017/01/14/bikers-trump-wall-meat-inauguration-day-protests-donald-trump timeout. httpconnectionpool(host='198.12.121.216', port=80): read timed out. (read timeout=1)
+2018-03-29 18:46:03,058 :: ERROR :: The request to http://insider.foxnews.com/2017/01/14/bikers-trump-wall-meat-inauguration-day-protests-donald-trump failed. We retry on an other proxy port.
+2018-03-29 18:46:04,489 :: ERROR :: Getting http://www.newsmax.com/MichaelReagan/democrats-russia-ronald-reagan/2016/12/13/id/763730/ timeout. httpsconnectionpool(host='www.newsmax.com', port=443): read timed out. (read timeout=1)
+2018-03-29 18:46:04,489 :: ERROR :: The request to http://www.newsmax.com/MichaelReagan/democrats-russia-ronald-reagan/2016/12/13/id/763730/ failed. We retry on an other proxy port.
+2018-03-29 18:46:09,293 :: ERROR :: Exception location: returner(result)
+Exception type: <class 'KeyError'>
+Exception: 'crawlingElement'
+Traceback (most recent call last):
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 1198, in getresponse
+    response.begin()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/socket.py", line 576, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='198.12.121.216', port=80): Read timed out. (read timeout=1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebBrowser/hjwebbrowser/httpbrowser.py", line 234, in privateGet
+    headers=self.header,
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='198.12.121.216', port=80): Read timed out. (read timeout=1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebBrowser/hjwebbrowser/httpbrowser.py", line 178, in returner
+    self.htmlCallback(result, self)
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebCrawler/webcrawler/crawler.py", line 1020, in htmlCallback
+    crawlingElement = data["crawlingElement"]
+KeyError: 'crawlingElement'
+
+2018-03-29 18:46:09,293 :: INFO :: success (200) from Julie-37 (198.12.121.216) http://insider.foxnews.com/2017/01/14/bikers-trump-wall-meat-inauguration-day-protests-donald-trump
+2018-03-29 18:46:13,511 :: ERROR :: Exception location: returner(result)
+Exception type: <class 'KeyError'>
+Exception: 'crawlingElement'
+Traceback (most recent call last):
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 1198, in getresponse
+    response.begin()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/socket.py", line 576, in readinto
+    return self._sock.recv_into(b)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/contrib/pyopenssl.py", line 294, in recv_into
+    raise timeout('The read operation timed out')
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.newsmax.com', port=443): Read timed out. (read timeout=1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebBrowser/hjwebbrowser/httpbrowser.py", line 234, in privateGet
+    headers=self.header,
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 640, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 640, in <listcomp>
+    history = [resp for resp in gen] if allow_redirects else []
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 218, in resolve_redirects
+    **adapter_kwargs
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.newsmax.com', port=443): Read timed out. (read timeout=1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebBrowser/hjwebbrowser/httpbrowser.py", line 178, in returner
+    self.htmlCallback(result, self)
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebCrawler/webcrawler/crawler.py", line 1020, in htmlCallback
+    crawlingElement = data["crawlingElement"]
+KeyError: 'crawlingElement'
+
+2018-03-29 18:46:13,511 :: INFO :: success (200) from Jean-François-18 (196.16.11.165) http://www.newsmax.com/MichaelReagan/democrats-russia-ronald-reagan/2016/12/13/id/763730/
+2018-03-29 18:46:14,659 :: INFO :: success (200) from Julie-37 (198.12.121.216) https://globalnews.ca/news/3181741/twitter-has-discussed-the-idea-of-banning-donald-trump-report/
+2018-03-29 18:46:16,783 :: INFO :: success (200) from Jean-François-18 (196.16.11.165) http://bleacherreport.com/articles/2687020-australian-open-2017-tv-schedule-day-by-day-listings-for-entire-tournament?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:49:51,875 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 18:49:51,876 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 18:49:51,877 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	}
+}
+2018-03-29 18:49:51,878 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	107.150.70.6	-
+0	198.12.121.216	-
+0	198.12.121.233	
+0	104.160.13.170	
+0	104.144.153.56	
+0	196.16.11.165	
+0	104.160.30.179	
+
+2018-03-29 18:49:51,883 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-29 18:49:51,885 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:49:51,886 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 18:49:51,887 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 18:49:51,888 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 18:49:51,889 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 18:49:51,891 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 18:49:51,892 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 18:49:51,894 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 18:49:51,901 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 18:49:51,903 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 18:49:51,905 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:49:51,908 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 18:49:51,909 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:49:51,911 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 18:49:51,912 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:49:51,913 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 18:49:51,917 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 18:49:51,918 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 18:49:51,920 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 18:49:51,921 :: INFO :: This url is already in newscrawl: http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 18:49:51,922 :: INFO :: This url is already in newscrawl: https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-29 18:49:51,924 :: INFO :: This url is already in newscrawl: http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/
+2018-03-29 18:49:51,926 :: INFO :: This url is already in newscrawl: https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-29 18:49:51,928 :: INFO :: This url is already in newscrawl: http://mashable.com/2017/01/14/niagara-falls-runs-dry/?utm_cid=hp-h-7#g4HW5mbDX5qj
+2018-03-29 18:49:51,929 :: INFO :: This url is already in newscrawl: http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-29 18:49:51,931 :: INFO :: This url is already in newscrawl: http://www.presidency.ucsb.edu/ws/index.php?pid=14392&st=&st1=
+2018-03-29 18:49:51,933 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/cornell-william-brooks-donald-trump_us_587a8a9ae4b09281d0eb4a51?ncid=engmodushpmg00000004
+2018-03-29 18:49:51,935 :: INFO :: This url is already in newscrawl: https://hotair.com/archives/2017/01/15/latest-hot-rumor-trump-to-boot-the-press-corps-from-the-white-house/
+2018-03-29 18:49:51,936 :: INFO :: This url is already in newscrawl: http://news.sky.com/story/hunt-to-get-15m-payout-from-hotcourses-sale-amid-nhs-crisis-10730426
+2018-03-29 18:49:51,938 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/mike-coffman-pushback-obamacare-repeal_us_587b8ca4e4b09281d0eb5f7c?ncid=engmodushpmg00000004
+2018-03-29 18:49:51,940 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/showbiz/tv-radio/754491/Celebrity-Big-Brother-2017-Calum-Best-evicted-next-one-way-ticket-James-Jordan-CBB
+2018-03-29 18:49:51,951 :: INFO :: This url is already in newscrawl: https://www.policeone.com/patrol-issues/articles/279911006-Ponch-and-Jon-are-back-in-CHiPs-movie-trailer/?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:49:51,953 :: INFO :: This url is already in newscrawl: http://www.star-telegram.com/news/state/texas/article126536929.html
+2018-03-29 18:49:51,955 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/news/uk/754196/army-housing-soldiers-hotels-taxpayers-accommodation-crisis
+2018-03-29 18:49:51,957 :: INFO :: This url is already in newscrawl: https://www.yahoo.com/news/germanys-merkel-warns-trump-against-protectionism-140002428.html
+2018-03-29 18:49:51,960 :: INFO :: This url is already in newscrawl: http://www.hindustantimes.com/india-news/singham-redux-mp-town-protests-transfer-of-ips-officer-who-busted-hawala-racket/story-H2r6eRSVirSexihx2eTReI.html
+2018-03-29 18:49:51,961 :: INFO :: This url is already in newscrawl: http://www.cbc.ca/1.3935762-
+2018-03-29 18:49:51,963 :: INFO :: This url is already in newscrawl: http://insider.foxnews.com/2017/01/14/bikers-trump-wall-meat-inauguration-day-protests-donald-trump
+2018-03-29 18:49:51,964 :: INFO :: This url is already in newscrawl: http://www.newsmax.com/MichaelReagan/democrats-russia-ronald-reagan/2016/12/13/id/763730/
+2018-03-29 18:49:51,966 :: INFO :: This url is already in newscrawl: https://globalnews.ca/news/3181741/twitter-has-discussed-the-idea-of-banning-donald-trump-report/
+2018-03-29 18:49:51,967 :: INFO :: This url is already in newscrawl: http://bleacherreport.com/articles/2687020-australian-open-2017-tv-schedule-day-by-day-listings-for-entire-tournament?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:49:55,432 :: INFO :: refused (403) from Éric-34 (198.12.121.216) http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/
+2018-03-29 18:49:56,647 :: INFO :: success (200) from Laurent-81 (107.150.70.6) http://observer.com/2017/01/the-clinton-foundation-shuts-down-clinton-global-initiative/#.WHu7nNecaWg.twitter
+2018-03-29 18:50:00,168 :: INFO :: success (200) from Éric-34 (198.12.121.216) https://www.theguardian.com/world/2017/jan/15/democrats-inauguration-boycott-john-lewis-trump?CMP=share_btn_tw
+2018-03-29 18:50:00,346 :: INFO :: success (200) from Laurent-81 (107.150.70.6) https://www.dailykos.com/stories/2017/1/15/1620767/-Watch-a-Republican-Congressman-run-away-from-his-own-meeting-after-huge-turnout-from-constituents
+2018-03-29 18:50:03,192 :: ERROR :: Getting https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/ timeout. httpsconnectionpool(host='blogs.wsj.com', port=443): read timed out. (read timeout=1)
+2018-03-29 18:50:03,192 :: ERROR :: The request to https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/ failed. We retry on an other proxy port.
+2018-03-29 18:50:04,037 :: INFO :: success (200) from Éric-34 (198.12.121.216) https://www.villagevoice.com/2017/01/11/womens-groups-demand-nypd-reopen-greenpoint-date-rape-cases/
+2018-03-29 18:50:09,492 :: INFO :: success (200) from Éric-34 (198.12.121.216) https://www.haaretz.com/israel-news/.premium-1.764782
+2018-03-29 18:50:10,252 :: ERROR :: Getting https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/ timeout. httpsconnectionpool(host='blogs.wsj.com', port=443): read timed out. (read timeout=1)
+2018-03-29 18:50:13,415 :: ERROR :: Getting http://www.sportsnet.ca/hockey/nhl/breaking-jonathan-toewss-career-worst-scoring-output/ timeout. httpsconnectionpool(host='www.sportsnet.ca', port=443): read timed out. (read timeout=1)
+2018-03-29 18:50:13,416 :: ERROR :: The request to http://www.sportsnet.ca/hockey/nhl/breaking-jonathan-toewss-career-worst-scoring-output/ failed. We retry on an other proxy port.
+2018-03-29 18:53:35,056 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-29 18:53:35,056 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-29 18:53:35,057 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2
+}
+2018-03-29 18:53:35,057 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	198.12.121.216	-
+0	196.16.11.165	-
+0	104.160.30.179	
+0	107.150.70.6	
+0	104.160.13.170	
+0	104.144.153.56	
+0	198.12.121.233	
+
+2018-03-29 18:53:35,060 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-29 18:53:35,061 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:53:35,062 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-29 18:53:35,063 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-29 18:53:35,064 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-29 18:53:35,064 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-29 18:53:35,065 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-29 18:53:35,066 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-29 18:53:35,067 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-29 18:53:35,070 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-29 18:53:35,072 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-29 18:53:35,073 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:53:35,076 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-29 18:53:35,076 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:53:35,077 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-29 18:53:35,077 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:53:35,078 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-29 18:53:35,080 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-29 18:53:35,080 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-29 18:53:35,081 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-29 18:53:35,081 :: INFO :: This url is already in newscrawl: http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-29 18:53:35,082 :: INFO :: This url is already in newscrawl: https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-29 18:53:35,082 :: INFO :: This url is already in newscrawl: http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/
+2018-03-29 18:53:35,083 :: INFO :: This url is already in newscrawl: https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-29 18:53:35,084 :: INFO :: This url is already in newscrawl: http://mashable.com/2017/01/14/niagara-falls-runs-dry/?utm_cid=hp-h-7#g4HW5mbDX5qj
+2018-03-29 18:53:35,085 :: INFO :: This url is already in newscrawl: http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-29 18:53:35,085 :: INFO :: This url is already in newscrawl: http://www.presidency.ucsb.edu/ws/index.php?pid=14392&st=&st1=
+2018-03-29 18:53:35,086 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/cornell-william-brooks-donald-trump_us_587a8a9ae4b09281d0eb4a51?ncid=engmodushpmg00000004
+2018-03-29 18:53:35,086 :: INFO :: This url is already in newscrawl: https://hotair.com/archives/2017/01/15/latest-hot-rumor-trump-to-boot-the-press-corps-from-the-white-house/
+2018-03-29 18:53:35,087 :: INFO :: This url is already in newscrawl: http://news.sky.com/story/hunt-to-get-15m-payout-from-hotcourses-sale-amid-nhs-crisis-10730426
+2018-03-29 18:53:35,088 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/mike-coffman-pushback-obamacare-repeal_us_587b8ca4e4b09281d0eb5f7c?ncid=engmodushpmg00000004
+2018-03-29 18:53:35,088 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/showbiz/tv-radio/754491/Celebrity-Big-Brother-2017-Calum-Best-evicted-next-one-way-ticket-James-Jordan-CBB
+2018-03-29 18:53:35,090 :: INFO :: Failed enough in failsSD: http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/
+2018-03-29 18:53:35,091 :: INFO :: This url is already in newscrawl: https://www.policeone.com/patrol-issues/articles/279911006-Ponch-and-Jon-are-back-in-CHiPs-movie-trailer/?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:53:35,091 :: INFO :: This url is already in newscrawl: http://www.star-telegram.com/news/state/texas/article126536929.html
+2018-03-29 18:53:35,091 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/news/uk/754196/army-housing-soldiers-hotels-taxpayers-accommodation-crisis
+2018-03-29 18:53:35,092 :: INFO :: This url is already in newscrawl: https://www.yahoo.com/news/germanys-merkel-warns-trump-against-protectionism-140002428.html
+2018-03-29 18:53:35,093 :: INFO :: This url is already in newscrawl: http://www.hindustantimes.com/india-news/singham-redux-mp-town-protests-transfer-of-ips-officer-who-busted-hawala-racket/story-H2r6eRSVirSexihx2eTReI.html
+2018-03-29 18:53:35,093 :: INFO :: This url is already in newscrawl: http://www.cbc.ca/1.3935762-
+2018-03-29 18:53:35,094 :: INFO :: This url is already in newscrawl: http://insider.foxnews.com/2017/01/14/bikers-trump-wall-meat-inauguration-day-protests-donald-trump
+2018-03-29 18:53:35,094 :: INFO :: This url is already in newscrawl: http://www.newsmax.com/MichaelReagan/democrats-russia-ronald-reagan/2016/12/13/id/763730/
+2018-03-29 18:53:35,095 :: INFO :: This url is already in newscrawl: https://globalnews.ca/news/3181741/twitter-has-discussed-the-idea-of-banning-donald-trump-report/
+2018-03-29 18:53:35,096 :: INFO :: This url is already in newscrawl: http://bleacherreport.com/articles/2687020-australian-open-2017-tv-schedule-day-by-day-listings-for-entire-tournament?utm_source=dlvr.it&utm_medium=twitter
+2018-03-29 18:53:35,096 :: INFO :: This url is already in newscrawl: http://observer.com/2017/01/the-clinton-foundation-shuts-down-clinton-global-initiative/#.WHu7nNecaWg.twitter
+2018-03-29 18:53:35,098 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/world/2017/jan/15/democrats-inauguration-boycott-john-lewis-trump?CMP=share_btn_tw
+2018-03-29 18:53:35,099 :: INFO :: This url is already in newscrawl: https://www.dailykos.com/stories/2017/1/15/1620767/-Watch-a-Republican-Congressman-run-away-from-his-own-meeting-after-huge-turnout-from-constituents
+2018-03-29 18:53:35,099 :: INFO :: This url is already in newscrawl: https://www.villagevoice.com/2017/01/11/womens-groups-demand-nypd-reopen-greenpoint-date-rape-cases/
+2018-03-29 18:53:35,103 :: INFO :: This url is already in newscrawl: https://www.haaretz.com/israel-news/.premium-1.764782
+2018-03-29 18:53:35,104 :: INFO :: This url is already in newscrawl: http://www.sportsnet.ca/hockey/nhl/breaking-jonathan-toewss-career-worst-scoring-output/
+2018-03-29 18:53:39,837 :: ERROR :: Getting https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/ timeout. httpsconnectionpool(host='blogs.wsj.com', port=443): read timed out. (read timeout=1)
+2018-03-29 18:53:39,837 :: ERROR :: The request to https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/ failed. We retry on an other proxy port.
+2018-03-29 18:53:40,668 :: INFO :: success (200) from Laurent-32 (198.12.121.216) https://www.theatlantic.com/international/archive/2017/01/kompromat-trump-dossier/512891/?utm_source=twb
+2018-03-29 18:53:43,163 :: INFO :: duplicate (200) from Laurent-32 (198.12.121.216) https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/bernardmarr/2016/09/23/how-machine-learning-big-data-and-ai-are-changing-healthcare-forever/&refURL=&referrer=
+2018-03-29 18:53:46,594 :: ERROR :: Getting https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/ timeout. httpsconnectionpool(host='blogs.wsj.com', port=443): read timed out. (read timeout=1)
+2018-03-29 18:53:46,605 :: INFO :: timeout (408) from Pascal-26 (196.16.11.165) https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/
+2018-03-29 18:53:47,050 :: ERROR :: Getting http://www.independent.co.uk/news/uk/politics/a-c-grayling-general-strike-brexit-coup-parliament-vote-article-50-bristol-interview-remain-eu-a7527831.html timeout. httpsconnectionpool(host='www.independent.co.uk', port=443): read timed out. (read timeout=1)
+2018-03-29 18:53:47,051 :: ERROR :: The request to http://www.independent.co.uk/news/uk/politics/a-c-grayling-general-strike-brexit-coup-parliament-vote-article-50-bristol-interview-remain-eu-a7527831.html failed. We retry on an other proxy port.
+2018-03-29 18:53:49,110 :: INFO :: refused (410) from Pascal-26 (196.16.11.165) https://naijadailyfeed.wordpress.com/2017/01/15/highlight-manchester-united-1-1-liverpool-premier-league-2017
+2018-03-29 18:53:51,115 :: INFO :: refused (410) from Pascal-26 (196.16.11.165) https://bestofticket.wordpress.com/?p=3650390
+2018-03-29 18:53:53,791 :: INFO :: success (200) from Pascal-26 (196.16.11.165) https://www.theguardian.com/uk-news/2017/jan/15/hard-brexit-means-retiring-later-britons-warned?CMP=Share_AndroidApp_Tweet
+2018-03-29 18:53:54,953 :: INFO :: success (200) from Laurent-32 (198.12.121.216) http://www.independent.co.uk/news/uk/politics/a-c-grayling-general-strike-brexit-coup-parliament-vote-article-50-bristol-interview-remain-eu-a7527831.html
+2018-03-29 18:53:56,072 :: INFO :: success (200) from Pascal-26 (196.16.11.165) http://www.breitbart.com/sports/2017/01/14/nfl-preview-no-anthem-kneelers-left-save-come-back-nfl-waters/
+2018-03-29 18:54:01,272 :: INFO :: success (200) from Laurent-32 (198.12.121.216) https://www.theguardian.com/film/2017/jan/14/emily-watson-apple-tree-yard-middle-aged-women-infidelity-sexuality
+2018-03-29 18:54:03,706 :: ERROR :: Getting http://www.telegraph.co.uk/gardening/how-to-grow/pikaplant-maintenance-free-plants-cheer-workplace/ timeout. httpsconnectionpool(host='www.telegraph.co.uk', port=443): read timed out. (read timeout=1)
+2018-03-29 18:54:03,706 :: ERROR :: The request to http://www.telegraph.co.uk/gardening/how-to-grow/pikaplant-maintenance-free-plants-cheer-workplace/ failed. We retry on an other proxy port.
+2018-03-29 18:54:10,281 :: ERROR :: Getting http://www.telegraph.co.uk/gardening/how-to-grow/pikaplant-maintenance-free-plants-cheer-workplace/ timeout. httpsconnectionpool(host='www.telegraph.co.uk', port=443): read timed out. (read timeout=1)
+2018-03-29 18:54:10,285 :: INFO :: timeout (408) from Pascal-26 (196.16.11.165) http://www.telegraph.co.uk/gardening/how-to-grow/pikaplant-maintenance-free-plants-cheer-workplace/
+2018-03-29 18:54:10,285 :: INFO :: Previous params score: 4.5
+2018-03-29 18:54:10,285 :: INFO :: Now we explore...
+2018-03-29 18:54:10,286 :: INFO :: New params:
+{
+	parallelRequests: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	browserCount: 2
+}
+2018-03-30 16:17:50,861 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-30 16:17:50,862 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-30 16:18:21,591 :: INFO :: New params:
+{
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.99
+	},
+	parallelRequests: 2
+}
+2018-03-30 16:18:56,039 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	107.150.70.6	-
+0	196.16.11.165	-
+0	198.12.121.233	
+0	104.160.13.170	
+0	198.12.121.216	
+0	104.144.153.56	
+0	104.160.30.179	
+
+2018-03-30 16:18:56,092 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-30 16:18:56,093 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:18:56,096 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-30 16:18:56,097 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-30 16:18:56,099 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-30 16:18:56,101 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-30 16:18:56,102 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-30 16:18:56,103 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-30 16:18:56,105 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-30 16:18:56,110 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-30 16:18:56,115 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-30 16:18:56,118 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:18:56,122 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-30 16:18:56,123 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:18:56,125 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-30 16:18:56,126 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:18:56,127 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-30 16:18:56,135 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-30 16:18:56,137 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-30 16:18:56,138 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-30 16:18:56,139 :: INFO :: This url is already in newscrawl: http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-30 16:18:56,140 :: INFO :: This url is already in newscrawl: https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-30 16:18:56,141 :: INFO :: This url is already in newscrawl: http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/
+2018-03-30 16:18:56,146 :: INFO :: This url is already in newscrawl: https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-30 16:18:56,148 :: INFO :: This url is already in newscrawl: http://mashable.com/2017/01/14/niagara-falls-runs-dry/?utm_cid=hp-h-7#g4HW5mbDX5qj
+2018-03-30 16:18:56,149 :: INFO :: This url is already in newscrawl: http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-30 16:18:56,150 :: INFO :: This url is already in newscrawl: http://www.presidency.ucsb.edu/ws/index.php?pid=14392&st=&st1=
+2018-03-30 16:18:56,156 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/cornell-william-brooks-donald-trump_us_587a8a9ae4b09281d0eb4a51?ncid=engmodushpmg00000004
+2018-03-30 16:18:56,157 :: INFO :: This url is already in newscrawl: https://hotair.com/archives/2017/01/15/latest-hot-rumor-trump-to-boot-the-press-corps-from-the-white-house/
+2018-03-30 16:18:56,158 :: INFO :: This url is already in newscrawl: http://news.sky.com/story/hunt-to-get-15m-payout-from-hotcourses-sale-amid-nhs-crisis-10730426
+2018-03-30 16:18:56,159 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/mike-coffman-pushback-obamacare-repeal_us_587b8ca4e4b09281d0eb5f7c?ncid=engmodushpmg00000004
+2018-03-30 16:18:56,161 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/showbiz/tv-radio/754491/Celebrity-Big-Brother-2017-Calum-Best-evicted-next-one-way-ticket-James-Jordan-CBB
+2018-03-30 16:18:56,164 :: INFO :: Failed enough in failsSD: http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/
+2018-03-30 16:18:56,165 :: INFO :: This url is already in newscrawl: https://www.policeone.com/patrol-issues/articles/279911006-Ponch-and-Jon-are-back-in-CHiPs-movie-trailer/?utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:18:56,166 :: INFO :: This url is already in newscrawl: http://www.star-telegram.com/news/state/texas/article126536929.html
+2018-03-30 16:18:56,167 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/news/uk/754196/army-housing-soldiers-hotels-taxpayers-accommodation-crisis
+2018-03-30 16:18:56,170 :: INFO :: This url is already in newscrawl: https://www.yahoo.com/news/germanys-merkel-warns-trump-against-protectionism-140002428.html
+2018-03-30 16:18:56,172 :: INFO :: This url is already in newscrawl: http://www.hindustantimes.com/india-news/singham-redux-mp-town-protests-transfer-of-ips-officer-who-busted-hawala-racket/story-H2r6eRSVirSexihx2eTReI.html
+2018-03-30 16:18:56,173 :: INFO :: This url is already in newscrawl: http://www.cbc.ca/1.3935762-
+2018-03-30 16:18:56,174 :: INFO :: This url is already in newscrawl: http://insider.foxnews.com/2017/01/14/bikers-trump-wall-meat-inauguration-day-protests-donald-trump
+2018-03-30 16:18:56,175 :: INFO :: This url is already in newscrawl: http://www.newsmax.com/MichaelReagan/democrats-russia-ronald-reagan/2016/12/13/id/763730/
+2018-03-30 16:18:56,177 :: INFO :: This url is already in newscrawl: https://globalnews.ca/news/3181741/twitter-has-discussed-the-idea-of-banning-donald-trump-report/
+2018-03-30 16:18:56,179 :: INFO :: This url is already in newscrawl: http://bleacherreport.com/articles/2687020-australian-open-2017-tv-schedule-day-by-day-listings-for-entire-tournament?utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:18:56,180 :: INFO :: This url is already in newscrawl: http://observer.com/2017/01/the-clinton-foundation-shuts-down-clinton-global-initiative/#.WHu7nNecaWg.twitter
+2018-03-30 16:18:56,205 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/world/2017/jan/15/democrats-inauguration-boycott-john-lewis-trump?CMP=share_btn_tw
+2018-03-30 16:18:56,210 :: INFO :: This url is already in newscrawl: https://www.dailykos.com/stories/2017/1/15/1620767/-Watch-a-Republican-Congressman-run-away-from-his-own-meeting-after-huge-turnout-from-constituents
+2018-03-30 16:18:56,226 :: INFO :: This url is already in newscrawl: https://www.villagevoice.com/2017/01/11/womens-groups-demand-nypd-reopen-greenpoint-date-rape-cases/
+2018-03-30 16:18:56,229 :: INFO :: Failed enough in failsSD: https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/
+2018-03-30 16:18:56,230 :: INFO :: This url is already in newscrawl: https://www.haaretz.com/israel-news/.premium-1.764782
+2018-03-30 16:18:56,231 :: INFO :: This url is already in newscrawl: http://www.sportsnet.ca/hockey/nhl/breaking-jonathan-toewss-career-worst-scoring-output/
+2018-03-30 16:18:56,232 :: INFO :: This url is already in newscrawl: https://www.theatlantic.com/international/archive/2017/01/kompromat-trump-dossier/512891/?utm_source=twb
+2018-03-30 16:18:56,236 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/politics/a-c-grayling-general-strike-brexit-coup-parliament-vote-article-50-bristol-interview-remain-eu-a7527831.html
+2018-03-30 16:18:56,246 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/uk-news/2017/jan/15/hard-brexit-means-retiring-later-britons-warned?CMP=Share_AndroidApp_Tweet
+2018-03-30 16:18:56,248 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/sports/2017/01/14/nfl-preview-no-anthem-kneelers-left-save-come-back-nfl-waters/
+2018-03-30 16:18:56,250 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/film/2017/jan/14/emily-watson-apple-tree-yard-middle-aged-women-infidelity-sexuality
+2018-03-30 16:18:59,249 :: ERROR :: Exception location: privateGet
+Exception type: <class 'requests.exceptions.ProxyError'>
+Exception: HTTPSConnectionPool(host='www.forbes.com', port=443): Max retries exceeded with url: /forbes/welcome/?toURL=https://www.forbes.com/sites/bernardmarr/2016/09/23/how-machine-learning-big-data-and-ai-are-changing-healthcare-forever/&refURL=&referrer= (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 403 Forbidden',)))
+Traceback (most recent call last):
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connection.py", line 294, in connect
+    self._tunnel()
+  File "/home/hayj/Programs/python-3.5.4/lib/python3.5/http/client.py", line 832, in _tunnel
+    message.strip()))
+OSError: Tunnel connection failed: 403 Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/urllib3-1.22-py3.5.egg/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.forbes.com', port=443): Max retries exceeded with url: /forbes/welcome/?toURL=https://www.forbes.com/sites/bernardmarr/2016/09/23/how-machine-learning-big-data-and-ai-are-changing-healthcare-forever/&refURL=&referrer= (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 403 Forbidden',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hayj/Drive/Workspace/Python/Crawling/WebBrowser/hjwebbrowser/httpbrowser.py", line 254, in privateGet
+    headers=self.header,
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/hayj/.virtualenvs/newscrawler-venv/lib/python3.5/site-packages/requests-2.18.4-py3.5.egg/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='www.forbes.com', port=443): Max retries exceeded with url: /forbes/welcome/?toURL=https://www.forbes.com/sites/bernardmarr/2016/09/23/how-machine-learning-big-data-and-ai-are-changing-healthcare-forever/&refURL=&referrer= (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 403 Forbidden',)))
+
+2018-03-30 16:18:59,249 :: ERROR :: Getting https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/bernardmarr/2016/09/23/how-machine-learning-big-data-and-ai-are-changing-healthcare-forever/&refURL=&referrer= error. httpsconnectionpool(host='www.forbes.com', port=443): max retries exceeded with url: /forbes/welcome/?tourl=https://www.forbes.com/sites/bernardmarr/2016/09/23/how-machine-learning-big-data-and-ai-are-changing-healthcare-forever/&refurl=&referrer= (caused by proxyerror('cannot connect to proxy.', oserror('tunnel connection failed: 403 forbidden',)))
+2018-03-30 16:19:00,354 :: INFO :: refused (410) from Denis-74 (107.150.70.6) https://naijadailyfeed.wordpress.com/2017/01/15/highlight-manchester-united-1-1-liverpool-premier-league-2017
+2018-03-30 16:19:02,695 :: INFO :: refused (410) from Denis-74 (107.150.70.6) https://bestofticket.wordpress.com/?p=3650390
+2018-03-30 16:19:04,921 :: INFO :: duplicate (200) from Louis-85 (196.16.11.165) https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/bernardmarr/2016/09/23/how-machine-learning-big-data-and-ai-are-changing-healthcare-forever/&refURL=&referrer=
+2018-03-30 16:19:06,221 :: ERROR :: Getting http://www.telegraph.co.uk/gardening/how-to-grow/pikaplant-maintenance-free-plants-cheer-workplace/ timeout. httpsconnectionpool(host='www.telegraph.co.uk', port=443): read timed out. (read timeout=1)
+2018-03-30 16:19:06,222 :: ERROR :: The request to http://www.telegraph.co.uk/gardening/how-to-grow/pikaplant-maintenance-free-plants-cheer-workplace/ failed. We retry on an other proxy port.
+2018-03-30 16:19:07,768 :: INFO :: success (200) from Louis-85 (196.16.11.165) https://www.theguardian.com/global-development-professionals-network/2017/jan/14/aid-in-reverse-how-poor-countries-develop-rich-countries
+2018-03-30 16:19:12,105 :: INFO :: success (200) from Louis-85 (196.16.11.165) http://www.ajc.com/news/local/bishop-eddie-long-dies-aggressive-form-cancer-church-says/K7oodHbeXnjyOc3JgVuyVI/
+2018-03-30 16:19:13,868 :: INFO :: success (200) from Denis-74 (107.150.70.6) http://www.telegraph.co.uk/gardening/how-to-grow/pikaplant-maintenance-free-plants-cheer-workplace/
+2018-03-30 16:19:17,023 :: INFO :: success (200) from Louis-85 (196.16.11.165) https://www.dailykos.com/stories/2017/01/15/1620784/-Trump-team-warns-ethics-chief-to-be-careful-about-criticizing-Trump
+2018-03-30 16:19:19,916 :: ERROR :: Getting https://mobile.nytimes.com/2017/01/15/arts/donald-trump-saturday-night-live.html?smid=tw-share&referer= timeout. httpsconnectionpool(host='mobile.nytimes.com', port=443): read timed out. (read timeout=1)
+2018-03-30 16:19:19,916 :: ERROR :: The request to https://mobile.nytimes.com/2017/01/15/arts/donald-trump-saturday-night-live.html?smid=tw-share&referer= failed. We retry on an other proxy port.
+2018-03-30 16:19:26,235 :: INFO :: success (200) from Denis-74 (107.150.70.6) https://mobile.nytimes.com/2017/01/15/arts/donald-trump-saturday-night-live.html?smid=tw-share&referer=
+2018-03-30 16:19:26,736 :: INFO :: Previous params score: 4.7
+2018-03-30 16:19:26,736 :: INFO :: Now we explore...
+2018-03-30 16:19:26,736 :: INFO :: New params:
+{
+	browserCount: 2,
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.5
+	},
+	parallelRequests: 2
+}
+2018-03-30 16:41:38,121 :: INFO :: twitter newscrawl-test (version 0.0.1) initialised.
+2018-03-30 16:41:38,122 :: WARNING :: WARNING: pls set parallelRequests!!!!!!!!!!!!!
+2018-03-30 16:41:38,124 :: INFO :: Reseting tor services...
+2018-03-30 16:41:38,705 :: INFO :: Tor services reseted.
+2018-03-30 16:41:38,705 :: INFO :: Initializing tor services...
+2018-03-30 16:41:39,789 :: INFO :: Tor services initialized.
+2018-03-30 16:41:39,791 :: INFO :: New params:
+{
+	proxyInstanciationRate: 
+	{
+		beta: NormalizedLawBeta.LOG,
+		alpha: 0.5
+	},
+	parallelRequests: 2,
+	browserCount: 2
+}
+2018-03-30 16:41:39,791 :: INFO :: Reseting tor services...
+2018-03-30 16:41:40,388 :: INFO :: Tor services reseted.
+2018-03-30 16:41:40,388 :: INFO :: Initializing tor services...
+2018-03-30 16:41:41,420 :: INFO :: Tor services initialized.
+2018-03-30 16:41:41,421 :: INFO :: Proxies instanciation (score (mean duration in seconds), ip, instanciation):
+0	104.144.153.56	-
+0	107.150.70.6	-
+0	198.12.121.233	
+0	104.160.13.170	
+0	104.160.30.179	
+0	198.12.121.216	
+0	196.16.11.165	
+
+2018-03-30 16:41:41,426 :: INFO :: This url is already in newscrawl: http://bit.ly/2DVd8jm
+2018-03-30 16:41:41,427 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-philippines-politics-robredo-idUSKBN1411NN?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:41:41,430 :: INFO :: This url is already in newscrawl: http://www.thehindu.com/news/Heavy-rains-likely-over-north-interior-T.N.-south-Karnataka-and-north-Kerala/article16793334.ece
+2018-03-30 16:41:41,431 :: INFO :: This url is already in newscrawl: https://www.cbsnews.com/news/2-cops-shot-but-shoot-back-while-serving-drugs-search-warrant-in-georgia/
+2018-03-30 16:41:41,432 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/idUSASC09MY8?type=companyNews&feedType=RSS&feedName=companyNews
+2018-03-30 16:41:41,433 :: INFO :: This url is already in newscrawl: http://www.taipeitimes.com/News/biz/print/2008/02/23/2003402550
+2018-03-30 16:41:41,435 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/world/chinese-paper-calls-trump-as-ignorant-as-a-childafter-taiwan-comment/2016/12/12/d91fbaea-c02c-11e6-b20d-3075b273feeb_story.html
+2018-03-30 16:41:41,436 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/home-news/national-action-british-neo-nazi-group-to-be-classed-as-terror-organisation-and-banned-first-time-a7468136.html
+2018-03-30 16:41:41,437 :: INFO :: This url is already in newscrawl: https://www.washingtonpost.com/blogs/plum-line/wp/2016/12/12/top-republicans-respond-to-russia-news-with-ludicrous-and-dangerous-spin/?utm_term=.f8366a27fc42
+2018-03-30 16:41:41,442 :: INFO :: Failed enough in failsSD: https://www.alternet.org/activism/8-strategies-confronting-hate-dont-involve-safety-pin
+2018-03-30 16:41:41,445 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/australia-news/2016/dec/12/dylan-voller-says-he-felt-defenceless-panicked-restraint-chair-don-dale-northern-territory?CMP=share_btn_tw
+2018-03-30 16:41:41,448 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/american-muslims-march-white-house-nseers?utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:41:41,452 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/us-news/2016/dec/12/donald-trump-environment-climate-change-skeptics?CMP=Share_AndroidApp_Tweet
+2018-03-30 16:41:41,453 :: INFO :: This url is already in newscrawl: http://www.reuters.com/article/us-eu-congo-sanctions-idUSKBN1411RY?feedType=RSS&feedName=worldNews&utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:41:41,454 :: INFO :: This url is already in newscrawl: http://www.truth-out.org/opinion/item/38682-socialism-for-the-rich-capitalism-for-the-poor-an-interview-with-noam-chomsky
+2018-03-30 16:41:41,455 :: INFO :: This url is already in newscrawl: http://www.corrections.com/articles/45006?utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:41:41,457 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/natasha-stoynoff-donald-trump-witnesses-people-magazine_us_58067448e4b0b994d4c21138?ncid=engmodushpmg00000004
+2018-03-30 16:41:41,460 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development/2017/jan/13/human-rights-abuses-bahrain-cast-shadow-over-2m-uk-aid-support
+2018-03-30 16:41:41,461 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/big-government/2017/01/14/tancredo-report-reveals-massive-indoctrination-students-universities-transformative-civic-engagement/
+2018-03-30 16:41:41,462 :: INFO :: This url is already in newscrawl: https://www.christiancentury.org/blog-post/how-king%E2%80%99s-political-vision-became-politically-irrelevant
+2018-03-30 16:41:41,463 :: INFO :: This url is already in newscrawl: http://guardian.ng/news/borno-bans-sales-of-charcoal-firewood-on-streets/?F
+2018-03-30 16:41:41,465 :: INFO :: This url is already in newscrawl: https://www.forbes.com/sites/insertcoin/2017/01/15/how-to-fix-pokemon-gos-annoying-ios-audio-dampening-bug/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#7ebfead722d3
+2018-03-30 16:41:41,466 :: INFO :: This url is already in newscrawl: http://www.telegraph.co.uk/news/2017/01/15/anis-amri-high-ecstasy-cocaine-berlin-market-attack/
+2018-03-30 16:41:41,468 :: INFO :: This url is already in newscrawl: https://www.fastcompany.com/3066849/qualcomm-drones-vr-cars-satellites
+2018-03-30 16:41:41,469 :: INFO :: This url is already in newscrawl: http://mashable.com/2017/01/14/niagara-falls-runs-dry/?utm_cid=hp-h-7#g4HW5mbDX5qj
+2018-03-30 16:41:41,469 :: INFO :: This url is already in newscrawl: http://www.miamiherald.com/news/nation-world/world/americas/guantanamo/article123591209.html
+2018-03-30 16:41:41,470 :: INFO :: This url is already in newscrawl: http://www.presidency.ucsb.edu/ws/index.php?pid=14392&st=&st1=
+2018-03-30 16:41:41,471 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/cornell-william-brooks-donald-trump_us_587a8a9ae4b09281d0eb4a51?ncid=engmodushpmg00000004
+2018-03-30 16:41:41,472 :: INFO :: This url is already in newscrawl: https://hotair.com/archives/2017/01/15/latest-hot-rumor-trump-to-boot-the-press-corps-from-the-white-house/
+2018-03-30 16:41:41,473 :: INFO :: This url is already in newscrawl: http://news.sky.com/story/hunt-to-get-15m-payout-from-hotcourses-sale-amid-nhs-crisis-10730426
+2018-03-30 16:41:41,474 :: INFO :: This url is already in newscrawl: https://www.huffingtonpost.com/entry/mike-coffman-pushback-obamacare-repeal_us_587b8ca4e4b09281d0eb5f7c?ncid=engmodushpmg00000004
+2018-03-30 16:41:41,474 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/showbiz/tv-radio/754491/Celebrity-Big-Brother-2017-Calum-Best-evicted-next-one-way-ticket-James-Jordan-CBB
+2018-03-30 16:41:41,477 :: INFO :: Failed enough in failsSD: http://www.wnd.com/2017/01/social-justice-incompatible-with-end-times-focus/
+2018-03-30 16:41:41,478 :: INFO :: This url is already in newscrawl: https://www.policeone.com/patrol-issues/articles/279911006-Ponch-and-Jon-are-back-in-CHiPs-movie-trailer/?utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:41:41,479 :: INFO :: This url is already in newscrawl: http://www.star-telegram.com/news/state/texas/article126536929.html
+2018-03-30 16:41:41,480 :: INFO :: This url is already in newscrawl: http://www.express.co.uk/news/uk/754196/army-housing-soldiers-hotels-taxpayers-accommodation-crisis
+2018-03-30 16:41:41,481 :: INFO :: This url is already in newscrawl: https://www.yahoo.com/news/germanys-merkel-warns-trump-against-protectionism-140002428.html
+2018-03-30 16:41:41,482 :: INFO :: This url is already in newscrawl: http://www.hindustantimes.com/india-news/singham-redux-mp-town-protests-transfer-of-ips-officer-who-busted-hawala-racket/story-H2r6eRSVirSexihx2eTReI.html
+2018-03-30 16:41:41,482 :: INFO :: This url is already in newscrawl: http://www.cbc.ca/1.3935762-
+2018-03-30 16:41:41,483 :: INFO :: This url is already in newscrawl: http://insider.foxnews.com/2017/01/14/bikers-trump-wall-meat-inauguration-day-protests-donald-trump
+2018-03-30 16:41:41,483 :: INFO :: This url is already in newscrawl: http://www.newsmax.com/MichaelReagan/democrats-russia-ronald-reagan/2016/12/13/id/763730/
+2018-03-30 16:41:41,484 :: INFO :: This url is already in newscrawl: https://globalnews.ca/news/3181741/twitter-has-discussed-the-idea-of-banning-donald-trump-report/
+2018-03-30 16:41:41,484 :: INFO :: This url is already in newscrawl: http://bleacherreport.com/articles/2687020-australian-open-2017-tv-schedule-day-by-day-listings-for-entire-tournament?utm_source=dlvr.it&utm_medium=twitter
+2018-03-30 16:41:41,485 :: INFO :: This url is already in newscrawl: http://observer.com/2017/01/the-clinton-foundation-shuts-down-clinton-global-initiative/#.WHu7nNecaWg.twitter
+2018-03-30 16:41:41,486 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/world/2017/jan/15/democrats-inauguration-boycott-john-lewis-trump?CMP=share_btn_tw
+2018-03-30 16:41:41,487 :: INFO :: This url is already in newscrawl: https://www.dailykos.com/stories/2017/1/15/1620767/-Watch-a-Republican-Congressman-run-away-from-his-own-meeting-after-huge-turnout-from-constituents
+2018-03-30 16:41:41,487 :: INFO :: This url is already in newscrawl: https://www.villagevoice.com/2017/01/11/womens-groups-demand-nypd-reopen-greenpoint-date-rape-cases/
+2018-03-30 16:41:41,489 :: INFO :: Failed enough in failsSD: https://blogs.wsj.com/washwire/2017/01/10/unparalleled-resistance-looms-for-trump-after-the-inaugural/
+2018-03-30 16:41:41,490 :: INFO :: This url is already in newscrawl: https://www.haaretz.com/israel-news/.premium-1.764782
+2018-03-30 16:41:41,491 :: INFO :: This url is already in newscrawl: http://www.sportsnet.ca/hockey/nhl/breaking-jonathan-toewss-career-worst-scoring-output/
+2018-03-30 16:41:41,491 :: INFO :: This url is already in newscrawl: https://www.theatlantic.com/international/archive/2017/01/kompromat-trump-dossier/512891/?utm_source=twb
+2018-03-30 16:41:41,493 :: INFO :: Failed enough in failsSD: https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/bernardmarr/2016/09/23/how-machine-learning-big-data-and-ai-are-changing-healthcare-forever/&refURL=&referrer=
+2018-03-30 16:41:41,494 :: INFO :: This url is already in newscrawl: http://www.independent.co.uk/news/uk/politics/a-c-grayling-general-strike-brexit-coup-parliament-vote-article-50-bristol-interview-remain-eu-a7527831.html
+2018-03-30 16:41:41,496 :: INFO :: Failed enough in failsSD: https://naijadailyfeed.wordpress.com/2017/01/15/highlight-manchester-united-1-1-liverpool-premier-league-2017
+2018-03-30 16:41:41,499 :: INFO :: Failed enough in failsSD: https://bestofticket.wordpress.com/?p=3650390
+2018-03-30 16:41:41,500 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/uk-news/2017/jan/15/hard-brexit-means-retiring-later-britons-warned?CMP=Share_AndroidApp_Tweet
+2018-03-30 16:41:41,501 :: INFO :: This url is already in newscrawl: http://www.breitbart.com/sports/2017/01/14/nfl-preview-no-anthem-kneelers-left-save-come-back-nfl-waters/
+2018-03-30 16:41:41,502 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/film/2017/jan/14/emily-watson-apple-tree-yard-middle-aged-women-infidelity-sexuality
+2018-03-30 16:41:41,503 :: INFO :: This url is already in newscrawl: http://www.telegraph.co.uk/gardening/how-to-grow/pikaplant-maintenance-free-plants-cheer-workplace/
+2018-03-30 16:41:41,504 :: INFO :: This url is already in newscrawl: https://www.theguardian.com/global-development-professionals-network/2017/jan/14/aid-in-reverse-how-poor-countries-develop-rich-countries
+2018-03-30 16:41:41,504 :: INFO :: This url is already in newscrawl: http://www.ajc.com/news/local/bishop-eddie-long-dies-aggressive-form-cancer-church-says/K7oodHbeXnjyOc3JgVuyVI/
+2018-03-30 16:41:41,505 :: INFO :: This url is already in newscrawl: https://www.dailykos.com/stories/2017/01/15/1620784/-Trump-team-warns-ethics-chief-to-be-careful-about-criticizing-Trump
+2018-03-30 16:41:41,505 :: INFO :: This url is already in newscrawl: https://mobile.nytimes.com/2017/01/15/arts/donald-trump-saturday-night-live.html?smid=tw-share&referer=
+2018-03-30 16:41:45,540 :: INFO :: success (200) from Michèle-11 (104.144.153.56) http://comicbook.com/2016/11/03/starship-troopers-reboot-in-development/?utm_campaign=crowdfire&utm_content=crowdfire&utm_medium=social&utm_source=twitter
+2018-03-30 16:41:46,399 :: INFO :: success (200) from Romain-29 (107.150.70.6) https://mobile.nytimes.com/2017/01/15/us/politics/one-hand-on-light-switch-obama-isnt-flipping-to-off-just-yet.html?referer=
+2018-03-30 16:41:47,906 :: INFO :: success (200) from Michèle-11 (104.144.153.56) http://wgntv.com/2017/01/14/ringling-brothers-closing-circus/
+2018-03-30 16:41:49,390 :: INFO :: success (200) from Romain-29 (107.150.70.6) http://www.new-magazine.co.uk/celebrity-news/976831/competition-win-a-place-at-a-bridget-jones-themed-boom-cycle-class-and-a-copy-of-the-dvd
