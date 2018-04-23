@@ -47,7 +47,7 @@ def alreadyFailedFunct(crawlingElement):
 
 def failedCallback(data):
     try:
-        url = data["crawlingElement"].data
+        url = data["url"]
         if failsSD.has(url):
             failsSD[url] += 1
         else:
@@ -163,8 +163,8 @@ if __name__ == '__main__':
     # If we want to unshort some urls in good users (set it as False):
     newsCrawlerGeneratorUnshortenerReadOnly = True
     # To handle twitter user scores:
-    notBotThreshold = 0.93
-    relevanceThreshold = 0.6
+    notBotThreshold = 0.8
+    relevanceThreshold = 0.5
     # Proxies:
     if TEST:
         proxies = getProxiesTest()
@@ -252,7 +252,7 @@ if __name__ == '__main__':
     if TEST:
         torPortCount = 2
     if maxRetryWithTor > 0:
-    	getTorSingleton(portCount=torPortCount, logger=logger, verbose=True)
+        getTorSingleton(portCount=torPortCount, logger=logger, verbose=True)
     # Crawler:
     crawler = Crawler \
     (

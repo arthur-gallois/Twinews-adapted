@@ -89,8 +89,6 @@ class ScoreSharesGenerator():
                     verbose=self.verbose,
                 )
                 currentTop = currentTuScores.top()
-                log("Top for " + sdVersion + ":\n" + listToStr(currentTop[0:20]) + "\n...\n" + listToStr(currentTop[-20:]), self)
-                log("Total for " + sdVersion + ": " + str(len(currentTop)), self)
                 self.allTops.append(currentTop)
                 yield currentTop
 
@@ -132,14 +130,63 @@ class NewsSharesGenerator:
 
 
 def testOne():
-    tu = TwitterUser("873737446441332740")
-    printLTS(list(NewsSharesGenerator(user=tu)))
+    tu = TwitterUser("1347391")
+#     printLTS(list(NewsSharesGenerator(user=tu)))
+    printLTS(list(UserSharesGenerator(user=tu)))
     print(tu.notBotScore())
     print(tu.relevanceScore())
 
-def unshortAll():
-    pass # TODO
-    # N'executer que relevanceScore et mettre unshortenerReadOnly as False
+def unshortSome():
+    if TEST:
+        logger = None
+    else:
+        logger = Logger("sharesgen-generatescores-" + getRandomStr() + ".log")
+    tuscSD = SerializableDict("tuscSD", limit=100)
+    tusc4TwitterUserScoresParams = \
+    {
+        "logger": logger,
+        "shortenedAsNews": False,
+        "notBotThreshold": 0.90,
+        "relevanceThreshold": 0.85,
+        "sdVersion": "0.0.4",
+        "unshortenerReadOnly": True,
+    }
+    tusc4 = getTwitterUserScoresSingleton\
+    (
+        twitterUserScoresParams=tusc4TwitterUserScoresParams,
+    )
+    top4 = tusc4.top()
+    tuscSD[str(tusc4TwitterUserScoresParams)] = top4
+    tusc3TwitterUserScoresParams = \
+    {
+        "logger": logger,
+        "shortenedAsNews": False,
+        "notBotThreshold": 0.95,
+        "relevanceThreshold": 0.80,
+        "sdVersion": "0.0.4",
+        "unshortenerReadOnly": True,
+    }
+    tusc3 = getTwitterUserScoresSingleton\
+    (
+        twitterUserScoresParams=tusc3TwitterUserScoresParams,
+    )
+    top3 = tusc3.top()
+    tuscSD[str(tusc3TwitterUserScoresParams)] = top3
+    # TODO OOOOOOOO OOOOOOOOOO OOOOOOOOOOOOOOO TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST
+    # We have to take users who are in tusc 0.0.4 but not in 0.0.3 so we know
+    # they have a lot of shortened urls
+    shortenerLovers = []
+    for currentTop4 in top4:
+        found = False
+        for currentTop3 in top3:
+            if currentTop4[0] == currentTop3[0]:
+                found = True
+                break
+        if not found:
+            shortenerLovers.append(currentTop4)
+    log("Top4 - top3:\n" + listToStr(shortenerLovers[0:20]) + "\n...\n" + listToStr(shortenerLovers[-20:]), logger)
+    log("Total for top4 - top3: " + str(len(shortenerLovers)), logger)
+
 
 def generateScores():
     """"
@@ -196,7 +243,9 @@ def generatorTest():
 
 if __name__ == '__main__':
     # WARNING: set unshortenerReadOnly as False
-    testOne()
+#     generateScores()
+    unshortSome()
+#     testOne()
 
 
 

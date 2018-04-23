@@ -2,7 +2,7 @@
 
 # nn pew in newscrawler-venv python ~/wm-dist-tmp/NewsCrawler/newscrawler/sharesgenerator.py
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
 from systemtools.basics import *
 from datatools.json import *
@@ -136,6 +136,7 @@ class TwitterUserScores():
         unshortenerReadOnly=True, # TODO set it as False
         cacheLimit=400000, # TODO set it as True
         sdVersion=None,
+        shortenedAsNews=False,
     ):
         self.logger = logger
         self.verbose = verbose
@@ -160,6 +161,7 @@ class TwitterUserScores():
         self.maxRatioDomainBadInterval = maxRatioDomainBadInterval
         self.sdVersion = sdVersion
         self.unshortenerReadOnly = unshortenerReadOnly
+        self.shortenedAsNews = shortenedAsNews
 
         # if modify versions:
         if self.sdVersion is None:
@@ -178,7 +180,7 @@ class TwitterUserScores():
                 self.tweetOverlapCheckCount = 300
 
         # We create an unshortener to check domains of share:
-        self.uns = Unshortener()
+        self.uns = Unshortener(readOnly=self.unshortenerReadOnly)
 
         # And a urlParser:
         self.urlParser = URLParser()
@@ -243,7 +245,8 @@ class TwitterUserScores():
 
     def notBotScoreFunct(self, userId, userData):
         """
-            This function give a score which try to say if the user is a normal user (not a bot, not a leader or verified user...).
+            This function give a score which try to say if the user is
+            a normal user (not a bot, not a leader or verified user...).
         """
         if not isUserData(userData):
             return self.defaultScore
@@ -523,6 +526,9 @@ class TwitterUserScores():
                                     userData, *args, **kwargs)
 
     def relevanceScoreFunct(self, userId, userData):
+        """
+            This function score the relevance of the user for news recommandation
+        """
         if not isUserData(userData):
             return self.defaultScore
 
@@ -558,24 +564,60 @@ class TwitterUserScores():
 
             # News count:
             coeff = 1.0
-            newsCount = 0
-            for tweet in userData["tweets"]:
-                for share in tweet["shares"]:
-                    url = share["url"]
-                    if self.nuf.isNews(url):
-                        newsCount += 1
-            if TEST:
-                log("newsCount=" + str(newsCount), self)
-            newsCountScore = linearScore\
-            (
-                newsCount,
-                self.notGreatNewsCountInterval[0],
-                self.notGreatNewsCountInterval[1],
-                stayBetween0And1=True,
-            )
-            newsCountScore = newsCountScore * coeff
-            score += newsCountScore
-            featuresCount += coeff
+            if coeff > 0.0:
+                newsCount = 0
+                for tweet in userData["tweets"]:
+                    for share in tweet["shares"]:
+                        url = share["url"]
+                        if self.nuf.isNews(url) or (self.shortenedAsNews and self.uns.isShortened(url)):
+                            newsCount += 1
+                if TEST:
+                    log("newsCount=" + str(newsCount), self)
+                newsCountScore = linearScore\
+                (
+                    newsCount,
+                    self.notGreatNewsCountInterval[0],
+                    self.notGreatNewsCountInterval[1],
+                    stayBetween0And1=True,
+                )
+                newsCountScore = newsCountScore * coeff
+                score += newsCountScore
+                featuresCount += coeff
+
+            # TODO test
+            # News count estimation over shortened urls:
+            coeff = 0.0
+            if  coeff > 0.0:
+                # The number of shortened urls that we know for sure it's news behind:
+                unshortenedNewsCount = 0
+                # The number of shortened url:
+                shortenedCount = 0
+                # The number of urls that were previously unshortend:
+                unshortenedCount = 0
+                for tweet in userData["tweets"]:
+                    for share in tweet["shares"]:
+                        url = share["url"]
+                        if self.uns.isShortened(url):
+                            shortenedCount += 1
+                            unshortenedUrl = self.uns.unshort(url)
+                            if unshortenedUrl is not None:
+                                unshortenedCount += 1
+                                if self.nuf.isNews(unshortenedUrl):
+                                    unshortenedNewsCount += 1
+                # Now we try to estimate the number of news which are behind shortened urls:
+                newsRatio = unshortenedNewsCount / unshortenedCount
+                newsCountApprox = int(newsRatio * shortenedCount)
+                # And we add the score:
+                newsCountApproxScore = linearScore\
+                (
+                    newsCountApprox,
+                    self.notGreatNewsCountInterval[0],
+                    self.notGreatNewsCountInterval[1],
+                    stayBetween0And1=True,
+                )
+                newsCountApproxScore = newsCountApproxScore * coeff
+                score += newsCountApproxScore
+                featuresCount += coeff
 
             # Finally we return the score:
             finalScore = score / featuresCount
@@ -639,7 +681,10 @@ class TwitterUserScores():
                     if TEST:
                         print("currentOverAllScore=" + str(currentOverAllScore))
                     allNotBot.append((key, currentOverAllScore))
-        return sortBy(allNotBot, desc=True, index=1)
+        currentTop = sortBy(allNotBot, desc=True, index=1)
+        log("Top for " + self.sdVersion + ":\n" + listToStr(currentTop[0:20]) + "\n...\n" + listToStr(currentTop[-20:]), self)
+        log("Total for " + self.sdVersion + ": " + str(len(currentTop)), self)
+        return currentTop
 
 userCrawlSingleton = None
 def getUserCrawlSingleton(dbName="twitter", collectionName="usercrawl",
