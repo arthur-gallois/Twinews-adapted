@@ -1,0 +1,34 @@
+{
+	"maxUser": 20000,
+	"notBotThreshold": 0.5,
+	"datasetRelevanceThreshold": 0.6,
+	"version": null,
+	"compress": true,
+	"tar": true,
+	"dataSubDir": "/TwitterNewsrec",
+	"copyConfig": true,
+	"copyIndexor": true,
+	"addUserStatistics": true,
+	"removeHtml": true,
+	"anonymize": false,
+	"datasetFolderName": "twitternewsrec",
+	"minNewsTextSize": 200,
+	"overlapNgramsMin": 4,
+	"overlapBatchMaxSize": 800,
+	"overlapSimilarityThreshold": 0.93,
+	"domainsFilter": null,
+	"newsCrawlFieldExcludes":
+	[
+		"_id",
+		"version",
+		"hostname",
+		"timestamp",
+		"httpStatus",
+		"browser",
+		"fromUnshortener",
+		"status",
+		"historyCount",
+		"proxy",
+		"message"
+	]
+}
