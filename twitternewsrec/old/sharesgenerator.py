@@ -1,11 +1,11 @@
 # coding: utf-8
 
-# nn pew in newscrawler-venv python ~/wm-dist-tmp/NewsCrawler/newscrawler/sharesgenerator.py
+# nn pew in newscrawler-venv python ~/wm-dist-tmp/NewsCrawler/newscrawler/sharesgenerator.py ; observe nohup.out
 
 import sys, os; sys.path.append("/".join(os.path.abspath(__file__).split("/")[0:-2]))
 
 from systemtools.basics import *
-from datatools.json import *
+from datatools.jsonreader import *
 from datatools.url import *
 from datatools.csvreader import *
 from systemtools.file import *
@@ -23,16 +23,16 @@ try:
     from systemtools.hayj import *
 except: pass
 import datetime
-from newscrawler.twitteruser import *
 
 
 class UserSharesGenerator():
-    def __init__(self, user, logger=None, verbose=True):
+    def __init__(self, user, logger=None, verbose=True, removeDuplicates=False):
         """
             user can be userData or userId or a TwitterUser instance
         """
+        self.removeDuplicates = removeDuplicates
         if isinstance(user, str):
-            self.userData = TwitterUser(user)
+            self.userData = TwitterUser(user).getUserData()
         elif isinstance(user, dict):
             self.userData = user
         else:
@@ -42,12 +42,18 @@ class UserSharesGenerator():
             self.userData = self.userData["scrap"]
 
     def __iter__(self):
+        shares = []
         if dictContains(self.userData, "tweets"):
             for tweet in self.userData["tweets"]:
                 for share in tweet["shares"]:
                     url = share["url"]
                     url = self.urlParser.normalize(url)
-                    yield url
+                    shares.append(url)
+        if len(shares) > 0:
+            if self.removeDuplicates:
+                shares = set(shares)
+            for share in shares:
+                yield share
 
 class ScoreSharesGenerator():
     """
@@ -60,7 +66,7 @@ class ScoreSharesGenerator():
     def __init__(self, logger=None, verbose=True,
                  notBotThreshold=0.95,
                  relevanceThreshold=0.85,
-                 tuScoresPriorityVersion=["0.0.3", "0.0.2"],
+                 tuScoresPriorityVersion=["0.0.10"], # "0.0.3", "0.0.2"
                  unshortenerReadOnly=True):
         self.logger = logger
         self.verbose = verbose
@@ -130,63 +136,77 @@ class NewsSharesGenerator:
 
 
 def testOne():
-    tu = TwitterUser("1347391")
+#     tu = TwitterUser("18746212")
+#     tu = TwitterUser("250376045")
+    tu = TwitterUser("476755076")
 #     printLTS(list(NewsSharesGenerator(user=tu)))
     printLTS(list(UserSharesGenerator(user=tu)))
     print(tu.notBotScore())
     print(tu.relevanceScore())
 
-def unshortSome():
-    if TEST:
-        logger = None
+def getShortenerLovers(logger=None, verbose=True):
+    # To retain all, we create tuscSD:
+    (user, password, host) = getOctodsMongoAuth()
+    tuscSD = SerializableDict("tuscSD_v2", limit=100,
+                              user=user, password=password, host=host,
+                              logger=logger,
+                              useMongodb=True)
+    # Now we generate all keys to retain:
+    tusc4TwitterUserScoresParams = sortByKey(\
+    {
+        "shortenedAsNews": False,
+        "notBotThreshold": 0.6,
+        "relevanceThreshold": 0.6,
+        "sdVersion": "0.0.4",
+        "unshortenerReadOnly": True,
+    })
+    tusc3TwitterUserScoresParams = sortByKey(\
+    {
+        "shortenedAsNews": False,
+        "notBotThreshold": 0.6,
+        "relevanceThreshold": 0.6,
+        "sdVersion": "0.0.10",
+        "unshortenerReadOnly": True,
+    })
+    tusc3Key = str(tusc3TwitterUserScoresParams) # The key for 0.0.3 top
+    tusc4Key = str(tusc4TwitterUserScoresParams) # The key for 0.0.4 top
+    topSubKey = tusc3Key + tusc4Key + "top4-top3" # The key for top4 - top3
+    # Now we add the logger:
+    for current in [tusc4TwitterUserScoresParams, tusc3TwitterUserScoresParams]:
+        current["logger"] = logger
+    # And if we already calculated this top, we get it:
+    if topSubKey in tuscSD:
+        shortenerLovers = tuscSD[topSubKey]
     else:
-        logger = Logger("sharesgen-generatescores-" + getRandomStr() + ".log")
-    tuscSD = SerializableDict("tuscSD", limit=100)
-    tusc4TwitterUserScoresParams = \
-    {
-        "logger": logger,
-        "shortenedAsNews": False,
-        "notBotThreshold": 0.90,
-        "relevanceThreshold": 0.85,
-        "sdVersion": "0.0.4",
-        "unshortenerReadOnly": True,
-    }
-    tusc4 = getTwitterUserScoresSingleton\
-    (
-        twitterUserScoresParams=tusc4TwitterUserScoresParams,
-    )
-    top4 = tusc4.top()
-    tuscSD[str(tusc4TwitterUserScoresParams)] = top4
-    tusc3TwitterUserScoresParams = \
-    {
-        "logger": logger,
-        "shortenedAsNews": False,
-        "notBotThreshold": 0.95,
-        "relevanceThreshold": 0.80,
-        "sdVersion": "0.0.4",
-        "unshortenerReadOnly": True,
-    }
-    tusc3 = getTwitterUserScoresSingleton\
-    (
-        twitterUserScoresParams=tusc3TwitterUserScoresParams,
-    )
-    top3 = tusc3.top()
-    tuscSD[str(tusc3TwitterUserScoresParams)] = top3
-    # TODO OOOOOOOO OOOOOOOOOO OOOOOOOOOOOOOOO TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST
-    # We have to take users who are in tusc 0.0.4 but not in 0.0.3 so we know
-    # they have a lot of shortened urls
-    shortenerLovers = []
-    for currentTop4 in top4:
-        found = False
-        for currentTop3 in top3:
-            if currentTop4[0] == currentTop3[0]:
-                found = True
-                break
-        if not found:
-            shortenerLovers.append(currentTop4)
-    log("Top4 - top3:\n" + listToStr(shortenerLovers[0:20]) + "\n...\n" + listToStr(shortenerLovers[-20:]), logger)
-    log("Total for top4 - top3: " + str(len(shortenerLovers)), logger)
-
+        # Else we calculate all:
+        if tusc4Key in tuscSD:
+            top4 = tuscSD[tusc4Key]
+        else:
+            tusc4 = TwitterUserScores(**tusc4TwitterUserScoresParams)
+            top4 = tusc4.top()
+            tuscSD[tusc4Key] = top4
+        if tusc3Key in tuscSD:
+            top3 = tuscSD[tusc3Key]
+        else:
+            tusc3 = TwitterUserScores(**tusc3TwitterUserScoresParams)
+            top3 = tusc3.top()
+            tuscSD[tusc3Key] = top3
+        # We have to take users who are in tusc 0.0.4 but not in 0.0.10 so we know
+        # they have a lot of shortened urls
+        shortenerLovers = []
+        for currentTop4 in top4:
+            found = False
+            for currentTop3 in top3:
+                if currentTop4[0] == currentTop3[0]:
+                    found = True
+                    break
+            if not found:
+                shortenerLovers.append(currentTop4)
+    # We print all:
+    log("Top4 - top3:\n" + listToStr(shortenerLovers[0:20]) + "\n...\n" + listToStr(shortenerLovers[-20:]), logger, verbose=verbose)
+    log("Total for top4 - top3: " + str(len(shortenerLovers)), logger, verbose=verbose)
+    # And we retrun the result:
+    return shortenerLovers
 
 def generateScores():
     """"
@@ -231,6 +251,45 @@ def generateScores():
         time.sleep(20)
     resetCallTimeout()
 
+def generateScoresSimple():
+    """"
+        Execute several instances in octods server
+    """
+    if TEST:
+        logger = None
+    else:
+        logger = Logger("sharesgen-generatescoressimple-" + getRandomStr() + ".log")
+    log("STARTING", logger)
+    (user, password, host) = getStudentMongoAuth()
+    while True:
+        log("New loop.....", logger)
+        collection = MongoCollection("twitter", "usercrawl", user=user, password=password, host=host)
+#         userIdList = []
+#         count = 0
+        # ajouter projection={"user_id": 1} block à la fin du premier batch de 101 elements, bizarrre...
+        for current in collection.find().sort([("timestamp", -1)]).skip(getRandomInt(10000)): # .skip(getRandomInt(10000))
+            if getRandomFloat() > 0.8:
+                userId = current["user_id"]
+                try:
+                    log("Trying " + str(userId) + "...", logger)
+                    tu = TwitterUser(userId)
+                    tuNotBotScore = tu.notBotScore()
+                    tuRelevanceScore = tu.relevanceScore()
+                    log("userId=" + str(tu.getUserId()), logger)
+                    log("tuNotBotScore=" + str(tuNotBotScore), logger)
+                    log("tuRelevanceScore=" + str(tuRelevanceScore), logger)
+                    log("\n\n", logger)
+                except Exception as e:
+                    logException(e, logger, location="generateScores")
+#                 userIdList.append()
+#                 count += 1
+#                 if count % 500 == 0:
+#                     log(count, logger)
+#                     log("adding " + str(current["user_id"]) + " and others...", logger)
+#         log("userIdList=" + str(userIdList), logger)
+#         for userId in userIdList:
+
+
 def topTest():
     tuScoreSingleton = getTwitterUserScoresSingleton()
     printLTS(tuScoreSingleton.top()[0:100])
@@ -243,9 +302,14 @@ def generatorTest():
 
 if __name__ == '__main__':
     # WARNING: set unshortenerReadOnly as False
-#     generateScores()
-    unshortSome()
-#     testOne()
+#     generateScoresSimple()
+
+#     if TEST:
+#         logger = None
+#     else:
+#         logger = Logger("shortners-lovers.log")
+#     getShortenerLovers(logger=logger)
+    testOne()
 
 
 

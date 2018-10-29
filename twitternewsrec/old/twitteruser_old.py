@@ -5,7 +5,7 @@
 __version__ = "0.0.4"
 
 from systemtools.basics import *
-from datatools.json import *
+from datatools.jsonreader import *
 from datatools.url import *
 from datatools.csvreader import *
 from systemtools.file import *
@@ -34,12 +34,7 @@ else:                                       #
     TEST = False                            #
 #############################################
 
-def isUserData(userData):
-    if userData is None or \
-    not dictContains(userData, "tweets") or \
-    not dictContains(userData, "user_id"):
-        return False
-    return True
+
 
 def userDataToReadableTmpFile(userData, fileName="readable-tmp-twitter-user.txt"):
     filePath = tmpDir() + "/" + fileName
@@ -136,7 +131,8 @@ class TwitterUserScores():
         unshortenerReadOnly=True, # TODO set it as False
         cacheLimit=400000, # TODO set it as True
         sdVersion=None,
-        shortenedAsNews=False,
+        shortenedAsNews=True,
+        estimateNewsCount=False,
     ):
         self.logger = logger
         self.verbose = verbose
@@ -162,6 +158,7 @@ class TwitterUserScores():
         self.sdVersion = sdVersion
         self.unshortenerReadOnly = unshortenerReadOnly
         self.shortenedAsNews = shortenedAsNews
+        self.estimateNewsCount = estimateNewsCount
 
         # if modify versions:
         if self.sdVersion is None:
@@ -198,7 +195,8 @@ class TwitterUserScores():
             elif isHostname("datascience01"):
                 self.useMongodbSerializableDicts = True
             else:
-                self.useMongodbSerializableDicts = False
+#                 self.useMongodbSerializableDicts = False
+                self.useMongodbSerializableDicts = True
 
         # We create serializable dicts:
         (user, password, host) = ("localhost", None, None)
@@ -217,6 +215,15 @@ class TwitterUserScores():
             limit=self.cacheLimit,
             user=user, password=password, host=host,
         )
+#         log("aaaaaaaaaaaaa", self)
+#         log(user, self)
+#         log(password, self)
+#         log(host, self)
+#         log(self.relevanceSD.data.host, self)
+#         log(self.relevanceSD.data.user, self)
+#         log(self.relevanceSD.data.dbName, self)
+#         log(self.relevanceSD.data.collectionName, self)
+#         log("bbbbbbbbbbbbbbb", self)
         self.notBotSD = SerializableDict\
         (
             "twitterusernotbotscores" + "-" + self.sdVersion,
@@ -230,14 +237,15 @@ class TwitterUserScores():
             limit=self.cacheLimit,
             user=user, password=password, host=host,
         )
+#         print(self.verbose)
+#         print(self.sdVersion)
+#         exit()
 
         # We reset all serializable dicts:
         if TEST:
             self.relevanceSD.reset(security=True)
             self.notBotSD.reset(security=True)
             log("relevanceSD and notBotSD reseted.", self)
-
-
 
     def notBotScore(self, userData, *args, **kwargs):
         return self.notBotSD.get(userData[self.userIdField],
@@ -463,9 +471,10 @@ class TwitterUserScores():
             if TEST:
                 print("differentDomainsScore=" + str(differentDomainsScore))
 
-            # We compute the approximate probabilty that a random tweet or a
+            # We compute the approximate probability that a random tweet or a
             # retweet has an other tweet or retweet with a 3-gram overlap
             # First we lower and tokenize all tweets:
+#             log("We compute the approximate probability that a random tweet or...", self)
             coeff = 2.0
             tokenizedtweets = []
             for tweet in userData["tweets"]:
@@ -513,6 +522,7 @@ class TwitterUserScores():
             featuresCount += coeff
             if TEST:
                 print("overlapScore=" + str(overlapScore))
+#             log("DONE.", self.logger)
 
             # Finally we return the score:
             finalScore = score / featuresCount
@@ -586,38 +596,40 @@ class TwitterUserScores():
 
             # TODO test
             # News count estimation over shortened urls:
-            coeff = 0.0
-            if  coeff > 0.0:
-                # The number of shortened urls that we know for sure it's news behind:
-                unshortenedNewsCount = 0
-                # The number of shortened url:
-                shortenedCount = 0
-                # The number of urls that were previously unshortend:
-                unshortenedCount = 0
-                for tweet in userData["tweets"]:
-                    for share in tweet["shares"]:
-                        url = share["url"]
-                        if self.uns.isShortened(url):
-                            shortenedCount += 1
-                            unshortenedUrl = self.uns.unshort(url)
-                            if unshortenedUrl is not None:
-                                unshortenedCount += 1
-                                if self.nuf.isNews(unshortenedUrl):
-                                    unshortenedNewsCount += 1
-                # Now we try to estimate the number of news which are behind shortened urls:
-                newsRatio = unshortenedNewsCount / unshortenedCount
-                newsCountApprox = int(newsRatio * shortenedCount)
-                # And we add the score:
-                newsCountApproxScore = linearScore\
-                (
-                    newsCountApprox,
-                    self.notGreatNewsCountInterval[0],
-                    self.notGreatNewsCountInterval[1],
-                    stayBetween0And1=True,
-                )
-                newsCountApproxScore = newsCountApproxScore * coeff
-                score += newsCountApproxScore
-                featuresCount += coeff
+            if self.estimateNewsCount:
+                print("à tester " * 20)
+                coeff = 0.0
+                if  coeff > 0.0:
+                    # The number of shortened urls that we know for sure it's news behind:
+                    unshortenedNewsCount = 0
+                    # The number of shortened url:
+                    shortenedCount = 0
+                    # The number of urls that were previously unshortened:
+                    unshortenedCount = 0
+                    for tweet in userData["tweets"]:
+                        for share in tweet["shares"]:
+                            url = share["url"]
+                            if self.uns.isShortened(url):
+                                shortenedCount += 1
+                                unshortenedUrl = self.uns.unshort(url)
+                                if unshortenedUrl is not None:
+                                    unshortenedCount += 1
+                                    if self.nuf.isNews(unshortenedUrl):
+                                        unshortenedNewsCount += 1
+                    # Now we try to estimate the number of news which are behind shortened urls:
+                    newsRatio = unshortenedNewsCount / unshortenedCount
+                    newsCountApprox = int(newsRatio * shortenedCount)
+                    # And we add the score:
+                    newsCountApproxScore = linearScore\
+                    (
+                        newsCountApprox,
+                        self.notGreatNewsCountInterval[0],
+                        self.notGreatNewsCountInterval[1],
+                        stayBetween0And1=True,
+                    )
+                    newsCountApproxScore = newsCountApproxScore * coeff
+                    score += newsCountApproxScore
+                    featuresCount += coeff
 
             # Finally we return the score:
             finalScore = score / featuresCount
@@ -701,6 +713,8 @@ def getUserCrawlSingleton(dbName="twitter", collectionName="usercrawl",
             )
         except: pass
     return userCrawlSingleton
+
+
 class TwitterUser():
     """
         This class will cut too recent tweet for the recommendation.

@@ -2,3 +2,4 @@ requests[socks]
 pysocks
 requests
 sh
+pymongo

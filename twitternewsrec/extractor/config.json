@@ -1,22 +1,32 @@
 {
-	"maxUser": 20000,
-	"notBotThreshold": 0.5,
-	"datasetRelevanceThreshold": 0.6,
+	"storeExtraNews": false,
+	"maxUser": 100000,
+	"maxNewsInRam": 10000,
+	"notBotThreshold": 0.4,
+	"datasetRelevanceThreshold": 0.4,
 	"version": null,
 	"compress": true,
+	"compresslevel": 9,
 	"tar": true,
 	"dataSubDir": "/TwitterNewsrec",
 	"copyConfig": true,
 	"copyIndexor": true,
+	"copyReadme": true,
+	"copyHjupdate": true,
+	"generateStatistics": true,
 	"addUserStatistics": true,
+	"rescrap": false,
 	"removeHtml": true,
 	"anonymize": false,
 	"datasetFolderName": "twitternewsrec",
-	"minNewsTextSize": 200,
+	"newsMinTextLength": 200,
+	"newsMinMeanLineLength": 8,
+	"doOverlap": false,
 	"overlapNgramsMin": 4,
-	"overlapBatchMaxSize": 800,
+	"overlapBatchMaxSize": 500,
 	"overlapSimilarityThreshold": 0.93,
 	"domainsFilter": null,
+	"maxUsersPerFile": 100,
 	"newsCrawlFieldExcludes":
 	[
 		"_id",
@@ -30,5 +40,19 @@
 		"historyCount",
 		"proxy",
 		"message"
+	],
+	"userCrawlFieldExcludes":
+	[
+		"hover_users",
+		"page_state",
+		"has_enough_old_tweets",
+		"scrap_version"
+	],
+	"userTweetFieldExcludes":
+	[
+		"text_html",
+		"scrap_version",
+		"date",
+		"source_type"
 	]
 }
