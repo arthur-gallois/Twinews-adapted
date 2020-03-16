@@ -28,7 +28,7 @@ def getMongoAuth(*args, user='student', **kwargs):
 	password = getDataEncryptorSingleton()["mongoauth"]['titanv']
 	return (user, password[user], getMongoHost())
 
-def makeMongoColletionKwargs\
+def makeMongoCollectionKwargs\
 (
 	user=None,
 	password=None,
@@ -45,7 +45,7 @@ def makeMongoColletionKwargs\
 	kwargs['logger'] = logger
 	kwargs['verbose'] = verbose
 	if user is None:
-		(user, password, host) = getTipiStudentMongoAuth()
+		(user, password, host) = getMongoAuth()
 	kwargs['user'] = user
 	kwargs['password'] = password
 	kwargs['host'] = host
@@ -53,7 +53,7 @@ def makeMongoColletionKwargs\
 	return kwargs
 
 def getNewsCollection(*args, **kwargs):
-	kwargs = makeMongoColletionKwargs()
+	kwargs = makeMongoCollectionKwargs(*args, **kwargs)
 	return MongoCollection\
 	(
 		"twinews", "news",
@@ -63,7 +63,7 @@ def getNewsCollection(*args, **kwargs):
 	)
 
 def getUsersCollection(*args, **kwargs):
-	kwargs = makeMongoColletionKwargs()
+	kwargs = makeMongoCollectionKwargs(*args, **kwargs)
 	return MongoCollection\
 	(
 		"twinews", "users",
