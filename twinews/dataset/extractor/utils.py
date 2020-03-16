@@ -3,7 +3,7 @@ from systemtools.basics import *
 from systemtools.file import *
 from systemtools.location import *
 from systemtools.duration import *
-from twitternewsrec.newscrawler.utils import *
+from twinews.newscrawler.utils import *
 from nlptools.overlap import *
 
 

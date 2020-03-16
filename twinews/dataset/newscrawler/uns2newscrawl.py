@@ -9,7 +9,7 @@
     
 """
 
-# nn pew in twitternewsrec-venv python ~/wm-dist-tmp/TwitterNewsrec/twitternewsrec/newscrawler/uns2newscrawl.py ; observe nohup.out
+# nn pew in st-venv python ~/wm-dist-tmp/Twinews/twinews/newscrawler/uns2newscrawl.py ; observe nohup.out
 
 import sys, os; sys.path.append("/".join(os.path.abspath(__file__).split("/")[0:-3]))
 
@@ -28,13 +28,13 @@ from newstools.newsscraper import *
 from machinelearning.function import *
 from databasetools.mongo import *
 from systemtools.hayj import *
-from twitternewsrec.user.twitteruser import *
-from twitternewsrec.newscrawler import __version__ as newsCrawlerVersion
+from twinews.user.twitteruser import *
+from twinews.newscrawler import __version__ as newsCrawlerVersion
 from unshortener import config as unsConfig
 from hjwebbrowser import config as wbConf
-from twitternewsrec.user import config as tuConf
-from twitternewsrec.newscrawler.utils import *
-from twitternewsrec.user.utils import *
+from twinews.user import config as tuConf
+from twinews.newscrawler.utils import *
+from twinews.user.utils import *
 from multiprocessing import Lock, Process
 
 

@@ -19,9 +19,9 @@ from newstools.newsscraper import *
 from machinelearning.function import *
 from databasetools.mongo import *
 from systemtools.hayj import *
-from twitternewsrec.user.twitteruser import *
-from twitternewsrec.user.topuser import *
-from twitternewsrec.newscrawler import __version__ as newsCrawlerVersion
+from twinews.user.twitteruser import *
+from twinews.user.topuser import *
+from twinews.newscrawler import __version__ as newsCrawlerVersion
 from unshortener import config as unsConfig
 from hjwebbrowser import config as wbConf
 

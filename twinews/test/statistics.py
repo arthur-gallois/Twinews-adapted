@@ -1,5 +1,5 @@
 
-from twitternewsrec.newscrawler.crawler import *
+from twinews.newscrawler.crawler import *
 from systemtools.basics import *
 from systemtools.logger import *
 

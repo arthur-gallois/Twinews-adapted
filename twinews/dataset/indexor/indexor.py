@@ -1,7 +1,7 @@
 # pew in student-venv python indexor.py
 # pew in st-venv python /home/hayj/Workspace/Python/Datasets/TwitterNewsrec/twitternewsrec/indexor/indexor.py
 # nn pew in twitternewsrec-venv python /home/hayj/wm-dist-tmp/TwitterNewsrec/twitternewsrec/indexor/indexor.py ; observe nohup.out
-
+ 
 import sys, os; sys.path.append("/".join(os.path.abspath(__file__).split("/")[0:-3]))
 
 # from domainduplicate import config as ddConf
@@ -10,9 +10,10 @@ from systemtools.basics import *
 from systemtools.file import *
 from systemtools.location import *
 from systemtools.logger import *
+from systemtools.printer import *
 from datatools.jsonutils import *
 from databasetools.mongo import *
-from datastructuretools.processing import *
+from machinelearning.iterator import *
 from datatools.url import *
 from newstools.newsscraper import *
 from nlptools.preprocessing import *
@@ -32,7 +33,7 @@ if TEST:
 
 # We get the config:
 currentDir = execDir(__file__)
-config = jsonToDict(currentDir + "/config.json")
+config = fromJsonFile(currentDir + "/config.json")
 
 # We find the dataDir:
 if config["dataDir"] is None:

@@ -12,9 +12,9 @@ from systemtools.system import *
 from newstools.newsscraper import *
 from databasetools.mongo import *
 from systemtools.hayj import *
-from twitternewsrec.user.twitteruser import *
-from twitternewsrec.newscrawler.utils import *
-from twitternewsrec.user.utils import *
+from twinews.user.twitteruser import *
+from twinews.newscrawler.utils import *
+from twinews.user.utils import *
 
 
 def rescrap():

@@ -11,9 +11,9 @@ from systemtools.logger import *
 from datatools.jsonutils import *
 from datatools.url import *
 from newstools.newsscraper import *
-from twitternewsrec.user.topuser import *
-from twitternewsrec.user.twitteruser import *
-from twitternewsrec.extractor.utils import *
+from twinews.user.topuser import *
+from twinews.user.twitteruser import *
+from twinews.extractor.utils import *
 from datastructuretools.processing import *
 
 text = """

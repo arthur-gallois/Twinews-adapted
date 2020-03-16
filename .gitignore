@@ -10,9 +10,13 @@ trash/
 !README.md
 TODO.md
 
+# PyCharm:
+.idea
+
 # Python
 *.pyc
 __pycache__/
+.ipynb_checkpoints/
 
 # hj specific
 **/wm-dist/*.json
@@ -69,3 +73,8 @@ local.properties
 .cache-main
 .scala_dependencies
 .worksheet
+
+# For expo and react native:
+node_modules/**/*
+.expo/*
+npm-debug.*

@@ -2,7 +2,7 @@
 from datastructuretools.hashmap import *
 from systemtools.basics import *
 from systemtools.logger import *
-from twitternewsrec.user import config as tuConf
+from twinews.user import config as tuConf
 from systemtools.hayj import *
 from systemtools.basics import *
 from systemtools.logger import *

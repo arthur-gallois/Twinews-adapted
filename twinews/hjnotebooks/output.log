@@ -1,0 +1,25 @@
+2020-03-16 09:27:33,674 :: INFO :: twinews news (version 1.0) initialised.
+2020-03-16 09:27:33,746 :: INFO :: twinews users (version 1.0) initialised.
+2020-03-16 13:17:15,296 :: INFO :: twinews news (version 1.0) initialised.
+2020-03-16 13:17:15,370 :: INFO :: twinews users (version 1.0) initialised.
+2020-03-16 13:22:06,065 :: INFO :: twinews news (version 1.0) initialised.
+2020-03-16 13:22:06,097 :: INFO :: twinews users (version 1.0) initialised.
+2020-03-16 13:22:26,217 :: ERROR :: Exception type: <class 'NameError'>
+Exception: name 'parseNews' is not defined
+Traceback (most recent call last):
+  File "<ipython-input-13-acc52a8a2089>", line 15, in preprocessNews
+    (text, tokens) = parseNews(rawText, logger=logger, verbose=verbose)
+NameError: name 'parseNews' is not defined
+
+2020-03-16 13:24:14,361 :: INFO :: twinews news (version 1.0) initialised.
+2020-03-16 13:24:14,386 :: INFO :: twinews users (version 1.0) initialised.
+2020-03-16 13:24:19,548 :: INFO ::  10% [==                  ] (45.899s left)
+2020-03-16 13:24:19,778 :: INFO ::  20% [====                ] (21.32s left)
+2020-03-16 13:24:20,086 :: INFO ::  30% [======              ] (13.16s left)
+2020-03-16 13:24:20,171 :: INFO ::  40% [========            ] (8.595s left)
+2020-03-16 13:24:20,768 :: INFO ::  50% [==========          ] (6.32s left)
+2020-03-16 13:24:21,660 :: INFO ::  60% [============        ] (4.813s left)
+2020-03-16 13:24:29,268 :: INFO ::  70% [==============      ] (6.351s left)
+2020-03-16 13:24:29,284 :: INFO ::  80% [================    ] (3.709s left)
+2020-03-16 13:24:30,107 :: INFO ::  90% [==================  ] (1.739s left)
+2020-03-16 13:24:33,147 :: INFO :: 100% [====================] (total duration: 18.7s, mean duration: 1.869s)
