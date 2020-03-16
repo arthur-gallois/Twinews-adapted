@@ -2,7 +2,7 @@ WebCrawler
 DataTools
 DatabaseTools
 TwitterCrawler
-SystemTools/hjsystemtools
+SystemTools/systools
 Scroller
 NLPTools
 NewsTools
