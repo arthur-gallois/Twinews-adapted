@@ -1,27 +1,32 @@
-from systemtools.basics import *
-from systemtools.printer import *
-from systemtools.file import *
-from systemtools.location import *
-from systemtools.system import *
-from datatools.dataencryptor import *
-from datastructuretools.hashmap import *
-
-def getTipiStudentMongoAuth(*args, **kwargs):
-    password = getDataEncryptorSingleton()["mongoauth"]['titanv']
-    host = '127.0.0.1'
-    return ('student', password['student'], host)
-
-(user, password, host) = getTipiStudentMongoAuth()
-from systemtools.hayj import *
+try:
+	from systemtools.hayj import *
+except: pass
 from systemtools.basics import *
 from systemtools.file import *
 from systemtools.location import *
 from systemtools.printer import *
 from databasetools.mongo import *
+from datatools.dataencryptor import *
+from datastructuretools.hashmap import *
 from newstools.goodarticle.utils import *
 from nlptools.preprocessing import *
 from nlptools.news import parser as newsParser
 import copy
+
+def getMongoHost():
+	weAreAtLRI = False
+	try:
+		if lri():
+			weAreAtLRI = True
+	except: pass
+	if weAreAtLRI:
+		return 'titanv.lri.fr'
+	else:
+		return '127.0.0.1'
+
+def getMongoAuth(*args, user='student', **kwargs):
+	password = getDataEncryptorSingleton()["mongoauth"]['titanv']
+	return (user, password[user], getMongoHost())
 
 def makeMongoColletionKwargs\
 (
