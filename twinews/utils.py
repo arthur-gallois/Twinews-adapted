@@ -58,7 +58,7 @@ def getNewsCollection(*args, **kwargs):
 	(
 		"twinews", "news",
 		indexOn=["url"],
-		indexNotUniqueOn=["domain", "lastUrlDomain", "lastUrl", "isGoodArticle"],
+		indexNotUniqueOn=["domain", "lastUrlDomain", "lastUrl", "isGoodArticle", "minTimestamp", "maxTimestamp"],
 		**kwargs,
 	)
 
