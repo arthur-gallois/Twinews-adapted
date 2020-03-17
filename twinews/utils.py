@@ -68,7 +68,7 @@ def getUsersCollection(*args, **kwargs):
 	(
 		"twinews", "users",
 		indexOn=["user_id"],
-		indexNotUniqueOn=["datasetRelevanceScore", "notBotScore"],
+		indexNotUniqueOn=["datasetRelevanceScore", "notBotScore", "minTimestamp", "maxTimestamp"],
 		**kwargs,
 	)
 
