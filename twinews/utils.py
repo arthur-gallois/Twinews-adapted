@@ -12,6 +12,7 @@ from newstools.goodarticle.utils import *
 from nlptools.preprocessing import *
 from nlptools.news import parser as newsParser
 import copy
+import pickle
 
 def getMongoHost():
 	weAreAtLRI = False
@@ -72,3 +73,6 @@ def getUsersCollection(*args, **kwargs):
 		**kwargs,
 	)
 
+def getEvalData(version):
+	currentDir = getExecDir(__file__)
+	return deserialize(currentDir + "/evaluation/splits/v" + str(version) + ".pickle.gzip")
