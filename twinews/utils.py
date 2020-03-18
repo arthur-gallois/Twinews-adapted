@@ -74,5 +74,12 @@ def getUsersCollection(*args, **kwargs):
 	)
 
 def getEvalData(version):
-	currentDir = getExecDir(__file__)
-	return deserialize(currentDir + "/evaluation/splits/v" + str(version) + ".pickle.gzip")
+	if isUser("hayj"):
+		if lri():
+			return deserialize(nosaveDir() + "/twinews-splits/v" + str(version) + ".pickle.gzip")
+		else:
+			twinewsSplitsDir = tmpDir("twinews-splits")
+			bash("rsync -avhuP hayj@titanv.lri.fr:~/NoSave/twinews-splits/* " + twinewsSplitsDir)
+			return deserialize(twinewsSplitsDir + "/v" + str(version) + ".pickle.gzip")
+	elif "uting" in getUser():
+		return "Yuting renvoie ton fichier avec deserialize"
