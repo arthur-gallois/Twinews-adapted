@@ -13,6 +13,7 @@ from nlptools.preprocessing import *
 from nlptools.news import parser as newsParser
 import copy
 import pickle
+import gzip
 
 def getMongoHost():
 	weAreAtLRI = False
@@ -81,6 +82,7 @@ def getEvalData(version):
 			twinewsSplitsDir = tmpDir("twinews-splits")
 			bash("rsync -avhuP --delete-after hayj@titanv.lri.fr:~/NoSave/twinews-splits/* " + twinewsSplitsDir)
 			return deserialize(twinewsSplitsDir + "/v" + str(version) + ".pickle.gzip")
-	elif "uting" in getUser():
-		directoryPath = "??????????"
-		return deserialize(directoryPath + "/v" + str(version) + ".pickle.gzip")
+	elif "yuting" in getUser():
+
+		directoryPath = "/home/yuting/PycharmProjects/data/twinews-splits/"
+		return deserialize(directoryPath + "/v" + str(version) + ".pickle")
