@@ -83,6 +83,52 @@ def getEvalData(version):
 			bash("rsync -avhuP --delete-after hayj@titanv.lri.fr:~/NoSave/twinews-splits/* " + twinewsSplitsDir)
 			return deserialize(twinewsSplitsDir + "/v" + str(version) + ".pickle.gzip")
 	elif "yuting" in getUser():
-
-		directoryPath = "/home/yuting/PycharmProjects/data/twinews-splits/"
+		directoryPath = homeDir() + "/PycharmProjects/data/twinews-splits"
 		return deserialize(directoryPath + "/v" + str(version) + ".pickle")
+
+def checkEvalData(trainUsers, testUsers, trainNews, testNews, candidates):
+    candidatesUrls = set()
+    for userId, news in candidates.items():
+        for n in news[0]:
+            candidatesUrls.add(n)
+    trainUsersUrls = set()
+    for userId, news in trainUsers.items():
+        for n in news:
+            trainUsersUrls.add(n)
+    testUsersUrls = set()
+    for userId, news in testUsers.items():
+        for n in news:
+            testUsersUrls.add(n)
+    assert len(trainNews) == len(trainUsersUrls)
+    assert len(testUsersUrls.union(candidatesUrls)) == len(testNews)
+    assert len(trainUsersUrls) + len(testUsersUrls) == len(trainUsersUrls.union(testUsersUrls))
+    assert len(trainNews) + len(testNews) == len(trainNews.union(testNews))
+    assert len(trainNews) + len(testNews) == len(trainNews.union(testNews).union(candidatesUrls))
+    assert len(trainUsersUrls) + len(testUsersUrls) < len(trainNews.union(candidatesUrls))
+    assert len(testUsersUrls) < len(candidatesUrls)
+
+def subsampleTwinews(evalData, maxUsers=100):
+    # Getting a sub-sample of user ids:
+    userIds = random.sample(list(evalData['testUsers'].keys()), usersCount)
+    # Sub-sampling users:
+    trainUsers = dictSelect(evalData['trainUsers'], userIds)
+    testUsers = dictSelect(evalData['testUsers'], userIds)
+    # Sub-sampling candidates:
+    candidates = dictSelect(evalData['candidates'], userIds)
+    # Getting urls:
+    urls = set()
+    for users in (trainUsers, testUsers):
+        for userId, news in users.items():
+            for n in news.keys():
+                urls.add(n)
+    for userId, bulks in candidates.items():
+        for news in bulks:
+            for n in news:
+                urls.add(n)
+    # Sub-sampling news:
+    trainNews = set([n for n in evalData['trainNews'] if n in urls])
+    testNews = set([n for n in evalData['testNews'] if n in urls])
+    # Checking data:
+    checkEvalData(trainUsers, testUsers, trainNews, testNews, candidates)
+    # We return all sub samples:
+    return (trainUsers, testUsers, trainNews, testNews, candidates)
