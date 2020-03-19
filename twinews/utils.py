@@ -87,7 +87,8 @@ def getEvalData(version):
 			return deserialize(twinewsSplitsDir + "/v" + str(version) + ".pickle.gzip")
 	elif "yuting" in getUser():
 		directoryPath = homeDir() + "/PycharmProjects/data/twinews-splits"
-		return deserialize(directoryPath + "/v" + str(version) + ".pickle")
+		return deserialize(directoryPath + "/v" + str(version) + ".pickle.gzip")
+
 
 def checkEvalData(trainUsers, testUsers, trainNews, testNews, candidates):
 	"""
