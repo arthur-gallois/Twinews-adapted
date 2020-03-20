@@ -85,7 +85,7 @@ def getEvalDataPath(version):
 			evalDataPath = twinewsSplitsDir + "/" + fileName
 	elif "yuting" in getUser():
 		rootDir = homeDir() + "/PycharmProjects/data"
-		bash("rsync -avhuP -e \"ssh -p 2222\" student@212.129.44.40:/data/twinews-splits . " + rootDir)
+		bash("rsync -avhuP -e \"ssh -p 2222\" student@212.129.44.40:/data/twinews-splits " + rootDir)
 		evalDataPath = rootDir + "/twinews-splits/" + fileName
 	return evalDataPath
 
@@ -109,14 +109,17 @@ def getEvalData(version, extraNewsCount=None, maxUsers=None, logger=None, verbos
 	# Getting eval data:
 	evalData = deserialize(getEvalDataPath(version))
 	assert evalData is not None
+	tt.tic("Eval data loaded")
 	# Sub-sampling:
 	if maxUsers is not None and maxUsers > 0:
 		evalData = subsampleEvalData(evalData, maxUsers=100)
 	# Checking data:
 	checkEvalData(evalData)
-	# Getting extraNews:
+	# Getting extraNews (WARNING, here it's very long on the computer of Yuting because the function request the database):
 	extraNews = getExtraNews(evalData['trainNews'].union(evalData['testNews']), logger=logger, limit=extraNewsCount)
 	evalData['extraNews'] = extraNews
+	if len(extraNews) > 0:
+		tt.tic("Extra news downloaded")
 	# Printing the duration:
 	tt.toc("Got Twinews evaluation data")
 	return evalData
@@ -194,3 +197,8 @@ def getExtraNews(blackNews, limit=None, logger=None, verbose=True):
 			if limit is not None and len(extraNews) == limit:
 				break
 	return extraNews
+
+if __name__ == '__main__':
+	evalData = getEvalData(1, extraNewsCount=0, maxUsers=100)
+	bp(evalData.keys(), 5)
+	log(b(evalData['stats']))
