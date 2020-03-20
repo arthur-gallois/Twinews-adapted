@@ -74,26 +74,61 @@ def getUsersCollection(*args, **kwargs):
 		**kwargs,
 	)
 
-def getEvalData(version):
-	"""
-		This function return the evaluation data with the right version in the right folder.
-	"""
+def getEvalDataPath(version):
+	fileName = "v" + str(version) + ".pickle.gzip"
 	if isUser("hayj"):
 		if lri():
-			return deserialize(nosaveDir() + "/twinews-splits/v" + str(version) + ".pickle.gzip")
+			evalDataPath = nosaveDir() + "/twinews-splits/" + fileName
 		else:
 			twinewsSplitsDir = tmpDir("twinews-splits")
 			bash("rsync -avhuP --delete-after hayj@titanv.lri.fr:~/NoSave/twinews-splits/* " + twinewsSplitsDir)
-			return deserialize(twinewsSplitsDir + "/v" + str(version) + ".pickle.gzip")
+			evalDataPath = twinewsSplitsDir + "/" + fileName
 	elif "yuting" in getUser():
-		directoryPath = homeDir() + "/PycharmProjects/data/twinews-splits"
-		return deserialize(directoryPath + "/v" + str(version) + ".pickle.gzip")
+		rootDir = homeDir() + "/PycharmProjects/data"
+		bash("rsync -avhuP -e \"ssh -p 2222\" student@212.129.44.40:/data/twinews-splits . " + rootDir)
+		evalDataPath = rootDir + "/twinews-splits/" + fileName
+	return evalDataPath
+
+def getEvalData(version, extraNewsCount=None, maxUsers=None, logger=None, verbose=True):
+	"""
+		This function return the evaluation data with the right version in the right folder.
+		Use `maxUsers` to sub-sample the dataset for test purposes.
+
+		Usage example:
+
+			evalData = getEvalData(1, extraNewsCount=100 if TEST else None, maxUsers=100 if TEST else None, logger=logger)
+			(trainUsers, testUsers, trainNews, testNews, candidates, extraNews) = \
+			(evalData['trainUsers'], evalData['testUsers'], evalData['trainNews'],
+			 evalData['testNews'], evalData['candidates'], evalData['extraNews'])
+			bp(evalData.keys(), 5, logger)
+			log(b(evalData['stats']), logger)
+	"""
+	# Creating tt:
+	tt = TicToc(logger=logger)
+	tt.tic(display=False)
+	# Getting eval data:
+	evalData = deserialize(getEvalDataPath(version))
+	assert evalData is not None
+	# Sub-sampling:
+	if maxUsers is not None and maxUsers > 0:
+		evalData = subsampleEvalData(evalData, maxUsers=100)
+	# Checking data:
+	checkEvalData(evalData)
+	# Getting extraNews:
+	extraNews = getExtraNews(evalData['trainNews'].union(evalData['testNews']), logger=logger, limit=extraNewsCount)
+	evalData['extraNews'] = extraNews
+	# Printing the duration:
+	tt.toc("Got Twinews evaluation data")
+	return evalData
 
 
-def checkEvalData(trainUsers, testUsers, trainNews, testNews, candidates):
+def checkEvalData(evalData):
 	"""
 		This function check the shape of evaluation datas.
 	"""
+	(trainUsers, testUsers, trainNews, testNews, candidates) = \
+	(evalData['trainUsers'], evalData['testUsers'], evalData['trainNews'],
+	evalData['testNews'], evalData['candidates'])
 	candidatesUrls = set()
 	for userId, news in candidates.items():
 		for n in news[0]:
@@ -125,32 +160,37 @@ def subsampleEvalData(evalData, maxUsers=100):
 	# Getting a sub-sample of user ids:
 	userIds = random.sample(list(evalData['testUsers'].keys()), maxUsers)
 	# Sub-sampling users:
-	trainUsers = dictSelect(evalData['trainUsers'], userIds)
-	testUsers = dictSelect(evalData['testUsers'], userIds)
+	evalData['trainUsers'] = dictSelect(evalData['trainUsers'], userIds)
+	evalData['testUsers'] = dictSelect(evalData['testUsers'], userIds)
 	# Sub-sampling candidates:
-	candidates = dictSelect(evalData['candidates'], userIds)
+	evalData['candidates'] = dictSelect(evalData['candidates'], userIds)
 	# Getting urls:
 	urls = set()
-	for users in (trainUsers, testUsers):
+	for users in (evalData['trainUsers'], evalData['testUsers']):
 		for userId, news in users.items():
 			for n in news.keys():
 				urls.add(n)
-	for userId, bulks in candidates.items():
+	for userId, bulks in evalData['candidates'].items():
 		for news in bulks:
 			for n in news:
 				urls.add(n)
 	# Sub-sampling news:
-	trainNews = set([n for n in evalData['trainNews'] if n in urls])
-	testNews = set([n for n in evalData['testNews'] if n in urls])
-	# Checking data:
-	checkEvalData(trainUsers, testUsers, trainNews, testNews, candidates)
+	evalData['trainNews'] = set([n for n in evalData['trainNews'] if n in urls])
+	evalData['testNews'] = set([n for n in evalData['testNews'] if n in urls])
 	# We return all sub samples:
-	return (trainUsers, testUsers, trainNews, testNews, candidates)
+	return evalData
 
-def getExtraNews(trainNews, testNews, logger=None, verbose=True):
+def getExtraNews(blackNews, limit=None, logger=None, verbose=True):
 	"""
 		This function return a list of urls (primary key of the news collection) that are not in testNews U trainNews
 	"""
+	if limit == 0:
+		return set()
 	newsCollection = getNewsCollection(logger=logger, verbose=verbose)
-	news = trainNews.union(testNews)
-	return set([e for e in newsCollection.distinct('url') if e not in news])
+	extraNews = set()
+	for n in newsCollection.distinct('url'):
+		if n not in blackNews:
+			extraNews.add(n)
+			if limit is not None and len(extraNews) == limit:
+				break
+	return extraNews
