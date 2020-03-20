@@ -112,7 +112,7 @@ def getEvalData(version, maxExtraNews=None, maxUsers=None, logger=None, verbose=
 	tt.tic("Eval data loaded")
 	# Sub-sampling:
 	if maxUsers is not None and maxUsers > 0:
-		evalData = subsampleEvalData(evalData, maxUsers=100)
+		evalData = subsampleEvalData(evalData, maxUsers=maxUsers)
 	# Checking data:
 	checkEvalData(evalData)
 	# Getting extraNews (WARNING, here it's very long on the computer of Yuting because the function request the database):
@@ -161,7 +161,8 @@ def subsampleEvalData(evalData, maxUsers=100):
 			(trainUsers, testUsers, trainNews, testNews, candidates) = subsampleEvalData(evalData, maxUsers=100)
 	"""
 	# Getting a sub-sample of user ids:
-	userIds = random.sample(list(evalData['testUsers'].keys()), maxUsers)
+	rd = random.Random(0)
+	userIds = rd.sample(sorted(list(evalData['testUsers'].keys())), maxUsers)
 	# Sub-sampling users:
 	evalData['trainUsers'] = dictSelect(evalData['trainUsers'], userIds)
 	evalData['testUsers'] = dictSelect(evalData['testUsers'], userIds)

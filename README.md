@@ -10,3 +10,9 @@
 
 Splits corresponds to all dataset splits with candidates to rank and stats.
 There are in `/users/modhel/hayj/NoSave/twinews-splits`
+
+
+
+# TODO
+
+ * https://stackoverflow.com/questions/6861184/is-there-any-option-to-limit-mongodb-memory-usage
