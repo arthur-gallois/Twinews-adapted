@@ -89,14 +89,14 @@ def getEvalDataPath(version):
 		evalDataPath = rootDir + "/twinews-splits/" + fileName
 	return evalDataPath
 
-def getEvalData(version, extraNewsCount=None, maxUsers=None, logger=None, verbose=True):
+def getEvalData(version, maxExtraNews=None, maxUsers=None, logger=None, verbose=True):
 	"""
 		This function return the evaluation data with the right version in the right folder.
 		Use `maxUsers` to sub-sample the dataset for test purposes.
 
 		Usage example:
 
-			evalData = getEvalData(1, extraNewsCount=100 if TEST else None, maxUsers=100 if TEST else None, logger=logger)
+			evalData = getEvalData(1, maxExtraNews=100 if TEST else None, maxUsers=100 if TEST else None, logger=logger)
 			(trainUsers, testUsers, trainNews, testNews, candidates, extraNews) = \
 			(evalData['trainUsers'], evalData['testUsers'], evalData['trainNews'],
 			 evalData['testNews'], evalData['candidates'], evalData['extraNews'])
@@ -116,7 +116,7 @@ def getEvalData(version, extraNewsCount=None, maxUsers=None, logger=None, verbos
 	# Checking data:
 	checkEvalData(evalData)
 	# Getting extraNews (WARNING, here it's very long on the computer of Yuting because the function request the database):
-	extraNews = getExtraNews(evalData['trainNews'].union(evalData['testNews']), logger=logger, limit=extraNewsCount)
+	extraNews = getExtraNews(evalData['trainNews'].union(evalData['testNews']), logger=logger, limit=maxExtraNews)
 	evalData['extraNews'] = extraNews
 	if len(extraNews) > 0:
 		tt.tic("Extra news downloaded")
@@ -198,7 +198,33 @@ def getExtraNews(blackNews, limit=None, logger=None, verbose=True):
 				break
 	return extraNews
 
+
+def getNewsField(urls, field, asDict=False, logger=None, verbose=True):
+	if asDict:
+		result = dict()
+	else:
+		result = []
+	newsCollection = getNewsCollection(logger=logger, verbose=verbose)
+	for url in pb(urls, logger=logger):
+		data = newsCollection[url][field]
+		if asDict:
+			result[url] = data
+		else:
+			result.append(data)
+	return result
+def getNewsText(*args, **kwargs):
+	"""
+		This function return the text of a list of urls from the news collection
+	"""
+	return getNewsField(*args, field='text', **kwargs)
+def getNewsSentences(*args, **kwargs):
+	return getNewsField(*args, field='sentences', **kwargs)
+def getNewsFilteredSentences(*args, **kwargs):
+	return getNewsField(*args, field='filtered_sentences', **kwargs)
+def getNewsFilteredText(*args, **kwargs):
+	return getNewsField(*args, field='filtered_text', **kwargs)
+
 if __name__ == '__main__':
-	evalData = getEvalData(1, extraNewsCount=0, maxUsers=100)
+	evalData = getEvalData(1, maxExtraNews=0, maxUsers=100)
 	bp(evalData.keys(), 5)
 	log(b(evalData['stats']))
