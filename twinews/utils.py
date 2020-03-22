@@ -200,19 +200,32 @@ def getExtraNews(blackNews, limit=None, logger=None, verbose=True):
 	return extraNews
 
 
+newsCollectionForGetNewsField = None
 def getNewsField(urls, field, asDict=False, logger=None, verbose=True):
+	"""
+		Takes a list of urls or a unique url
+	"""
+	global newsCollectionForGetNewsField
+	isUnique = not isinstance(urls, list)
+	assert not (isUnique and asDict)
+	if not isinstance(urls, list):
+		urls = [urls]
 	if asDict:
 		result = dict()
 	else:
 		result = []
-	newsCollection = getNewsCollection(logger=logger, verbose=verbose)
+	if newsCollectionForGetNewsField is None:
+		newsCollectionForGetNewsField = getNewsCollection(logger=logger, verbose=verbose)
 	for url in pb(urls, logger=logger):
-		data = newsCollection[url][field]
+		data = newsCollectionForGetNewsField[url][field]
 		if asDict:
 			result[url] = data
 		else:
 			result.append(data)
-	return result
+	if isUnique:
+		return result[0]
+	else:
+		return result
 def getNewsText(*args, **kwargs):
 	"""
 		This function return the text of a list of urls from the news collection
