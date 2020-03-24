@@ -250,6 +250,44 @@ def getDistances(xvectors, yvectors, metric='cosin', logger=None, verbose=False)
     distances = pairwise_distances(xvectors, yvectors, metric=metric)
     return distances
 
+
+
+def getTwinewsRankings(logger=None, verbose=True):
+    """
+        This function return the mongo GridFS corresponding to Twinews rankings.
+        See this documentation to know how to retrieve rankings by requesting
+        specific parameters you used for a specific model:
+        https://github.com/hayj/DatabaseTools#mongofs
+    """
+    (user, password, host) = getMongoAuth()
+    return MongoFS\
+    (
+        user=user, password=password, host=host,
+        dbName="twinews-rankings",
+        logger=logger, verbose=verbose,
+    )
+
+
+def addRankings(modelName, ranks, config, logger=None, verbose=True):
+    """
+        This function add a ranking to the mongo GridFS.
+        You need to choose a model name such as "lda", "dssm"...
+        You give ranks that have the same structure as candidates in evaluation data
+        but instead of sets for urls, it is lists to give the ranking.
+        You also need to give the config of your model containing your parameters
+        and, at least, splitVersion and maxUsers (for the sub-sampling).
+    """
+    if 'splitVersion' not in config:
+        raise Exception("You need to specify the split version in config using the `splitVersion` field")
+    if 'maxUsers' not in config:
+        raise Exception("You need to add the `maxUsers` field in config (can be None)")
+    configHash = objectToHash(config)[:5]
+    twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
+    modelName = modelName + '-' + configHash
+    twinewsRankings.insert(modelName, ranks, **config)
+
+
+
 if __name__ == '__main__':
 	evalData = getEvalData(1, maxExtraNews=0, maxUsers=100)
 	bp(evalData.keys(), 5)
