@@ -229,4 +229,4 @@ def getNewsFilteredText(*args, **kwargs):
 if __name__ == '__main__':
 	evalData = getEvalData(1, maxExtraNews=0, maxUsers=100)
 	bp(evalData.keys(), 5)
-	log(b(evalData['stats']))
+	log(b(evalData['meta']))
