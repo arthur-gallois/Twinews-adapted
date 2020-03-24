@@ -1,6 +1,6 @@
 # Collections
 
- * **twinews**:
+ * **twinews**: A mongo database containing the following collections.
    * **users**: Corresponds to all users with all tweets. You will find the field `news` a list of url (primary key in the `news` collection) and `timestamps` all timestamps when the user shared the news.
    * **news**: Corresponds all news data. You will find `users` all users who shared the news. `timestamps` are all timestamps when users shared the news. `minTimestamp` is the timestamp when the news was shared for the first time.
    * **scores**: Corresponds to all results scores of rankings. Folders are the same as folders in `rankings`.
