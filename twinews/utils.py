@@ -271,9 +271,15 @@ def getTwinewsRankings(logger=None, verbose=True):
 def addRankings(modelName, ranks, config, logger=None, verbose=True):
     """
         This function add a ranking to the mongo GridFS.
+
         You need to choose a model name such as "lda", "dssm"...
+        This model name will be set as the model name you gave plus 5 first letters
+        of the hash of the config to ensure you do not erase you ranking with
+        differents parameters.
+
         You give ranks that have the same structure as candidates in evaluation data
         but instead of sets for urls, it is lists to give the ranking.
+        
         You also need to give the config of your model containing your parameters
         and, at least, splitVersion and maxUsers (for the sub-sampling).
     """
