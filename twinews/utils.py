@@ -74,21 +74,6 @@ def getUsersCollection(*args, **kwargs):
 		**kwargs,
 	)
 
-def getEvalDataPath(version):
-	fileName = "v" + str(version) + ".pickle.gzip"
-	if isUser("hayj"):
-		if lri():
-			evalDataPath = nosaveDir() + "/twinews-splits/" + fileName
-		else:
-			twinewsSplitsDir = tmpDir("twinews-splits")
-			bash("rsync -avhuP --delete-after hayj@titanv.lri.fr:~/NoSave/twinews-splits/* " + twinewsSplitsDir)
-			evalDataPath = twinewsSplitsDir + "/" + fileName
-	elif "yuting" in getUser():
-		rootDir = homeDir() + "/PycharmProjects/data"
-		bash("rsync -avhuP -e \"ssh -p 2222\" student@212.129.44.40:/data/twinews-splits " + rootDir)
-		evalDataPath = rootDir + "/twinews-splits/" + fileName
-	return evalDataPath
-
 def getEvalData(version, maxExtraNews=None, maxUsers=None, logger=None, verbose=True):
 	"""
 		This function return the evaluation data with the right version in the right folder.
@@ -107,8 +92,11 @@ def getEvalData(version, maxExtraNews=None, maxUsers=None, logger=None, verbose=
 	tt = TicToc(logger=logger)
 	tt.tic(display=False)
 	# Getting eval data:
-	evalData = deserialize(getEvalDataPath(version))
+	(user, password, host) = getMongoAuth()
+	mfs = MongoFS(dbName="twinews-splits", user=user, password=password, host=host)
+	evalData = mfs[version]
 	assert evalData is not None
+	evalData = mergeDicts(evalData, {'meta': mfs.getMeta(version)})
 	tt.tic("Eval data loaded")
 	# Sub-sampling:
 	if maxUsers is not None and maxUsers > 0:

@@ -9,8 +9,12 @@
 # Splits (evaluation data)
 
 Splits corresponds to all dataset splits with candidates to rank and stats.
-There are in `/users/modhel/hayj/NoSave/twinews-splits`
+All splits are in the mongo database twinews-splits.
 
+Version of splits are the following:
+
+ 1. The train / test split over the whole dataset with minimum 8 train news per users and 2 test news per user. Candidates are 1000 for each user. 
+ 2. The train / validation split over the train set of the split version 1 with minimum 8 train news per users and 2 test news per user. Candidates are 1000 for each user.
 
 
 # TODO
