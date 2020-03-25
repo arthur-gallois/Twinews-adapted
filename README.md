@@ -19,6 +19,31 @@ Version of splits are the following:
  2. The train / validation split over the train set of the split version 1 with minimum 8 train news per users and 2 test news per user. Candidates are 1000 for each user.
 
 
+# Pour dump la base de données Twinews
+
+Sur le docker jupyter, ouvrir un terminal, installer mongodb <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/>
+
+Puis dans le docker faire :
+
+	hjpassword=<voir dataencryptor>
+	/NoSave/twinews-dumps/dump.sh $hjpassword
+
+Le script contient :
+
+```
+rm -rf /NoSave/twinews-dumps/twinews-rankings
+mongodump --gzip --username hayj --password $1 --host titanv.lri.fr --authenticationDatabase admin --db twinews-rankings --out /NoSave/twinews-dumps
+rm -rf /NoSave/twinews-dumps/twinews-splits
+mongodump --gzip --username hayj --password $1 --host titanv.lri.fr --authenticationDatabase admin --db twinews-splits --out /NoSave/twinews-dumps
+rm -rf /NoSave/twinews-dumps/twinews
+mongodump --gzip --username hayj --password $1 --host titanv.lri.fr --authenticationDatabase admin --db twinews --out /NoSave/twinews-dumps
+```
+
+Puis depuis n'importe quel tipi :
+
+	nn -o ~/tmp/nohup-twinews-dumps-sync.out rsync -avhuP -e "ssh -p 2222" --delete-after ~/NoSave/twinews-dumps hayj@212.129.44.40:~ ; sleep 1 ; tail -f ~/tmp/nohup-twinews-dumps-sync.out
+
+
 # TODO
 
  * https://stackoverflow.com/questions/6861184/is-there-any-option-to-limit-mongodb-memory-usage
