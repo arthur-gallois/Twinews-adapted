@@ -18,6 +18,7 @@ from math import log2
 from math import sqrt
 from numpy import asarray
 from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
+import pymongo
 
 def getMongoHost():
 	weAreAtLRI = False
@@ -59,6 +60,9 @@ def makeMongoCollectionKwargs\
 	return kwargs
 
 def getNewsCollection(*args, **kwargs):
+	"""
+		This function return the twinews.news collection.
+	"""
 	kwargs = makeMongoCollectionKwargs(*args, **kwargs)
 	return MongoCollection\
 	(
@@ -69,6 +73,9 @@ def getNewsCollection(*args, **kwargs):
 	)
 
 def getUsersCollection(*args, **kwargs):
+	"""
+		This function return the twinews.users collection.
+	"""
 	kwargs = makeMongoCollectionKwargs(*args, **kwargs)
 	return MongoCollection\
 	(
@@ -77,6 +84,30 @@ def getUsersCollection(*args, **kwargs):
 		indexNotUniqueOn=["datasetRelevanceScore", "notBotScore", "minTimestamp", "maxTimestamp"],
 		**kwargs,
 	)
+
+def getTwinewsScores(logger=None, verbose=True):
+	"""
+		This function return the twinews.scores collection.
+	"""
+	user = 'hayj' if isUser('hayj') else 'student'
+	(user, password, host) = getMongoAuth(user=user)
+	kwargs = makeMongoCollectionKwargs(user=user, password=password, host=host, logger=logger, verbose=verbose)
+	twinewsScores = MongoCollection\
+	(
+		"twinews", "scores",
+		**kwargs,
+	)
+	if user == 'hayj':
+		twinewsScores.collection.create_index([("id", pymongo.ASCENDING), ("metric", pymongo.ASCENDING)], unique=True, background=True)
+	return twinewsScores
+
+def addTwinewsScore(modelKey, metric, score, *args, **kwargs):
+	"""
+		This function allows to add a new score.
+		The primary key is on id (modelKey) and metric so the function can throw a `DuplicateKeyError`.
+	"""
+	s = getTwinewsScores(*args, **kwargs)
+	s.insert({'id': modelKey, 'metric': metric, 'score': score})
 
 def getEvalData(version, maxExtraNews=None, maxUsers=None, logger=None, verbose=True):
 	"""
