@@ -230,28 +230,6 @@ def getNewsFilteredSentences(*args, **kwargs):
 def getNewsFilteredText(*args, **kwargs):
 	return getNewsField(*args, field='filtered_text', **kwargs)
 
-def getDistances(xvectors, yvectors, metric='cosin', logger=None, verbose=False):
-	"""
-		metric can be 'cosine', 'euclidean', 'kl', 'js'
-	"""
-	# Kullback–Leibler and Jensen-Shannon divergence: 
-	def kl_divergence(p, q):
-		return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-	def js_divergence(p, q):
-		m = 0.5 * (p + q)
-		return 0.5 * kl_divergence(p, m) + 0.5 * kl_divergence(q, m)
-	if metric == 'cosine':
-		pass
-	elif metric == 'euclidean':
-		pass
-	elif metric == 'kl':
-		metric = kl_divergence
-	elif metric == 'js':
-		metric = js_divergence
-	distances = pairwise_distances(xvectors, yvectors, metric=metric)
-	return distances
-
-
 
 def getTwinewsRankings(logger=None, verbose=True):
 	"""
