@@ -51,3 +51,27 @@ Puis depuis n'importe quel tipi :
 # TODO
 
  * https://stackoverflow.com/questions/6861184/is-there-any-option-to-limit-mongodb-memory-usage
+
+
+ Problème avec la distance kl_divergence :
+
+	return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
+	Traceback (most recent call last):
+	File "/users/modhel/hayj/notebooks/twinews/hjmodels/topicmodels.ipynb.py", line 530, in <module>
+	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 148, in usersRankingsByHistoryDistance
+	kwargs,
+	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 89, in userRankingsByHistoryDistance
+	distances = getDistances(xvectors, yvectors, metric=distanceMetric, logger=logger)
+	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 31, in getDistances
+	distances = pairwise_distances(xvectors, yvectors, metric=metric)
+	File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1752, in pairwise_distances
+	return _parallel_pairwise(X, Y, func, n_jobs, kwds)
+	File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1348, in _parallel_pairwise
+	return func(X, Y, kwds)
+	File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1392, in _pairwise_callable
+	out[i, j] = metric(X[i], Y[j], kwds)
+	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 19, in kl_divergence
+	return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
+	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 19, in <genexpr>
+	return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
+	ValueError: math domain error
