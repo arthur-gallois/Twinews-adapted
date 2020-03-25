@@ -1,3 +1,7 @@
+# Requirements
+
+Use this script to install all dependencies : <https://github.com/hayj/Bash/blob/master/hjupdate.sh>
+
 # Collections
 
  * **twinews**: A mongo database containing the following collections.
@@ -41,7 +45,7 @@ mongodump --gzip --username hayj --password $1 --host titanv.lri.fr --authentica
 
 Puis depuis n'importe quel tipi :
 
-	nn -o ~/tmp/nohup-twinews-dumps-sync.out rsync -avhuP -e "ssh -p 2222" --delete-after ~/NoSave/twinews-dumps hayj@212.129.44.40:~ ; sleep 1 ; tail -f ~/tmp/nohup-twinews-dumps-sync.out
+	nn -o ~/tmp/nohup-twinews-dumps-sync.out rsync -avhP -e "ssh -p 2222" --delete-after ~/NoSave/twinews-dumps hayj@212.129.44.40:~ ; sleep 1 ; tail -f ~/tmp/nohup-twinews-dumps-sync.out
 
 
 # TODO
