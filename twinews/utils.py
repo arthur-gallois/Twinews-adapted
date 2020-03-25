@@ -17,6 +17,7 @@ import gzip
 from math import log2
 from math import sqrt
 from numpy import asarray
+from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
 
 def getMongoHost():
 	weAreAtLRI = False
@@ -230,68 +231,91 @@ def getNewsFilteredText(*args, **kwargs):
 	return getNewsField(*args, field='filtered_text', **kwargs)
 
 def getDistances(xvectors, yvectors, metric='cosin', logger=None, verbose=False):
-    """
-        metric can be 'cosine', 'euclidean', 'kl', 'js'
-    """
-    # Kullback–Leibler and Jensen-Shannon divergence: 
-    def kl_divergence(p, q):
-        return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-    def js_divergence(p, q):
-        m = 0.5 * (p + q)
-        return 0.5 * kl_divergence(p, m) + 0.5 * kl_divergence(q, m)
-    if metric == 'cosine':
-        pass
-    elif metric == 'euclidean':
-        pass
-    elif metric == 'kl':
-        metric = kl_divergence
-    elif metric == 'js':
-        metric = js_divergence
-    distances = pairwise_distances(xvectors, yvectors, metric=metric)
-    return distances
+	"""
+		metric can be 'cosine', 'euclidean', 'kl', 'js'
+	"""
+	# Kullback–Leibler and Jensen-Shannon divergence: 
+	def kl_divergence(p, q):
+		return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
+	def js_divergence(p, q):
+		m = 0.5 * (p + q)
+		return 0.5 * kl_divergence(p, m) + 0.5 * kl_divergence(q, m)
+	if metric == 'cosine':
+		pass
+	elif metric == 'euclidean':
+		pass
+	elif metric == 'kl':
+		metric = kl_divergence
+	elif metric == 'js':
+		metric = js_divergence
+	distances = pairwise_distances(xvectors, yvectors, metric=metric)
+	return distances
 
 
 
 def getTwinewsRankings(logger=None, verbose=True):
-    """
-        This function return the mongo GridFS corresponding to Twinews rankings.
-        See this documentation to know how to retrieve rankings by requesting
-        specific parameters you used for a specific model:
-        https://github.com/hayj/DatabaseTools#mongofs
-    """
-    (user, password, host) = getMongoAuth()
-    return MongoFS\
-    (
-        user=user, password=password, host=host,
-        dbName="twinews-rankings",
-        logger=logger, verbose=verbose,
-    )
+	"""
+		This function return the mongo GridFS corresponding to Twinews rankings.
+		See this documentation to know how to retrieve rankings by requesting
+		specific parameters you used for a specific model:
+		https://github.com/hayj/DatabaseTools#mongofs
+	"""
+	(user, password, host) = getMongoAuth()
+	return MongoFS\
+	(
+		user=user, password=password, host=host,
+		dbName="twinews-rankings",
+		logger=logger, verbose=verbose,
+	)
 
 
-def addRankings(modelName, ranks, config, logger=None, verbose=True):
-    """
-        This function add a ranking to the mongo GridFS.
+def parseRankingConfig(modelName, config, logger=None, verbose=True):
+	"""
+		This function check a config and return a key with a new config.
+	"""
+	if 'splitVersion' not in config:
+		raise Exception("You need to specify the split version in config using the `splitVersion` field")
+	if 'maxUsers' not in config:
+		raise Exception("You need to add the `maxUsers` field in config (can be None)")
+	if 'model' in config:
+		if config['model'] != modelName:
+			raise Exception("The `model` field in config must be equal to modelName (first positional arg)")
+	else:
+		config['model'] = modelName
+	configHash = objectToHash(config)[:5]
+	key = modelName + '-' + configHash
+	return (key, config)
 
-        You need to choose a model name such as "lda", "dssm"...
-        This model name will be set as the model name you gave plus 5 first letters
-        of the hash of the config to ensure you do not erase you ranking with
-        differents parameters.
+def addRanking(modelName, ranks, config, logger=None, verbose=True):
+	"""
+		This function add a ranking to the mongo GridFS.
 
-        You give ranks that have the same structure as candidates in evaluation data
-        but instead of sets for urls, it is lists to give the ranking.
-        
-        You also need to give the config of your model containing your parameters
-        and, at least, splitVersion and maxUsers (for the sub-sampling).
-    """
-    if 'splitVersion' not in config:
-        raise Exception("You need to specify the split version in config using the `splitVersion` field")
-    if 'maxUsers' not in config:
-        raise Exception("You need to add the `maxUsers` field in config (can be None)")
-    configHash = objectToHash(config)[:5]
-    twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
-    modelName = modelName + '-' + configHash
-    twinewsRankings.insert(modelName, ranks, **config)
+		You need to choose a model name such as "lda", "dssm"...
+		This model name will be set as the model name you gave plus 5 first letters
+		of the hash of the config to ensure you do not erase you ranking with
+		differents parameters.
 
+		You give ranks that have the same structure as candidates in evaluation data
+		but instead of sets for urls, it is lists to give the ranking.
+
+		You also need to give the config of your model containing your parameters
+		and, at least, splitVersion and maxUsers (for the sub-sampling).
+
+		Warning: do not give the field `model` in config, it will be automatically
+		added (modelName).
+	"""
+	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
+	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
+	twinewsRankings.insert(key, ranks, **config)
+
+
+def rankingExists(modelName, config, logger=None, verbose=True):
+	"""
+		Use this function to check if a rankings exists and to do not compute it again.
+	"""
+	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
+	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
+	return key in twinewsRankings
 
 
 if __name__ == '__main__':
