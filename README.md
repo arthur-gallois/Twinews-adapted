@@ -45,69 +45,69 @@ Version of splits are the following:
     'trainNewsCount': 237150,
     'usersCount': 15905
   },
-  'extraNews': { url1, url2, ... }, # These are extra news you can use (not in train / test)
+  'extraNews': { 'url1', 'url2', '...' }, # These are extra news you can use (not in train / test)
   'candidates': # You need to take that and rand all candidates
   {
-    <user id>: # Here it's a list because we can have multiple lists of candidates per user
+    '<user id>': # Here it's a list because we can have multiple lists of candidates per user
     [
       {
-        <url 1>,
-        ...,
-        <url 1000>
+        '<url 1>',
+        # ...,
+        '<url 1000>'
       }
     ],
-    ...,
+    # ...,
     '100022528': 
     [
       {
-        http://ow.ly/GNQM30hSXPU,
-        ...,
-        https://usat.ly/2Db0QTH
+        'http://ow.ly/GNQM30hSXPU',
+        # ...,
+        'https://usat.ly/2Db0QTH'
       }
     ]
   },
   'testNews': # These are news after splitDate
   {
-    <url 1>,
-    ...,
-    <url 71781>
+    '<url 1>',
+    # ...,
+    '<url 71781>'
   },
   'trainNews': # These are news before splitDate
   {
-    <url 1>,
-    ...,
-    <url 237150>
+    '<url 1>',
+    # ...,
+    '<url 237150>'
   },
   'trainUsers': # Users in train (you can specify maxUsers for subsampling the dataset)
   {
     '100022528': 
     {
-      <url 1>: <timestamp in seconds the user shared the news>,
-      ...,
-      <url 42>: 1515609959,
+      '<url 1>': '<timestamp in seconds the user shared the news>',
+      # ...,
+      '<url 42>': 1515609959,
     },
-    ...,
-    <user id>: 
+    # ...,
+    '<user id>': 
     {
-      <url 1>: 1515670765,
-      ...,
-      <url 34> : 1514572410
+      '<url 1>': 1515670765,
+      # ...,
+      '<url 34>' : 1514572410
     }
   },
   'testUsers': 
   {
     '100022528': 
     {
-      <url 1>: <timestamp in seconds the user shared the news>,
-      ...,
-      <url 11>: 1515609959,
+      '<url 1>': '<timestamp in seconds the user shared the news>',
+      # ...,
+      '<url 11>': 1515609959,
     },
-    ...,
-    <user id>: 
+    # ...,
+    '<user id>': 
     {
-      <url 1>: 1515670765,
-      ...,
-      <url 6> : 1514572410
+      '<url 1>': 1515670765,
+      # ...,
+      '<url 6>' : 1514572410
     }
   }
 }
