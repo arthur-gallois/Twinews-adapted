@@ -48,8 +48,8 @@ Version of splits are the following:
 	'extraNews': { 'url1', 'url2', '...' }, # These are extra news you can use (not in train / test)
 	'candidates': # You need to take that and rand all candidates
 	{
-		'<user id>': # Here it's a list because we can have multiple lists of candidates per user
-		[
+		'<user id>':
+		[ # Here it's a list because we can have multiple lists of candidates per user
 			{
 				'<url 1>',
 				# ...,
