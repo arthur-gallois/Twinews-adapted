@@ -28,12 +28,12 @@ Version of splits are the following:
 {
   'meta': # Informations about the current evaluation data
   {
-    'created': 2020.03.24-14.28.06,
-    'endDate': 2018-01-15,
+    'created': '2020.03.24-14.28.06',
+    'endDate': '2018-01-15',
     'id': 2, # 2 is for validation, 1 is for test
     'ranksLength': 1000,
-    'splitDate': 2017-12-25,
-    'startDate': 2017-10-01,
+    'splitDate': '2017-12-25',
+    'startDate': '2017-10-01',
     'testMaxNewsPerUser': 97,
     'testMeanNewsPerUser': 7.22,
     'testMinNewsPerUser': 2,
