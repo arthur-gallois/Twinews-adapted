@@ -106,6 +106,8 @@ def addTwinewsScore(modelKey, metric, score, *args, **kwargs):
 		This function allows to add a new score.
 		The primary key is on id (modelKey) and metric so the function can throw a `DuplicateKeyError`.
 	"""
+	if modelKey not in getTwinewsRankings():
+		raise Exception(modelKey + " must be in twinews-rankings")
 	s = getTwinewsScores(*args, **kwargs)
 	s.insert({'id': modelKey, 'metric': metric, 'score': score})
 
@@ -315,7 +317,10 @@ def addRanking(modelName, ranks, config, logger=None, verbose=True):
 	"""
 	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
 	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
-	twinewsRankings.insert(key, ranks, **config)
+	try:
+		twinewsRankings.insert(key, ranks, **config)
+	except Exception as e:
+		logException(e, logger, verbose=verbose)
 
 
 def rankingExists(modelName, config, logger=None, verbose=True):
