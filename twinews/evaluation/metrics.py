@@ -19,14 +19,70 @@
 # https://medium.com/swlh/rank-aware-recsys-evaluation-metrics-5191bba16832
 
 
+from twinews.evaluation.rank_metrics import *
 
 
+############################# MRR #############################
+# Measure: Where is the first relevant item?
+def mrr(r):
+	if r is None or len(r) == 0:
+		raise Exception("r must be a list")
+	if not isinstance(r[0], list):
+		r = [r]
+	for i in range(len(r)):
+		r[i] = bool2binary(r[i])
+		for current in r[i]:
+			assert current == 1 or current == 0
+	return mean_reciprocal_rank(r)
 
-def ndcg():
-	pass
+############################# PRECISION @ K #############################
+def __precision(r, k):
+	assert k <= len(r)
+	assert r is not None and len(r) > 0
+	r = bool2binary(r)
+	for current in r:
+		assert current == 1 or current == 0
+	return precision_at_k(r, k)
+def pAt10(r):
+	return __precision(r, 10)
+def pAt100(r):
+	return __precision(r, 100)
 
-def ndcg_at_10():
-	pass
+############################# MAP #############################
+def map(r):
+	if r is None or len(r) == 0:
+		raise Exception("r must be a list")
+	if not isinstance(r[0], list):
+		r = [r]
+	for i in range(len(r)):
+		r[i] = bool2binary(r[i])
+		for current in r[i]:
+			assert current == 1 or current == 0
+	return mean_average_precision(r)
 
-def ndcg_at_100():
-	pass
+############################# NDCG #############################
+def ndcg(r, k=None):
+	if k is None:
+		k = len(r)
+	assert k <= len(r)
+	assert r is not None and len(r) > 0
+	r = bool2binary(r)
+	for current in r:
+		assert current == 1 or current == 0
+	return ndcg_at_k(r, k)
+def ndcgAt10(r):
+	return ndcg(r, 10)
+def ndcgAt100(r):
+	return ndcg(r, 100)
+
+
+############################# UTILS #############################
+def bool2binary(r):
+	return [int(e) for e in r]
+
+
+if __name__ == '__main__':
+	print(map([0, 1, 1, 0, 1, 1]))
+	print(ndcg([0, 1, 1, 0, 1, 1]))
+	print(pAt10([0, 1, 1, 0, 1, 1, True, False, True, False, True, False, False]))
+	print(mrr([0, 1, 1, 0, 1, 1]))

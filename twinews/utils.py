@@ -91,7 +91,7 @@ def getTwinewsScores(logger=None, verbose=True):
 	"""
 	user = 'hayj' if isUser('hayj') else 'student'
 	(user, password, host) = getMongoAuth(user=user)
-	kwargs = makeMongoCollectionKwargs(user=user, password=password, host=host, logger=logger, verbose=verbose)
+	kwargs = makeMongoCollectionKwargs(user=user, password=password, host=host, logger=logger, verbose=verbose, datasetVersion=None)
 	twinewsScores = MongoCollection\
 	(
 		"twinews", "scores",
@@ -107,7 +107,7 @@ def addTwinewsScore(modelKey, metric, score, *args, **kwargs):
 		The primary key is on id (modelKey) and metric so the function can throw a `DuplicateKeyError`.
 	"""
 	if modelKey not in getTwinewsRankings():
-		raise Exception(modelKey + " must be in twinews-rankings")
+		raise Exception(modelKey + " must be in the twinews-rankings GridFS")
 	s = getTwinewsScores(*args, **kwargs)
 	s.insert({'id': modelKey, 'metric': metric, 'score': score})
 
