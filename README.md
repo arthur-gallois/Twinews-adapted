@@ -26,90 +26,90 @@ Version of splits are the following:
 
 ```python
 {
-  'meta': # Informations about the current evaluation data
-  {
-    'created': '2020.03.24-14.28.06',
-    'endDate': '2018-01-15',
-    'id': 2, # 2 is for validation, 1 is for test
-    'ranksLength': 1000,
-    'splitDate': '2017-12-25',
-    'startDate': '2017-10-01',
-    'testMaxNewsPerUser': 97,
-    'testMeanNewsPerUser': 7.22,
-    'testMinNewsPerUser': 2,
-    'testNewsCount': 71781,
-    'totalNewsAvailable': 570210,
-    'trainMaxNewsPerUser': 379,
-    'trainMeanNewsPerUser': 26.48,
-    'trainMinNewsPerUser': 8,
-    'trainNewsCount': 237150,
-    'usersCount': 15905
-  },
-  'extraNews': { 'url1', 'url2', '...' }, # These are extra news you can use (not in train / test)
-  'candidates': # You need to take that and rand all candidates
-  {
-    '<user id>': # Here it's a list because we can have multiple lists of candidates per user
-    [
-      {
-        '<url 1>',
-        # ...,
-        '<url 1000>'
-      }
-    ],
-    # ...,
-    '100022528': 
-    [
-      {
-        'http://ow.ly/GNQM30hSXPU',
-        # ...,
-        'https://usat.ly/2Db0QTH'
-      }
-    ]
-  },
-  'testNews': # These are news after splitDate
-  {
-    '<url 1>',
-    # ...,
-    '<url 71781>'
-  },
-  'trainNews': # These are news before splitDate
-  {
-    '<url 1>',
-    # ...,
-    '<url 237150>'
-  },
-  'trainUsers': # Users in train (you can specify maxUsers for subsampling the dataset)
-  {
-    '100022528': 
-    {
-      '<url 1>': '<timestamp in seconds the user shared the news>',
-      # ...,
-      '<url 42>': 1515609959,
-    },
-    # ...,
-    '<user id>': 
-    {
-      '<url 1>': 1515670765,
-      # ...,
-      '<url 34>' : 1514572410
-    }
-  },
-  'testUsers': 
-  {
-    '100022528': 
-    {
-      '<url 1>': '<timestamp in seconds the user shared the news>',
-      # ...,
-      '<url 11>': 1515609959,
-    },
-    # ...,
-    '<user id>': 
-    {
-      '<url 1>': 1515670765,
-      # ...,
-      '<url 6>' : 1514572410
-    }
-  }
+	'meta': # Informations about the current evaluation data
+	{
+		'created': '2020.03.24-14.28.06',
+		'endDate': '2018-01-15',
+		'id': 2, # 2 is for validation, 1 is for test
+		'ranksLength': 1000,
+		'splitDate': '2017-12-25',
+		'startDate': '2017-10-01',
+		'testMaxNewsPerUser': 97,
+		'testMeanNewsPerUser': 7.22,
+		'testMinNewsPerUser': 2,
+		'testNewsCount': 71781,
+		'totalNewsAvailable': 570210,
+		'trainMaxNewsPerUser': 379,
+		'trainMeanNewsPerUser': 26.48,
+		'trainMinNewsPerUser': 8,
+		'trainNewsCount': 237150,
+		'usersCount': 15905
+	},
+	'extraNews': { 'url1', 'url2', '...' }, # These are extra news you can use (not in train / test)
+	'candidates': # You need to take that and rand all candidates
+	{
+		'<user id>': # Here it's a list because we can have multiple lists of candidates per user
+		[
+			{
+				'<url 1>',
+				# ...,
+				'<url 1000>'
+			}
+		],
+		# ...,
+		'100022528': 
+		[
+			{
+				'http://ow.ly/GNQM30hSXPU',
+				# ...,
+				'https://usat.ly/2Db0QTH'
+			}
+		]
+	},
+	'testNews': # These are news after splitDate
+	{
+		'<url 1>',
+		# ...,
+		'<url 71781>'
+	},
+	'trainNews': # These are news before splitDate
+	{
+		'<url 1>',
+		# ...,
+		'<url 237150>'
+	},
+	'trainUsers': # Users in train (you can specify maxUsers for subsampling the dataset)
+	{
+		'100022528': 
+		{
+			'<url 1>': '<timestamp in seconds the user shared the news>',
+			# ...,
+			'<url 42>': 1515609959,
+		},
+		# ...,
+		'<user id>': 
+		{
+			'<url 1>': 1515670765,
+			# ...,
+			'<url 34>' : 1514572410
+		}
+	},
+	'testUsers': 
+	{
+		'100022528': 
+		{
+			'<url 1>': '<timestamp in seconds the user shared the news>',
+			# ...,
+			'<url 11>': 1515609959,
+		},
+		# ...,
+		'<user id>': 
+		{
+			'<url 1>': 1515670765,
+			# ...,
+			'<url 6>' : 1514572410
+		}
+	}
 }
 ```
 
