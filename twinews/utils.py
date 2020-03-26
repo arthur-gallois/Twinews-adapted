@@ -18,6 +18,7 @@ from math import log2
 from math import sqrt
 from numpy import asarray
 from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
+import pymongo
 
 def getMongoHost():
 	weAreAtLRI = False
@@ -59,6 +60,9 @@ def makeMongoCollectionKwargs\
 	return kwargs
 
 def getNewsCollection(*args, **kwargs):
+	"""
+		This function return the twinews.news collection.
+	"""
 	kwargs = makeMongoCollectionKwargs(*args, **kwargs)
 	return MongoCollection\
 	(
@@ -69,6 +73,9 @@ def getNewsCollection(*args, **kwargs):
 	)
 
 def getUsersCollection(*args, **kwargs):
+	"""
+		This function return the twinews.users collection.
+	"""
 	kwargs = makeMongoCollectionKwargs(*args, **kwargs)
 	return MongoCollection\
 	(
@@ -77,6 +84,32 @@ def getUsersCollection(*args, **kwargs):
 		indexNotUniqueOn=["datasetRelevanceScore", "notBotScore", "minTimestamp", "maxTimestamp"],
 		**kwargs,
 	)
+
+def getTwinewsScores(logger=None, verbose=True):
+	"""
+		This function return the twinews.scores collection.
+	"""
+	user = 'hayj' if isUser('hayj') else 'student'
+	(user, password, host) = getMongoAuth(user=user)
+	kwargs = makeMongoCollectionKwargs(user=user, password=password, host=host, logger=logger, verbose=verbose, datasetVersion=None)
+	twinewsScores = MongoCollection\
+	(
+		"twinews", "scores",
+		**kwargs,
+	)
+	if user == 'hayj':
+		twinewsScores.collection.create_index([("id", pymongo.ASCENDING), ("metric", pymongo.ASCENDING)], unique=True, background=True)
+	return twinewsScores
+
+def addTwinewsScore(modelKey, metric, score, *args, **kwargs):
+	"""
+		This function allows to add a new score.
+		The primary key is on id (modelKey) and metric so the function can throw a `DuplicateKeyError`.
+	"""
+	if modelKey not in getTwinewsRankings():
+		raise Exception(modelKey + " must be in the twinews-rankings GridFS")
+	s = getTwinewsScores(*args, **kwargs)
+	s.insert({'id': modelKey, 'metric': metric, 'score': score})
 
 def getEvalData(version, maxExtraNews=None, maxUsers=None, logger=None, verbose=True):
 	"""
@@ -230,28 +263,6 @@ def getNewsFilteredSentences(*args, **kwargs):
 def getNewsFilteredText(*args, **kwargs):
 	return getNewsField(*args, field='filtered_text', **kwargs)
 
-def getDistances(xvectors, yvectors, metric='cosin', logger=None, verbose=False):
-	"""
-		metric can be 'cosine', 'euclidean', 'kl', 'js'
-	"""
-	# Kullback–Leibler and Jensen-Shannon divergence: 
-	def kl_divergence(p, q):
-		return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-	def js_divergence(p, q):
-		m = 0.5 * (p + q)
-		return 0.5 * kl_divergence(p, m) + 0.5 * kl_divergence(q, m)
-	if metric == 'cosine':
-		pass
-	elif metric == 'euclidean':
-		pass
-	elif metric == 'kl':
-		metric = kl_divergence
-	elif metric == 'js':
-		metric = js_divergence
-	distances = pairwise_distances(xvectors, yvectors, metric=metric)
-	return distances
-
-
 
 def getTwinewsRankings(logger=None, verbose=True):
 	"""
@@ -306,7 +317,10 @@ def addRanking(modelName, ranks, config, logger=None, verbose=True):
 	"""
 	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
 	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
-	twinewsRankings.insert(key, ranks, **config)
+	try:
+		twinewsRankings.insert(key, ranks, **config)
+	except Exception as e:
+		logException(e, logger, verbose=verbose)
 
 
 def rankingExists(modelName, config, logger=None, verbose=True):
