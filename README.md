@@ -132,7 +132,7 @@ Then you get candidates in evaluation data (see the shape of eval data in the RE
 
 	candidates = getEvalData(config['splitVersion'], maxUsers=config['maxUsers'])['candidates']
 
-You then need to produce all rankings in a variable `rankings` that is the same as `candidates` but with list instead of sets of urls.
+You need to produce all rankings in a variable `rankings` that is the same as `candidates` but with lists instead of sets of urls.
 
 Finally you add `rankings` in the `twinews-rankings` database:
 
