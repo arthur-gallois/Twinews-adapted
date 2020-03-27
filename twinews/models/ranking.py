@@ -69,6 +69,7 @@ def userRankingsByHistoryDistance\
 		
 			distanceMetric: the distance metric (default is 'cosine')
 	"""
+	assert (isinstance(historyRef, int) and historyRef >= 1) or (isinstance(historyRef, float) and historyRef > 0.0 and historyRef <= 1.0)
 	# First we convert the historyRef to a float
 	if isinstance(historyRef, float):
 		historyRef = int(historyRef * len(trainUrls))
