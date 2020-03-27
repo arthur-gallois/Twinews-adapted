@@ -123,9 +123,9 @@ When you implement a model. You need to init a config dict:
 
 	config = \
 	{
-	    'splitVersion': 2,
-	    'maxUsers': None,
-	    'historyRef': 0.3,
+	    'splitVersion': 2, # Mandatory
+	    'maxUsers': None, # Mandatory
+	    'historyRef': 0.3, # A hyperparameter you can optimize
 	}
 
 Then you get candidates in evaluation data (see the shape of eval data in the README):
