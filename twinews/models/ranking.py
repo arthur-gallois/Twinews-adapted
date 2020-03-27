@@ -53,6 +53,10 @@ def userRankingsByHistoryDistance\
 	     * 1 will allow to use only the most similar train item for the similarity of the candidate with the history of the user
 	     * 0.5 will allow to use the half of history for each candidates
 	     * 3 to use 3 most similar items with the current candidate...
+
+	    `historyRef` is a parameter that say "For a particular candidate, I want to score it by similarity with the history of the user. But how many items I take for that? A float of 0.3 mean we take 30% train items. An integer of 10 mean  we take max 10 train items."
+
+	    My hypothesis is that "One particular candidate item has same topic as a sub-part of all history items of a user (because the user read several topics). So to match the candidate with a sub-set of the history will allow to better match the item with particular topics. If we choose 1.0 as the value for this parameter, it can down the similarity of the candidate because a large part of the user history is not related to the topic of the candidate"
 		
 		Args:
 		
