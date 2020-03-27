@@ -113,6 +113,10 @@ Version of splits are the following:
 }
 ```
 
+# How the continuous evaluation work?
+
+The `twinews-rankings` database is the data each model produced (rankings). The `twinews.scores` collection is connected to the `twinews-rankings` database and will map score of all models for all metrics (`evaluation.ipynb` is looping infinitely and add rows in `twinews-rankings` when a new model is added in the `twinews-rankings` database).
+
 # Pour dump la base de données Twinews
 
 Sur le docker jupyter, ouvrir un terminal, installer mongodb <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/>

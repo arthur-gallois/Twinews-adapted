@@ -22,6 +22,21 @@
 from twinews.evaluation.rank_metrics import *
 
 
+
+"""
+
+# Usage
+
+Metrics in this file take a vector a boolean (the relevance vector of your ranking). A True in the relevance vector indicates that the item is relevant. The more there are Trues near the index 0, the more the score will be high.
+
+For example you ranked [url3, url2, url1, url4]. And you know that only url2 and url1 are relevant. So your relevance vector is [False, True, True, False]. This relevance vector is better (given, for instance, the ndcg metric) than the relevance vector of the ranking [url3, url4, url1, url2].
+
+
+"""
+
+
+
+
 ############################# MRR #############################
 # Measure: Where is the first relevant item?
 def mrr(r):
