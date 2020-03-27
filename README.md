@@ -115,7 +115,29 @@ Version of splits are the following:
 
 # How the continuous evaluation work?
 
-The `twinews-rankings` database is the data each model produced (rankings). The `twinews.scores` collection is connected to the `twinews-rankings` database and will map score of all models for all metrics (`evaluation.ipynb` is looping infinitely and add rows in `twinews-rankings` when a new model is added in the `twinews-rankings` database).
+A **model** is a particular algorithm which is intended to rank items. A **model instance** is a model with particular parameters definined in `config`. For example `nmf-9cd4f` is the `nmf` model with a config that gave the hash `9cd4f`. A **model instance**'s rankings is a unique *entry* (or a unique *row*) of the `twinews-rankings` database.
+
+The `twinews-rankings` database is the data each **model instance** produced (rankings). The `twinews.scores` collection is connected to the `twinews-rankings` database and will map scores of all **model instances** for all metrics (`evaluation.ipynb` is looping infinitely and add rows in `twinews.scores` when a new model is added in the `twinews-rankings` database).
+
+When you implement a model. You need to init a config dict:
+
+	config = \
+	{
+	    'splitVersion': 2,
+	    'maxUsers': None,
+	    'historyRef': 0.3,
+	}
+
+Then you get candidates in evaluation data (see the shape of eval data in the README):
+
+	candidates = getEvalData(config['splitVersion'], maxUsers=config['maxUsers'])['candidates']
+
+You then need to produce all rankings in a variable `rankings` that is the same as `candidates` but with list instead of sets of urls.
+
+Finally you add `rankings` in the `twinews-rankings` database:
+
+	addRanking('nmf', rankings, config)
+
 
 # Pour dump la base de données Twinews
 
