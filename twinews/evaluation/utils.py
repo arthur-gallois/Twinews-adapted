@@ -3,6 +3,7 @@ from systemtools.location import *
 from systemtools.basics import *
 from systemtools.file import *
 from systemtools.printer import *
+from dataviztools.pandasutils import *
 from twinews.utils import *
 import pandas as pd
 from IPython.display import display, HTML
@@ -29,6 +30,7 @@ def printReport\
     noSubsampling=True,
     logger=None,
     sortBy=None,
+    colorize=True,
 ):
     twinewsRankings = getTwinewsRankings(verbose=False)
     twinewsScores = getTwinewsScores(verbose=False)
@@ -98,5 +100,6 @@ def printReport\
             sortBy = None
         if sortBy is not None:
             df.sort_values(sortBy, ascending=False, inplace=True)
+        df = colorise_df_columns(df, grey={'id'}, green=metrics)
         display(df)
         return df
