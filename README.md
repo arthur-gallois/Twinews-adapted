@@ -12,6 +12,10 @@ Use this script to install all dependencies : <https://github.com/hayj/Bash/blob
  * **twinews-rankings**: A GridFS mongo database. Corresponds to models outputs. Keys are lda-RHG9H-v1 first 5 letters of the hash of the config of the model instance following by the evaluation split version. The data inside must follow the same guideline.
 
 
+# How to get the text of a news?
+
+Use `twinews.utils.getNewsText(url)` to get the text (which correspond to the field `detokText`) and `twinews.utils.getNewsSentences(url)` to get the text (which correspond to the field `detokSentences`) that is already tokenized by word and sentences.
+
 # Splits (evaluation data)
 
 Splits corresponds to all dataset splits with candidates to rank and stats.
@@ -171,23 +175,54 @@ Puis depuis n'importe quel tipi :
 
  Problème avec la distance kl_divergence :
 
-	return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-	Traceback (most recent call last):
-	File "/users/modhel/hayj/notebooks/twinews/hjmodels/topicmodels.ipynb.py", line 530, in <module>
-	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 148, in usersRankingsByHistoryDistance
-	kwargs,
-	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 89, in userRankingsByHistoryDistance
-	distances = getDistances(xvectors, yvectors, metric=distanceMetric, logger=logger)
-	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 31, in getDistances
-	distances = pairwise_distances(xvectors, yvectors, metric=metric)
-	File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1752, in pairwise_distances
-	return _parallel_pairwise(X, Y, func, n_jobs, kwds)
-	File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1348, in _parallel_pairwise
-	return func(X, Y, kwds)
-	File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1392, in _pairwise_callable
-	out[i, j] = metric(X[i], Y[j], kwds)
-	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 19, in kl_divergence
-	return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-	File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 19, in <genexpr>
-	return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-	ValueError: math domain error
+```
+return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
+Traceback (most recent call last):
+File "/users/modhel/hayj/notebooks/twinews/hjmodels/topicmodels.ipynb.py", line 530, in <module>
+File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 148, in usersRankingsByHistoryDistance
+kwargs,
+File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 89, in userRankingsByHistoryDistance
+distances = getDistances(xvectors, yvectors, metric=distanceMetric, logger=logger)
+File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 31, in getDistances
+distances = pairwise_distances(xvectors, yvectors, metric=metric)
+File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1752, in pairwise_distances
+return _parallel_pairwise(X, Y, func, n_jobs, kwds)
+File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1348, in parallel_pairwise
+return func(X, Y, kwds)
+File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1392, in _pairwise_callable
+out[i, j] = metric(X[i], Y[j], kwds)
+File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 19, in kl_divergence
+return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
+File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 19, in <genexpr>
+return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
+ValueError: math domain error
+```
+
+Essayer de faire des colonnes verticales :
+
+```python
+# Tentative de header vertical:
+# https://stackoverflow.com/questions/46715736/rotating-the-column-name-for-a-panda-dataframe
+df.style.hide_index().set_table_styles(
+    [dict(selector="th",props=[('max-width', '3px')]),
+        dict(selector="th.col_heading",
+                 props=[("writing-mode", "vertical-rl"),
+                        # ("height", "1px"),
+                        # ("position", "relative"),
+                        # ("left", "10px"),
+                        ("text-align", "left"),
+                        ("padding-bottom", "0px"),
+                        # ("margin-top", "200px"),
+                        # ("margin", "0"),
+                        # ("margin-top", "150px"),
+                        # ("bottom", "0"),
+                        ('transform', 'rotate(-50deg)'),
+                        ("transform-origin", "top left"),
+                        ])]
+)
+```
+
+
+
+
+
