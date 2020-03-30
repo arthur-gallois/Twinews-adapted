@@ -51,8 +51,11 @@ def makeMongoCollectionKwargs\
 	}
 	kwargs['logger'] = logger
 	kwargs['verbose'] = verbose
-	if user is None:
-		(user, password, host) = getMongoAuth()
+	if user is None or password is None or host is None:
+		if user is None:
+			(user, password, host) = getMongoAuth()
+		else:
+			(user, password, host) = getMongoAuth(user=user)
 	kwargs['user'] = user
 	kwargs['password'] = password
 	kwargs['host'] = host
@@ -255,13 +258,13 @@ def getNewsText(*args, **kwargs):
 	"""
 		This function return the text of a list of urls from the news collection
 	"""
-	return getNewsField(*args, field='text', **kwargs)
+	return getNewsField(*args, field='detokText', **kwargs)
 def getNewsSentences(*args, **kwargs):
 	return getNewsField(*args, field='sentences', **kwargs)
-def getNewsFilteredSentences(*args, **kwargs):
-	return getNewsField(*args, field='filtered_sentences', **kwargs)
-def getNewsFilteredText(*args, **kwargs):
-	return getNewsField(*args, field='filtered_text', **kwargs)
+# def getNewsFilteredSentences(*args, **kwargs):
+# 	return getNewsField(*args, field='filtered_sentences', **kwargs)
+# def getNewsFilteredText(*args, **kwargs):
+# 	return getNewsField(*args, field='filtered_text', **kwargs)
 
 
 def getTwinewsRankings(logger=None, verbose=True):
