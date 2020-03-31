@@ -83,6 +83,8 @@ def userRankingsByHistoryDistance\
     # First we convert the historyRef to a float
     if isinstance(historyRef, float):
         historyRef = int(historyRef * len(trainUrls))
+        if historyRef == 0:
+        	historyRef = 1
     else:
         historyRef = historyRef
     # Then we store all history vectors and urls in lists:
