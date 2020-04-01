@@ -20,6 +20,42 @@ def rankingToRelevanceVector(ranking, gtUrls):
 			rel.append(False)
 	return rel
 
+def checkRankings(rankings, candidates, maxUsers=None):
+    """We check if rankings are coherent with candidates (for the right split version)"""
+    gotACheck = False
+    rankingsKeys = set(rankings.keys())
+    candidatesKeys = set(candidates.keys())
+    if maxUsers is None:
+        assert len(rankingsKeys) == len(candidatesKeys)
+    assert len(rankingsKeys.union(candidatesKeys)) == len(candidatesKeys)
+    for userId in rankings:
+        assert len(rankings[userId]) == len(candidates[userId])
+        for u, ranking in enumerate(rankings[userId]):
+            assert len(ranking) > 0
+            assert isinstance(ranking, list)
+            if isinstance(ranking[0], tuple):
+                ranking = [e[0] for e in ranking]
+            rankingSet = set(ranking)
+            currentCandidates = candidates[userId][u]
+            assert len(rankingSet) == len(currentCandidates)
+            assert isinstance(currentCandidates, set)
+            assert len(rankingSet.union(currentCandidates)) == len(rankingSet)
+            gotACheck = True
+    assert gotACheck
+
+def purgeSubsampledRankings():
+    toRemove = set()
+    rks = getTwinewsRankings(verbose=False)
+    scores = getTwinewsScores(verbose=False)
+    for current in t.keys():
+        meta = t.getMeta(current)
+        if meta['maxUsers'] is not None:
+            toRemove.add(meta['id'])
+    log(str(len(toRemove)) + " rankings to remove: " + b(toRemove))
+    for currentId in toRemove:
+        del rks[currentId]
+        scores.delete({'id': currentId})
+
 
 def printReport\
 (
@@ -57,13 +93,19 @@ def printReport\
 	if len(data) == 0:
 		log("No data found", logger)
 	else:
-		try:
-			refKeys = data[0].keys()
-			for e in data:
-				assert e.keys() == refKeys
-		except:
-			raise Exception("Some data keys doesn't match:\n" + b(data, 5))
+		firstKeys = set(data[0].keys())
+		refKeys = set(data[0].keys())
+		for e in data:
+			if e.keys() != firstKeys:
+				subs = set(substract(set(e.keys()), firstKeys) + substract(firstKeys, set(e.keys())))
+				logWarning("Found key difference: " + str(subs), logger)
+			for key in e.keys():
+				refKeys.add(key)
 		if len(data) > 1:
+			for i in range(len(data)):
+				toAdd = substract(refKeys, set(data[i].keys()))
+				for k in toAdd:
+					data[i][k] = 'N/A'
 			keysHavingSameValues = set(data[0].keys())
 			baseValues = data[0]
 			for current in data[1:]:
