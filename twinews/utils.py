@@ -152,7 +152,6 @@ def getEvalData(version, maxExtraNews=None, maxUsers=None, logger=None, verbose=
 	tt.toc("Got Twinews evaluation data")
 	return evalData
 
-
 def checkEvalData(evalData):
 	"""
 		This function check the shape of evaluation datas.

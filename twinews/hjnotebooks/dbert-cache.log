@@ -4180,3 +4180,11 @@
 2020-03-28 19:05:25,006 :: INFO :: 41.45% [========            ] (9h 45m 44.539s left)
 2020-03-28 19:05:48,559 :: INFO :: 41.46% [========            ] (9h 46m 3.327s left)
 2020-03-28 19:06:10,985 :: INFO :: 41.47% [========            ] (9h 46m 20.485s left)
+2020-03-29 15:02:55,021 :: INFO :: [ 94bef_ep32 ]
+2020-03-29 15:02:58,088 :: INFO :: twinews news (version 1.0) initialised.
+2020-03-29 15:03:13,189 :: INFO :: 94bef_ep32 dbert model loaded.
+2020-03-29 15:03:13,218 :: INFO :: serializabledict twinews-dbert-94bef_ep32 initialised.
+2020-03-29 15:03:13,224 :: INFO :: Finding not yet computed texts   0% [                    ]
+2020-03-29 15:03:44,265 :: INFO :: Finding not yet computed texts  10% [==                  ] (4m 39.359s left)
+2020-03-29 15:04:15,697 :: INFO :: Finding not yet computed texts  20% [====                ] (4m 9.879s left)
+2020-03-29 15:04:46,187 :: INFO :: Finding not yet computed texts  30% [======              ] (3m 36.906s left)

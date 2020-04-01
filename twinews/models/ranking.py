@@ -119,7 +119,7 @@ def userRankingsByHistoryDistance\
             # And we add it in the dict:
             urlDistances[yurls[testIndex]] = currentDist
         # Finally we rank candidates by sorting distances:
-        ranking = [e[0] for e in sortBy(urlDistances, index=1, desc=False)]
+        ranking = [(e[0], e[1]) for e in sortBy(urlDistances, index=1, desc=False)]
         # And we add to rankings:
         rankings.append(ranking)
     # Finally we return all rankings:
