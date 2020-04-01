@@ -299,6 +299,8 @@ def parseRankingConfig(modelName, config, logger=None, verbose=True):
 	key = modelName + '-' + configHash
 	return (key, config)
 
+def addRankings(*args, **kwargs):
+	return addRanking(*args, **kwargs)
 def addRanking(modelName, ranks, config, logger=None, verbose=True):
 	"""
 		This function add a ranking to the mongo GridFS.
