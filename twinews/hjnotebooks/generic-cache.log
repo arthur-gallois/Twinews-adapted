@@ -1,0 +1,272 @@
+2020-04-02 12:02:12,608 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 12:07:05,489 :: INFO :: [
+  [ 5e70a0c6137cc1977b8b3a53, 5e70a0c6137cc1977b8b3a54 ],
+  [ 5e70a0c6137cc1977b8b3a55, 5e70a0c6137cc1977b8b3a57 ],
+  [ 5e70a0c6137cc1977b8b3a58, 5e70a0c6137cc1977b8b3a59 ],
+  [ 5e70a0c6137cc1977b8b3a5a, 5e70a0c6137cc1977b8b3a5b ]
+]
+2020-04-02 12:33:39,173 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 12:33:49,894 :: INFO :: [
+  [ 5e70a0c6137cc1977b8b3a53, 5e70a0c6137cc1977b8b3a54 ],
+  [ 5e70a0c6137cc1977b8b3a55, 5e70a0c6137cc1977b8b3a57 ],
+  [ 5e70a0c6137cc1977b8b3a58, 5e70a0c6137cc1977b8b3a59 ],
+  [ 5e70a0c6137cc1977b8b3a5a, 5e70a0c6137cc1977b8b3a5b ]
+]
+2020-04-02 12:34:04,877 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 12:34:04,878 :: INFO :: 4 containers to process.
+2020-04-02 12:36:55,578 :: INFO :: [
+  [ 5e70a0c6137cc1977b8b3a53, 5e70a0c6137cc1977b8b3a54 ],
+  [ 5e70a0c6137cc1977b8b3a55, 5e70a0c6137cc1977b8b3a57 ],
+  [ 5e70a0c6137cc1977b8b3a58, 5e70a0c6137cc1977b8b3a59 ],
+  [ 5e70a0c6137cc1977b8b3a5a, 5e70a0c6137cc1977b8b3a5b ]
+]
+2020-04-02 12:36:56,231 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 12:36:56,232 :: INFO :: 4 containers to process.
+2020-04-02 12:37:21,103 :: INFO :: [
+  [ 5e70a0c6137cc1977b8b3a53, 5e70a0c6137cc1977b8b3a54 ],
+  [ 5e70a0c6137cc1977b8b3a55, 5e70a0c6137cc1977b8b3a57 ],
+  [ 5e70a0c6137cc1977b8b3a58, 5e70a0c6137cc1977b8b3a59 ],
+  [ 5e70a0c6137cc1977b8b3a5a, 5e70a0c6137cc1977b8b3a5b ]
+]
+2020-04-02 12:37:21,825 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 12:37:21,827 :: INFO :: 4 containers to process.
+2020-04-02 12:37:22,384 :: INFO ::  25% [=====               ] (1.65s left)
+2020-04-02 12:37:22,410 :: INFO ::  50% [==========          ] (0.58s left)
+2020-04-02 12:37:22,439 :: INFO ::  75% [===============     ] (0.203s left)
+2020-04-02 12:37:22,460 :: INFO :: 100% [====================] (total duration: 0.63s, mean duration: 0.157s)
+2020-04-02 13:07:16,786 :: INFO :: --> tictoc starts...
+2020-04-02 13:07:16,851 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 13:07:48,294 :: INFO :: --> tictoc starts...
+2020-04-02 13:07:48,399 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 13:07:51,532 :: INFO :: [
+  [ 5e70a0c6137cc1977b8b3a53, 5e70a0c6137cc1977b8b3a54 ],
+  [ 5e70a0c6137cc1977b8b3a55, 5e70a0c6137cc1977b8b3a57 ],
+  [ 5e70a0c6137cc1977b8b3a58, 5e70a0c6137cc1977b8b3a59 ],
+  [ 5e70a0c6137cc1977b8b3a5a, 5e70a0c6137cc1977b8b3a5b ]
+]
+2020-04-02 13:23:21,650 :: INFO :: --> tictoc starts...
+2020-04-02 13:23:21,708 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 13:23:31,504 :: INFO :: [
+  [ 5e70bb05137cc1977b94cc59, 5e70b2aa137cc1977b924670, ..., 5e70b6ec137cc1977b939986, 5e70b2fd137cc1977b925554 ],
+  [ 5e70b7d0137cc1977b93ef3c, 5e70c728137cc1977b962e24, ..., 5e70a576137cc1977b8d77fb, 5e70b6e0137cc1977b9393c8 ],
+  [ 5e70a3fd137cc1977b8cd1f6, 5e70b481137cc1977b92e2b8, ..., 5e70b011137cc1977b914a46, 5e70b8ac137cc1977b94310f ],
+  [ 5e70b726137cc1977b93ab9b, 5e70ae7f137cc1977b90be69, ..., 5e70a4fe137cc1977b8d35bd, 5e70b08a137cc1977b9170c7 ]
+]
+2020-04-02 13:23:47,954 :: INFO :: Initializing InferSent...
+2020-04-02 13:23:52,914 :: INFO :: Initializing InferSent...
+2020-04-02 13:26:56,698 :: INFO :: Loading InferSent model...
+2020-04-02 13:26:57,131 :: INFO :: Building vocab...
+2020-04-02 13:29:06,617 :: INFO :: --> tictoc starts...
+2020-04-02 13:29:06,674 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 13:30:07,127 :: INFO :: [
+  [ 5e70aec0137cc1977b90d55e, 5e70b3be137cc1977b92966b, ..., 5e70a7cc137cc1977b8e8372, 5e70b746137cc1977b93bab2 ],
+  [ 5e70bbe3137cc1977b95237b, 5e70a1f3137cc1977b8bdf4e, ..., 5e70b076137cc1977b916a04, 5e70b0bc137cc1977b918919 ],
+  [ 5e70bc37137cc1977b953d4f, 5e70a977137cc1977b8f0acc, ..., 5e70abde137cc1977b8fd7fa, 5e70af23137cc1977b90f6bf ],
+  [ 5e70af38137cc1977b90fd9c, 5e70a525137cc1977b8d4b43, ..., 5e70aa28137cc1977b8f49c5, 5e70a5fc137cc1977b8db2e9 ]
+]
+2020-04-02 13:30:31,924 :: INFO :: Loading InferSent model...
+2020-04-02 13:30:32,410 :: INFO :: Loading docs for vocab...
+2020-04-02 13:30:32,454 :: INFO :: Building vocab...
+2020-04-02 13:37:14,996 :: INFO :: --> tic: 8m 8.37s | message: InferSent initialized.
+2020-04-02 13:44:22,403 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 13:44:22,405 :: INFO :: 4 containers to process.
+2020-04-02 13:47:13,670 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 13:47:13,672 :: INFO :: 4 containers to process.
+2020-04-02 13:47:27,172 :: INFO ::  25% [=====               ] (40.47s left)
+2020-04-02 13:47:27,174 :: INFO ::  50% [==========          ] (13.5s left)
+2020-04-02 13:47:27,176 :: INFO ::  75% [===============     ] (4.5s left)
+2020-04-02 13:47:27,177 :: INFO :: 100% [====================] (total duration: 13.5s, mean duration: 3.375s)
+2020-04-02 13:55:00,651 :: INFO :: --> tictoc starts...
+2020-04-02 13:55:00,713 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 13:55:10,572 :: INFO :: [
+  [ 5e70a9d0137cc1977b8f3093, 5e70bc6e137cc1977b954c42, ..., 5e70a301137cc1977b8c66c0, 5e70a1a4137cc1977b8bb572 ],
+  [ 5e70a977137cc1977b8f0b0d, 5e70a805137cc1977b8e9bd5, ..., 5e70a478137cc1977b8d0642, 5e70a29e137cc1977b8c315b ],
+  [ 5e70b960137cc1977b9459d7, 5e70b776137cc1977b93cfac, ..., 5e70a288137cc1977b8c2889, 5e70ab8f137cc1977b8fb786 ],
+  [ 5e70b8fc137cc1977b9440b2, 5e70b874137cc1977b9419f3, ..., 5e70a624137cc1977b8dc188, 5e70a15f137cc1977b8b98b9 ]
+]
+2020-04-02 13:55:12,666 :: INFO :: Loading InferSent model...
+2020-04-02 13:55:13,086 :: INFO :: Loading docs for vocab...
+2020-04-02 13:55:13,129 :: INFO :: Building vocab...
+2020-04-02 13:55:21,801 :: INFO :: --> tic: 21.14s | message: InferSent initialized.
+2020-04-02 13:55:21,809 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 13:55:21,809 :: INFO :: 4 containers to process.
+2020-04-02 13:55:39,392 :: INFO ::  25% [=====               ] (52.739s left)
+2020-04-02 13:55:39,395 :: INFO ::  50% [==========          ] (17.58s left)
+2020-04-02 13:55:39,396 :: INFO ::  75% [===============     ] (5.859s left)
+2020-04-02 13:55:39,397 :: INFO :: 100% [====================] (total duration: 17.58s, mean duration: 4.395s)
+2020-04-02 13:55:39,403 :: INFO :: --> toc total duration: 38.75s
+2020-04-02 15:15:51,753 :: INFO :: --> tictoc starts...
+2020-04-02 15:15:51,814 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 15:16:12,766 :: INFO :: [
+  [ 5e70bb49137cc1977b94ea92, 5e70bcb8137cc1977b9562c0, ..., 5e70b58a137cc1977b93183a, 5e70aedf137cc1977b90e885 ],
+  [ 5e70a355137cc1977b8c9800, 5e70bba2137cc1977b95140d, ..., 5e70b673137cc1977b936fc8, 5e70b405137cc1977b92b7e4 ],
+  [ 5e70a692137cc1977b8df1fd, 5e70b4b5137cc1977b92f1fa, ..., 5e70a3bc137cc1977b8cbbdd, 5e70afc7137cc1977b9130c5 ],
+  [ 5e70b692137cc1977b9379a2, 5e70b745137cc1977b93ba5c, ..., 5e70a266137cc1977b8c16fc, 5e70bae4137cc1977b94be9b ]
+]
+2020-04-02 15:19:35,177 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 15:19:35,179 :: INFO :: 4 containers to process.
+2020-04-02 15:26:58,692 :: INFO ::  25% [=====               ] (22m 10.529s left)
+2020-04-02 15:26:59,117 :: INFO ::  50% [==========          ] (7m 23.93s left)
+2020-04-02 15:26:59,124 :: INFO ::  75% [===============     ] (2m 27.979s left)
+2020-04-02 15:26:59,125 :: INFO :: 100% [====================] (total duration: 7m 23.939s, mean duration: 1m 50.985s)
+2020-04-02 15:57:57,973 :: INFO :: --> tictoc starts...
+2020-04-02 15:57:58,043 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 15:58:07,870 :: INFO :: [
+  [ 5e70b630137cc1977b935321, 5e70b46e137cc1977b92da05, ..., 5e70ab52137cc1977b8fa0fd, 5e70b3fc137cc1977b92b396 ],
+  [ 5e70cd7c137cc1977b9675dc, 5e70acc5137cc1977b901ef2, ..., 5e70a404137cc1977b8cd717, 5e70a5ad137cc1977b8d9183 ],
+  [ 5e70b8c8137cc1977b9437ce, 5e70b07f137cc1977b916e46, ..., 5e70b5fa137cc1977b933f01, 5e70b250137cc1977b921d07 ],
+  [ 5e70a4da137cc1977b8d231c, 5e70b68f137cc1977b937807, ..., 5e70b99f137cc1977b947659, 5e70acdb137cc1977b902692 ]
+]
+2020-04-02 15:59:10,439 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 15:59:10,441 :: INFO :: 4 containers to process.
+2020-04-02 16:44:53,831 :: INFO :: --> tictoc starts...
+2020-04-02 16:44:53,896 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 16:45:03,477 :: INFO :: [
+  [ 5e70b991137cc1977b946f35, 5e70a1ca137cc1977b8bc592, ..., 5e70a196137cc1977b8bb0e8, 5e70b06b137cc1977b91639d ],
+  [ 5e70aa0a137cc1977b8f41ee, 5e70ac36137cc1977b8feab7, ..., 5e70a602137cc1977b8db53d, 5e70a0ff137cc1977b8b6355 ],
+  [ 5e70a442137cc1977b8cf088, 5e70a568137cc1977b8d6e93, ..., 5e70a9e6137cc1977b8f372b, 5e70a123137cc1977b8b852f ],
+  [ 5e70ab9e137cc1977b8fbcaa, 5e70ab90137cc1977b8fb7a3, ..., 5e70bcfa137cc1977b957834, 5e70bb11137cc1977b94d0d9 ]
+]
+2020-04-02 16:45:03,616 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 16:45:03,618 :: INFO :: 4 containers to process.
+2020-04-02 16:55:04,296 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 16:55:04,298 :: INFO :: 4 containers to process.
+2020-04-02 17:37:05,773 :: INFO :: --> tictoc starts...
+2020-04-02 17:37:05,839 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 17:38:30,392 :: INFO :: --> tictoc starts...
+2020-04-02 17:38:30,453 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 17:38:40,042 :: INFO :: [
+  [ 5e70bde6137cc1977b95cb56, 5e70bfe5137cc1977b95dbe2, ..., 5e70aa41137cc1977b8f508a, 5e70ab74137cc1977b8facdd ],
+  [ 5e70a1e6137cc1977b8bd4b6, 5e70ab76137cc1977b8fad75, ..., 5e70aebe137cc1977b90d49a, 5e70d2a7137cc1977b96a4d6 ],
+  [ 5e70ac64137cc1977b8ff81e, 5e70b5dd137cc1977b93341c, ..., 5e70c82a137cc1977b964229, 5e70af98137cc1977b912166 ],
+  [ 5e70af0e137cc1977b90f10a, 5e70a20d137cc1977b8becdd, ..., 5e70b078137cc1977b916a9e, 5e70a76a137cc1977b8e56c2 ]
+]
+2020-04-02 17:38:40,217 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 17:38:40,218 :: INFO :: 4 containers to process.
+2020-04-02 17:39:07,649 :: INFO :: [
+  [ 5e70b568137cc1977b930dbd, 5e70ba60137cc1977b949df4, ..., 5e70aef8137cc1977b90edb1, 5e70abc9137cc1977b8fcd55 ],
+  [ 5e70a373137cc1977b8ca39e, 5e70b99f137cc1977b947687, ..., 5e70b13d137cc1977b91b4cc, 5e70b63e137cc1977b93590f ],
+  [ 5e70ac4c137cc1977b8ff111, 5e70a672137cc1977b8de5d1, ..., 5e70b918137cc1977b944709, 5e70bb13137cc1977b94d2db ],
+  [ 5e70a2a5137cc1977b8c370d, 5e70a953137cc1977b8efcfa, ..., 5e70a53c137cc1977b8d53fc, 5e70bc1d137cc1977b95359f ]
+]
+2020-04-02 17:39:07,776 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 17:39:07,778 :: INFO :: 4 containers to process.
+2020-04-02 17:40:00,018 :: INFO :: [
+  [ 5e70afd2137cc1977b9134b0, 5e70ac9a137cc1977b900be0, ..., 5e70c738137cc1977b962f3c, 5e70b9c9137cc1977b94870e ],
+  [ 5e70a25d137cc1977b8c123d, 5e70b580137cc1977b9314a2, ..., 5e70ad4c137cc1977b905745, 5e70afe5137cc1977b913d96 ],
+  [ 5e70aab6137cc1977b8f76cd, 5e70a4a1137cc1977b8d10bc, ..., 5e70bd5b137cc1977b9596ef, 5e70aef6137cc1977b90ec0b ],
+  [ 5e70a6d8137cc1977b8e143b, 5e70bb9e137cc1977b951044, ..., 5e70a522137cc1977b8d481e, 5e70ae93137cc1977b90c2ce ]
+]
+2020-04-02 17:40:00,158 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-02 17:40:00,159 :: INFO :: 4 containers to process.
+2020-04-02 17:46:25,948 :: INFO :: --> tictoc starts...
+2020-04-02 17:46:26,012 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 17:46:35,670 :: INFO :: [
+  [ 5e70a4a1137cc1977b8d10bd, 5e70b68b137cc1977b937551, ..., 5e70aeaf137cc1977b90cde9, 5e70aeb7137cc1977b90d1e7 ],
+  [ 5e70a663137cc1977b8ddbb7, 5e70a695137cc1977b8df452, ..., 5e70b52c137cc1977b9300df, 5e70b6e8137cc1977b9398d4 ],
+  [ 5e70a7c2137cc1977b8e7cfa, 5e70aae1137cc1977b8f7e53, ..., 5e70afb2137cc1977b9129c4, 5e70ad9b137cc1977b9073a3 ],
+  [ 5e70b87a137cc1977b941c54, 5e70bbe3137cc1977b952363, ..., 5e70b2bc137cc1977b924c22, 5e70a5b0137cc1977b8d93a5 ]
+]
+2020-04-02 17:46:35,819 :: INFO :: 4 containers to process.
+2020-04-02 17:48:53,675 :: INFO ::  25% [=====               ] (6m 53.549s left)
+2020-04-02 17:49:43,632 :: INFO ::  50% [==========          ] (3m 7.81s left)
+2020-04-02 17:50:38,729 :: INFO ::  75% [===============     ] (1m 20.966s left)
+2020-04-02 17:51:30,582 :: INFO :: 100% [====================] (total duration: 4m 54.759s, mean duration: 1m 13.689s)
+2020-04-02 17:53:35,360 :: INFO :: --> tictoc starts...
+2020-04-02 17:53:35,427 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 17:53:45,001 :: INFO :: [
+  [ 5e70a6ce137cc1977b8e0d8d, 5e70ace9137cc1977b902f23, ..., 5e70a9b6137cc1977b8f2ae3, 5e70b250137cc1977b921d9e ],
+  [ 5e70d286137cc1977b96a3c6, 5e70a937137cc1977b8ef13d, ..., 5e70bb3d137cc1977b94e301, 5e70a4e5137cc1977b8d292e ],
+  [ 5e70a1a3137cc1977b8bb528, 5e70b07d137cc1977b916d18, ..., 5e70a1b5137cc1977b8bbbce, 5e70a69c137cc1977b8df789 ],
+  [ 5e70b458137cc1977b92d015, 5e70ad6a137cc1977b9063f6, ..., 5e70a5f8137cc1977b8db01d, 5e70a25d137cc1977b8c127d ]
+]
+2020-04-02 17:53:45,197 :: INFO :: 4 containers to process.
+2020-04-02 17:54:36,082 :: INFO ::  25% [=====               ] (2m 32.64s left)
+2020-04-02 17:55:25,961 :: INFO ::  50% [==========          ] (1m 40.76s left)
+2020-04-02 18:06:27,998 :: INFO :: --> tictoc starts...
+2020-04-02 18:06:28,065 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 18:06:38,154 :: INFO :: [
+  [ 5e70a641137cc1977b8dcd8f, 5e70ac87137cc1977b900258, ..., 5e70b264137cc1977b92244a, 5e70a4e7137cc1977b8d2a87 ],
+  [ 5e70b5ae137cc1977b93240f, 5e70bd6c137cc1977b959d79, ..., 5e70a59b137cc1977b8d8d03, 5e70b0a7137cc1977b9181ef ],
+  [ 5e70b766137cc1977b93c5bf, 5e70a504137cc1977b8d3a47, ..., 5e70b764137cc1977b93c49f, 5e70ac83137cc1977b90001b ],
+  [ 5e70acaf137cc1977b9015be, 5e70a11b137cc1977b8b7db9, ..., 5e70a336137cc1977b8c869c, 5e70bb3d137cc1977b94e305 ]
+]
+2020-04-02 18:10:16,940 :: INFO :: --> tictoc starts...
+2020-04-02 18:10:17,005 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-02 18:10:26,317 :: INFO :: [
+  [ 5e70a24f137cc1977b8c07ad, 5e70adf2137cc1977b9092e0, ..., 5e70a0f7137cc1977b8b5fcf, 5e70bce7137cc1977b95733e ],
+  [ 5e70a7f0137cc1977b8e93da, 5e70a153137cc1977b8b92f3, ..., 5e70b6c6137cc1977b938f6a, 5e70af5f137cc1977b910df9 ],
+  [ 5e70a120137cc1977b8b82b6, 5e70a0c6137cc1977b8b3aa2, ..., 5e70b06b137cc1977b916392, 5e70ac3f137cc1977b8fed88 ],
+  [ 5e70bce2137cc1977b957015, 5e70a182137cc1977b8ba97f, ..., 5e70a2c0137cc1977b8c44b3, 5e70a442137cc1977b8cf0f6 ]
+]
+2020-04-02 18:10:26,446 :: INFO :: 4 containers to process.
+2020-04-03 16:02:52,249 :: INFO :: --> tictoc starts...
+2020-04-03 16:02:52,375 :: INFO :: twinews news (version 1.0) initialised.
+2020-04-03 16:10:12,616 :: INFO :: [
+  [ 5e70a41f137cc1977b8ce4b1, 5e70b5de137cc1977b933490, ..., 5e70a0d8137cc1977b8b510f, 5e70b56b137cc1977b930e88 ],
+  [ 5e70a2a4137cc1977b8c359e, 5e70a751137cc1977b8e4c26, ..., 5e70a543137cc1977b8d58ed, 5e70a956137cc1977b8efe13 ],
+  [ 5e70a446137cc1977b8cf380, 5e70a357137cc1977b8c9979, ..., 5e70ab17137cc1977b8f8f00, 5e70c338137cc1977b95ffb3 ],
+  [ 5e70c2a6137cc1977b95f84b, 5e70a2c8137cc1977b8c4bdd, ..., 5e70a561137cc1977b8d680d, 5e70adcc137cc1977b90824f ]
+]
+2020-04-03 16:11:45,105 :: INFO :: [
+  [ 5e70a121137cc1977b8b836e, 5e70bdcb137cc1977b95bddd, ..., 5e70a0f8137cc1977b8b607e, 5e70ae84137cc1977b90c05d ],
+  [ 5e70b1a8137cc1977b91deeb, 5e70bb8d137cc1977b950b3b, ..., 5e70a448137cc1977b8cf4dd, 5e70b0a2137cc1977b917f1d ],
+  [ 5e70af3f137cc1977b91006a, 5e70bba2137cc1977b95141a, ..., 5e70bb5e137cc1977b94f341, 5e70b0a7137cc1977b9181a6 ],
+  [ 5e70b5f9137cc1977b933e6f, 5e70a1ae137cc1977b8bb8e1, ..., 5e70afde137cc1977b913a93, 5e70ace3137cc1977b902d12 ]
+]
+2020-04-03 16:17:32,994 :: INFO :: [
+  [ 5e70b288137cc1977b923758, 5e70a2a1137cc1977b8c33cc, ..., 5e70a86a137cc1977b8ec18a, 5e70b651137cc1977b93609a ],
+  [ 5e70a32f137cc1977b8c8074, 5e70b653137cc1977b936128, ..., 5e70a6ec137cc1977b8e1ac8, 5e70a571137cc1977b8d750c ],
+  [ 5e70a16a137cc1977b8b9f0b, 5e70a71e137cc1977b8e3083, ..., 5e70a6af137cc1977b8dfe75, 5e70bbb0137cc1977b9517f1 ],
+  [ 5e70aa26137cc1977b8f4937, 5e70a1b0137cc1977b8bb9c5, ..., 5e70bb57137cc1977b94ed42, 5e70af4c137cc1977b910584 ]
+]
+2020-04-03 16:17:36,561 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-03 16:17:36,562 :: INFO :: 4 containers to process.
+2020-04-03 16:18:11,817 :: INFO :: [
+  [ 5e70a51d137cc1977b8d4414, 5e70a52a137cc1977b8d4ef1, ..., 5e70a9f9137cc1977b8f3b4a, 5e70a61c137cc1977b8dbce5 ],
+  [ 5e70a7b3137cc1977b8e7824, 5e70aa29137cc1977b8f49e9, ..., 5e70abc8137cc1977b8fccdf, 5e70acf0137cc1977b9032d8 ],
+  [ 5e70a1fe137cc1977b8be8eb, 5e70a2cf137cc1977b8c5218, ..., 5e70b7a6137cc1977b93e4fe, 5e70bdb0137cc1977b95b451 ],
+  [ 5e70a494137cc1977b8d0cac, 5e70b332137cc1977b92661f, ..., 5e70b637137cc1977b935603, 5e70c630137cc1977b961ca0 ]
+]
+2020-04-03 16:18:11,947 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-03 16:18:11,948 :: INFO :: 4 containers to process.
+2020-04-03 16:18:12,090 :: INFO ::  25% [=====               ] (0.42s left)
+2020-04-03 16:18:12,108 :: INFO ::  50% [==========          ] (0.15s left)
+2020-04-03 16:18:12,110 :: INFO ::  75% [===============     ] (0.053s left)
+2020-04-03 16:18:12,128 :: INFO :: 100% [====================] (total duration: 0.17s, mean duration: 0.042s)
+2020-04-03 16:18:36,481 :: INFO :: [
+  [ 5e70b071137cc1977b9167a4, 5e70a83d137cc1977b8eb0bd, ..., 5e70b1b0137cc1977b91e30c, 5e70bd55137cc1977b959323 ],
+  [ 5e70b483137cc1977b92e365, 5e70a564137cc1977b8d6a8c, ..., 5e70b5c2137cc1977b932a67, 5e70a215137cc1977b8bf12e ],
+  [ 5e70b91c137cc1977b944818, 5e70aeac137cc1977b90cbc8, ..., 5e70a6b1137cc1977b8e006e, 5e70a235137cc1977b8bfe96 ],
+  [ 5e70a0d2137cc1977b8b4a2d, 5e70caca137cc1977b965f6e, ..., 5e70ac83137cc1977b8fffbf, 5e70a2ba137cc1977b8c408c ]
+]
+2020-04-03 16:18:36,629 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-03 16:18:36,630 :: INFO :: 4 containers to process.
+2020-04-03 16:18:39,831 :: INFO ::  25% [=====               ] (9.6s left)
+2020-04-03 16:18:39,897 :: INFO ::  50% [==========          ] (3.26s left)
+2020-04-03 16:18:39,932 :: INFO ::  75% [===============     ] (1.099s left)
+2020-04-03 16:18:39,964 :: INFO :: 100% [====================] (total duration: 3.33s, mean duration: 0.832s)
+2020-04-03 16:20:00,083 :: INFO :: [
+  [ 5e70b0d7137cc1977b919593, 5e70a4d4137cc1977b8d1f41, ..., 5e70bc28137cc1977b9538b1, 5e70a153137cc1977b8b92c2 ],
+  [ 5e70bcc9137cc1977b95693d, 5e70a0ce137cc1977b8b45a7, ..., 5e70ad6e137cc1977b906679, 5e70b83a137cc1977b940bf5 ],
+  [ 5e70ab7d137cc1977b8fafe8, 5e70a60f137cc1977b8dba56, ..., 5e70a7f1137cc1977b8e9509, 5e70adc5137cc1977b907e4d ],
+  [ 5e70c25e137cc1977b95f4c1, 5e70a392137cc1977b8cafa8, ..., 5e70b759137cc1977b93bf51, 5e70bde4137cc1977b95ca2c ]
+]
+2020-04-03 16:20:00,258 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-03 16:20:00,259 :: INFO :: 4 containers to process.
+2020-04-03 16:20:04,719 :: INFO ::  25% [=====               ] (13.35s left)
+2020-04-03 16:20:05,982 :: INFO ::  50% [==========          ] (5.72s left)
+2020-04-03 16:20:06,000 :: INFO ::  75% [===============     ] (1.913s left)
+2020-04-03 16:20:06,002 :: INFO :: 100% [====================] (total duration: 5.74s, mean duration: 1.435s)
+2020-04-03 16:20:28,070 :: INFO :: [
+  [ 5e70b534137cc1977b9302c1, 5e70a7f1137cc1977b8e94c2, ..., 5e70bc80137cc1977b9550a6, 5e70b3db137cc1977b92a3ad ],
+  [ 5e70a502137cc1977b8d388e, 5e70ab86137cc1977b8fb388, ..., 5e70a5f9137cc1977b8db090, 5e70afe0137cc1977b913b8d ],
+  [ 5e70b135137cc1977b91b302, 5e70b1be137cc1977b91ea71, ..., 5e70bb70137cc1977b94fda7, 5e70c7ff137cc1977b963eea ],
+  [ 5e70a7f0137cc1977b8e93e4, 5e70a525137cc1977b8d4b2a, ..., 5e70a284137cc1977b8c25ae, 5e70c7d3137cc1977b963b69 ]
+]
+2020-04-03 16:20:28,288 :: WARNING :: With parallelProcesses > 1, this iterator is not consistent, meaning 2 iterations over same containers will not give items in the same order
+2020-04-03 16:20:28,289 :: INFO :: 4 containers to process.
+2020-04-03 16:20:31,393 :: INFO ::  25% [=====               ] (9.3s left)
+2020-04-03 16:20:31,557 :: INFO ::  50% [==========          ] (3.26s left)
+2020-04-03 16:20:31,606 :: INFO ::  75% [===============     ] (1.103s left)
+2020-04-03 16:20:31,656 :: INFO :: 100% [====================] (total duration: 3.36s, mean duration: 0.84s)

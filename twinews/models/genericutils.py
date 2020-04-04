@@ -40,7 +40,7 @@ genericFields = \
     'dbert-ft': 'detokText',
     'dbert-base': 'detokText',
     'infersent': 'detokSentences',
-    'usent': None,
+    'usent': 'detokText',
     'sent2vec': 'detokSentences',
     'doc2vec': 'sentences',
     'bert': 'detokSentences',
