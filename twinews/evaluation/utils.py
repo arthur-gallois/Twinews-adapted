@@ -129,7 +129,7 @@ def printReport\
 			for score in scores:
 				if metricsFilter is None or score['metric'] in metricsFilter:
 					metrics.add(score['metric'])
-					current[score['metric']] = score['score']
+					current[score['metric']] = truncateFloat(score['score'], 5)
 		if len(metrics) > 0:
 			metrics = sorted(list(metrics))
 			if sortBy is None:
