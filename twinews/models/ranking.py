@@ -9,6 +9,7 @@ from math import log2
 from math import sqrt
 from numpy import asarray
 import scipy
+from machinelearning.function import *
 
 
 def getDistances(xvectors, yvectors, metric='cosine', logger=None, verbose=False):
@@ -168,5 +169,136 @@ def usersRankingsByHistoryDistance\
         rankings[userId] = currentRankings
     # And we return all rankings of all users:
     return rankings
+
+def normalizeRankingScores(x):
+    """
+        This function normalize ranking scores between 0.0 and 1.0 and make it ascending.
+    """
+    x = minMaxNormalize(x)
+    if x[0] > x[-1]:
+        x = [1 - e for e in x]
+    return np.array(x)
+
+
+def rescore(x, *args, **kwargs):
+    x = np.array(x)
+    x = normalizeRankingScores(x)
+    x = normalizedLawX(x, *args, inverse=False, **kwargs)
+    return list(x)
+
+def mergeRankings\
+(
+    rankings,
+    rankAsScore=None,
+    weights=None,
+    alphas=None,
+    betas=None,
+    padShorterRankings=True,
+    padToken="__no_item__",
+    logger=None,
+    verbose=True,
+    epsilon=0.0001,
+    returnScores=True,
+):
+    """
+        This function merge rankings of different recommender systems.
+
+        Actually this funciton works when you give same items in all rankings (same item count, same items...).
+        TODO How to take into account items that are not in a sub-set of ranking: give to it the worst score (1.0) ?
+
+        :args:
+
+            **rankings**: rankings is a list of tuples (label, score)
+            if rankings is not a list of tuples (containing only labels), scores will be automatically generating according to the rank of each item. All scores will be normalized between 0.0 and 1.0. If you give scores for each item, scores must be ordered (descending or ascending). If scores are descending, it will be converted in ascending scores, so it will be normalized, meaning different rankings can have different scoring strategies (similarity, distance...).
+            **rankAsScore**: Same size as `rankings`. For each ranking, indicates if scores are ranks of items. If False, given scores will be taken into account.
+            **weights**: Same size as `rankings`. For each ranking, indicates the weight of it.
+            **alphas**: Same size as `rankings`. For each ranking, indicates the alpha parameter of the function `machinelearning.function.normalizedLawX`. If lower than 0.5, first items' scores will come close to 0.0 (the best rank). If higher to 0.5, last items' scores will come close to 1.0 (the worst rank).
+            **betas**: Same size as `rankings`. For each ranking, indicates the beta parameter of the function `machinelearning.function.normalizedLawX`.
+            **padShorterRankings**: If True (default), all rankings are padded to be the same size as the longer ranking. For exemple in case you have a ranking of 10 items and an other of 1000 items, setting `padShorterRankings` as `True` will add 990 items to the first ranking list. It prevents to have very low scores for last items (du to the normalization) in this ranking (containing only 10 items).
+    """
+    # We check params and rankings shape:
+    assert len(rankings) >= 2
+    if rankAsScore is None:
+        rankAsScore = [True] * len(rankings)
+    if weights is None:
+        weights = [1.0 / len(rankings)] * len(rankings)
+    if alphas is None:
+        alphas = [0.5] * len(rankings)
+    if betas is None:
+        betas = [NormalizedLawBeta.LOG] * len(rankings)
+    assert len(rankings) == len(alphas)
+    assert len(rankings) == len(betas)
+    assert len(rankings) == len(rankAsScore)
+    assert len(rankings) == len(weights)
+    assert sum(weights) < 1.0 + epsilon and sum(weights) > 1.0 - epsilon
+    # We convert scores per rank according to `rankAsScore`:
+    for i in range(len(rankings)):
+        ranking = rankings[i]
+        assert len(ranking) > 0
+        currentRankAsScore = rankAsScore[i]
+        if currentRankAsScore:
+            if isinstance(ranking[0], tuple):
+                labels = [e[0] for e in ranking]
+            else:
+                labels = ranking
+            scores = list(range(len(labels)))
+            ranking = [(labels[u], scores[u]) for u in range(len(labels))]
+        elif not isinstance(ranking[0], tuple):
+                raise Exception("You need to provide the ranking scores when using `rankAsScore` as False")
+        rankings[i] = ranking
+    # We find longer ranking:
+    maxRankingsLength = max([len(e) for e in rankings])
+    # We normalize scores:
+    for i in range(len(rankings)):
+        ranking = rankings[i]
+        if len(ranking) == 1:
+            ranking = [(ranking[0][0], 0.0)]
+        else:
+            labels = [e[0] for e in ranking]
+            scores = [e[1] for e in ranking]
+            # We pad rankings:
+            if padShorterRankings and len(labels) < maxRankingsLength:
+                amountToAdd = maxRankingsLength - len(labels)
+                meanDistance = (max(scores) - min(scores)) / len(scores)
+                currentScore = max(scores) + meanDistance
+                for u in range(amountToAdd):
+                    labels.append(padToken)
+                    scores.append(currentScore)
+                    currentScore += meanDistance
+            # We normalize scores:
+            scores = rescore(scores, alpha=alphas[i], beta=betas[i])
+            ranking = [(labels[u], scores[u]) for u in range(len(labels))]
+        rankings[i] = ranking
+    # We aggregate scores per label:
+    labelScores = dict()
+    for i in range(len(rankings)):
+        ranking = rankings[i]
+        weight = weights[i]
+        for label, score in ranking:
+            if label != padToken:
+                if label not in labelScores:
+                    labelScores[label] = []
+                labelScores[label].append(score * weight)
+    # We mean all scores:
+    labelScores = [(label, np.sum(scores)) for label, scores in labelScores.items()]
+    # We generate final ranking:
+    labelScores = sortBy(labelScores, index=1, desc=False)
+    # Finally we return the ranking:
+    if returnScores:
+        return labelScores
+    else:
+        ranking = [e[0] for e in labelScores]
+        return ranking
+
+
+
+
+if __name__ == '__main__':
+    a = list(range(1))
+    print(a)
+    print(normalizeRankingScores(a))
+
+
+
 
 
