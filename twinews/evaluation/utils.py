@@ -60,6 +60,8 @@ def purgeSubsampledRankings():
 def printReport\
 (
 	model=None,
+	excludedModels=None,
+	onlyFields=None,
 	splitVersion=None,
 	metaFilter={}, # A dict that map field to mandatory values
 	metricsFilter=None, # A set of allowed metrics
@@ -88,6 +90,11 @@ def printReport\
 			if metaFilter[filtKey] != meta[filtKey]:
 				toKeep = False
 				break
+		if excludedModels is not None and len(excludedModels) > 0:
+			if meta['model'] in excludedModels:
+				toKeep = False
+		if onlyFields is not None and len(onlyFields) > 0:
+			meta = dictSelect(meta, onlyFields)
 		if toKeep:
 			data.append(meta)
 	if len(data) == 0:
@@ -115,9 +122,10 @@ def printReport\
 			sameValues = dict()
 			for key in keysHavingSameValues:
 				sameValues[key] = data[0][key]
-			log("These values are common to all rows:\n", logger)
-			for key, value in sameValues.items():
-				log("\t- " + str(key) + ": " + str(value), logger)
+			if len(sameValues) > 0:
+				log("These values are common to all rows:\n", logger)
+				for key, value in sameValues.items():
+					log("\t- " + str(key) + ": " + str(value), logger)
 			for i in range(len(data)):
 				for key in keysHavingSameValues:
 					del data[i][key]
