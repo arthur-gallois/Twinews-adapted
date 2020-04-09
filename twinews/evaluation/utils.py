@@ -123,7 +123,7 @@ def printReport\
 			for key in keysHavingSameValues:
 				sameValues[key] = data[0][key]
 			if len(sameValues) > 0:
-				log("These values are common to all rows:\n", logger)
+				log("These values are common to all rows " + str(len(data)) + ":\n", logger)
 				for key, value in sameValues.items():
 					log("\t- " + str(key) + ": " + str(value), logger)
 			for i in range(len(data)):
