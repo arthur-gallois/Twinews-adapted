@@ -126,7 +126,7 @@ class WordHash(object):
 
 def test_WordHash():
 
-    vocab = 'Key words based text matching methods and semantic matching method'
+    vocab = ['Key words based text matching methods and semantic matching method','n_gram_term_index_mapping',1]
 
     #print(vocab.split())
     wordhash = WordHash(vocab.split(), load_from_file=False, load_file='n_gram_term_index_mapping.pkl', dump_to_file=False, dump_file='n_gram_term_index_mapping.pkl')
