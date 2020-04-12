@@ -19,6 +19,7 @@ from math import sqrt
 from numpy import asarray
 from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
 import pymongo
+import gridfs
 
 def getMongoHost():
 	weAreAtLRI = False
@@ -281,6 +282,20 @@ def getTwinewsRankings(logger=None, verbose=True):
 		logger=logger, verbose=verbose,
 	)
 
+def pruneRankings(modelKey):
+    twinewsRankings = getTwinewsRankings(verbose=False)
+    meta = twinewsRankings.getMeta(modelKey)
+    key = meta['id']
+    del meta['id']
+    del twinewsRankings[modelKey]
+    twinewsRankings.insert(key, None, **meta)
+
+def removeRankingsAndScores(modelKey):
+	twinewsRankings = getTwinewsRankings(verbose=False)
+	twinewsScores = getTwinewsScores(verbose=False)
+	del twinewsRankings[modelKey]
+	twinewsScores.collection.delete_many({'id': modelKey})
+
 
 def parseRankingConfig(modelName, config, logger=None, verbose=True):
 	"""
@@ -318,6 +333,8 @@ def addRanking(modelName, ranks, config, logger=None, verbose=True):
 	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
 	try:
 		twinewsRankings.insert(key, ranks, **config)
+	except gridfs.errors.FileExists:
+		logError(key + " is already in the database.", logger, verbose=verbose)
 	except Exception as e:
 		logException(e, logger, verbose=verbose)
 
