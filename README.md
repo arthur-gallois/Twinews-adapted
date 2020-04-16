@@ -148,67 +148,73 @@ Finally you add `rankings` in the `twinews-rankings` database:
 In eval data you get candidates for each user (so `evalData['candidates']`:
 
 ```python
-'<user id>':
-[ # Here it's a list because we can have multiple lists of candidates per user
-	{
-		'<url 1>',
-		# ...,
-		'<url 1000>'
-	}
-],
-# ...,
-'100022528': 
-[
-	{
-		'http://ow.ly/GNQM30hSXPU',
-		# ...,
-		'https://usat.ly/2Db0QTH'
-	}
-]
+{
+	'<user id>':
+	[ # Here it's a list because we can have multiple lists of candidates per user
+		{
+			'<url 1>',
+			# ...,
+			'<url 1000>'
+		}
+	],
+	# ...,
+	'100022528': 
+	[
+		{
+			'http://ow.ly/GNQM30hSXPU',
+			# ...,
+			'https://usat.ly/2Db0QTH'
+		}
+	]
+}
 ```
 
 Your rankings must be the same shape but lists (to order items by relevance):
 
 ```python
-'<user id>':
-[
+{
+	'<user id>':
 	[
-		'<url 102>',
-		# ...,
-		'<url 506>'
-	]
-],
-# ...,
-'100022528': 
-[
+		[
+			'<url 102>',
+			# ...,
+			'<url 506>'
+		]
+	],
+	# ...,
+	'100022528': 
 	[
-		'http://ow.ly/JHDG',
-		# ...,
-		'https://bit.ly/465JHGV'
+		[
+			'http://ow.ly/JHDG',
+			# ...,
+			'https://bit.ly/465JHGV'
+		]
 	]
-]
+}
 ```
 
 **BUT** you can also give scores with urls (distance or similarity, it doesn't matter, and you don't need to normalize it, it doesn't matter). This is usefull when we will combinate multiple models outputs.
 
 ```python
-'<user id>':
-[
+{
+	'<user id>':
 	[
-		('<url 102>', <score for url 102>), # A tuple url and score
-		# ...,
-		('<url 506>', <score for url 506>),
-	]
-],
-# ...,
-'100022528': 
-[
+		[
+			('<url 102>', <score for url 102>), # A tuple url and score
+			# ...,
+			('<url 506>', <score for url 506>),
+		]
+	],
+	# ...,
+	'100022528': 
 	[
-		('http://ow.ly/JHDG', 100548),
-		# ...,
-		('https://bit.ly/465JHGV', 845),
+		[
+			('http://ow.ly/JHDG', 100548),
+			# ...,
+			('https://bit.ly/465JHGV', 845),
+		]
 	]
-]
+}
 ```
 
 
