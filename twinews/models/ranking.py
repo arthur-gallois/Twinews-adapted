@@ -12,7 +12,7 @@ import scipy
 from machinelearning.function import *
 
 
-def getDistances(xvectors, yvectors, metric='cosine', logger=None, verbose=False):
+def getDistances(xvectors, yvectors, metric='cosine', logger=None, verbose=False, multipartsThreshold=None, nJobs=None): # multipartsThreshold=500000
     """
         metric can be 'cosine', 'euclidean', 'kl', 'js'
     """
@@ -30,7 +30,17 @@ def getDistances(xvectors, yvectors, metric='cosine', logger=None, verbose=False
         metric = kl_divergence
     elif metric == 'js':
         metric = js_divergence
-    distances = pairwise_distances(xvectors, yvectors, metric=metric)
+    # If a matrix is large:
+    if multipartsThreshold is not None and (((xvectors.shape[0] * xvectors.shape[1]) > multipartsThreshold) or ((yvectors.shape[0] * yvectors.shape[1]) > multipartsThreshold)):
+        distances = []
+        for i in range(xvectors.shape[0]):
+            xelement = xvectors[i]
+            if len(xelement.shape) == 1:
+                xelement = np.array([xelement])
+            distances.append(pairwise_distances(xelement, yvectors, metric=metric)[0])
+        distances = np.array(distances)
+    else:
+        distances = pairwise_distances(xvectors, yvectors, metric=metric, n_jobs=nJobs)
     return distances
 
 def vstack(arrays):
