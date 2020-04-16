@@ -177,20 +177,20 @@ Your rankings must be the same shape but lists (to order items by relevance):
 {
 	'<user id>':
 	[
-		{
+		[
 			'<url 102>',
 			# ...,
 			'<url 506>'
-		}
+		]
 	],
 	# ...,
 	'100022528': 
 	[
-		{
+		[
 			'http://ow.ly/JHDG',
 			# ...,
 			'https://bit.ly/465JHGV'
-		}
+		]
 	]
 },
 ```
@@ -202,20 +202,20 @@ Your rankings must be the same shape but lists (to order items by relevance):
 {
 	'<user id>':
 	[
-		{
+		[
 			('<url 102>', <score for url 102>), # A tuple url and score
 			# ...,
 			('<url 506>', <score for url 506>),
-		}
+		]
 	],
 	# ...,
 	'100022528': 
 	[
-		{
+		[
 			('http://ow.ly/JHDG', 100548),
 			# ...,
 			('https://bit.ly/465JHGV', 845),
-		}
+		]
 	]
 },
 ```
