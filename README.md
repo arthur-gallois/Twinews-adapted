@@ -50,7 +50,7 @@ Version of splits are the following:
 		'usersCount': 15905
 	},
 	'extraNews': { 'url1', 'url2', '...' }, # These are extra news you can use (not in train / test)
-	'candidates': # You need to take that and rand all candidates
+	'candidates': # You need to take that and rank all candidates
 	{
 		'<user id>':
 		[ # Here it's a list because we can have multiple lists of candidates per user
@@ -143,30 +143,113 @@ Finally you add `rankings` in the `twinews-rankings` database:
 	addRanking('nmf', rankings, config)
 
 
-# Pour dump la base de données Twinews
+# How to generate rankings?
 
-Sur le docker jupyter, ouvrir un terminal, installer mongodb <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/>
+In eval data you get candidates for each user (so `evalData['candidates']`:
 
-Puis dans le docker faire :
-
-	hjpassword=<voir dataencryptor>
-	/NoSave/twinews-dumps/dump.sh $hjpassword
-
-Le script contient :
-
+```python
+{
+	'<user id>':
+	[ # Here it's a list because we can have multiple lists of candidates per user
+		{
+			'<url 1>',
+			# ...,
+			'<url 1000>'
+		}
+	],
+	# ...,
+	'100022528': 
+	[
+		{
+			'http://ow.ly/GNQM30hSXPU',
+			# ...,
+			'https://usat.ly/2Db0QTH'
+		}
+	]
+}
 ```
-rm -rf /NoSave/twinews-dumps/twinews-rankings
-mongodump --gzip --username hayj --password $1 --host titanv.lri.fr --authenticationDatabase admin --db twinews-rankings --out /NoSave/twinews-dumps
-rm -rf /NoSave/twinews-dumps/twinews-splits
-mongodump --gzip --username hayj --password $1 --host titanv.lri.fr --authenticationDatabase admin --db twinews-splits --out /NoSave/twinews-dumps
-rm -rf /NoSave/twinews-dumps/twinews
-mongodump --gzip --username hayj --password $1 --host titanv.lri.fr --authenticationDatabase admin --db twinews --out /NoSave/twinews-dumps
+
+Your rankings must be the same shape but lists (to order items by relevance):
+
+```python
+{
+	'<user id>':
+	[
+		[
+			'<url 102>',
+			# ...,
+			'<url 506>'
+		]
+	],
+	# ...,
+	'100022528': 
+	[
+		[
+			'http://ow.ly/JHDG',
+			# ...,
+			'https://bit.ly/465JHGV'
+		]
+	]
+}
 ```
 
-Puis depuis n'importe quel tipi :
+**BUT** you can also give scores with urls (distance or similarity, it doesn't matter, and you don't need to normalize it, it doesn't matter). This is usefull when we will combinate multiple models outputs.
 
-	nn -o ~/tmp/nohup-twinews-dumps-sync.out rsync -avhP -e "ssh -p 2222" --delete-after ~/NoSave/twinews-dumps hayj@212.129.44.40:~ ; sleep 1 ; tail -f ~/tmp/nohup-twinews-dumps-sync.out
+```python
+{
+	'<user id>':
+	[
+		[
+			('<url 102>', <score for url 102>), # A tuple url and score
+			# ...,
+			('<url 506>', <score for url 506>),
+		]
+	],
+	# ...,
+	'100022528': 
+	[
+		[
+			('http://ow.ly/JHDG', 100548),
+			# ...,
+			('https://bit.ly/465JHGV', 845),
+		]
+	]
+}
+```
 
+
+# Faire un dump de la base de donnée
+
+Faire `mongopass` sur hjlat puis cette suite de commandes :
+
+```bash
+password=<password>
+scriptname="twinews-dump-and-sync" ; scriptlog=~/tmp/nohup-$scriptname.out ; scriptpath=~/tmp/$scriptname.sh
+nn -o $scriptlog $scriptpath $password
+tail -f $scriptlog
+```
+
+Dans `vim ~/tmp/twinews-dump-and-sync.sh` sur titanv :
+
+```bash
+#!/bin/bash
+source ~/.bash_profile
+source ~/.hjbashrc
+shopt -s expand_aliases
+source ~/.bash_aliases
+dockerName=hjmongo1 ; username=hayj ; password=$1
+dockerRootDir=/dumps
+realRootDir=/special/hayj/mongodb-dumps
+for db in "twinews-rankings" "twinews-splits" "twinews" "serializabledict"
+do
+	echo "Dumping the $db database"
+	rm -rf $dockerRootDir/$db
+	# Remove the `-it` option because it say "the input device is not a TTY" under nohup
+	docker exec $dockerName mongodump --gzip --host 127.0.0.1 --db $db --out $dockerRootDir --username $username --password $password --authenticationDatabase admin
+done
+rsync --delete-after -avhuP -e "ssh -p 2222" $realRootDir hayj@212.129.44.40:~/twinews-dumps
+rm -rf $realRootDir/*
+```
 
 # TODO
 
