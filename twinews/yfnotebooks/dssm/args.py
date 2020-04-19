@@ -11,6 +11,6 @@ vocab_size = 7427
 
 class_size = 2
 
-epochs = 50
+epochs = 10
 
 batch_size = 100  # TODO need to decide a new batch size avoid collapsing

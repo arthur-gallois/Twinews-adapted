@@ -9,7 +9,7 @@ from gensim.models import Word2Vec
 import numpy as np
 # from drcn import args
 from scipy import sparse as sps
-
+import io
 
 def split(word):
     '''
@@ -29,8 +29,8 @@ def split(word):
 
 # new loading 3-gram vocab
 def load_ngram_char_vocab():
-    path = os.path.join(os.path.dirname(__file__), '../input/test_vocab.txt')
-    vocab = [line.strip() for line in open(path, 'rb').readlines()]
+    path = '/home/yuting/PycharmProjects/data/test_vocab2.txt'
+    vocab = [line.decode().strip() for line in io.open(path, 'rb').readlines()]
     word2idx = {word: index for index, word in enumerate(vocab)}
     idx2word = {index: word for index, word in enumerate(vocab)}
     return word2idx, idx2word
@@ -304,9 +304,30 @@ if __name__ == '__main__':
     # #print((a.toarray()).shape)
     # print(a)
 
-    p_test, h_test, label_test = load_hashed_data('../input/dssm_test_dev.csv', data_size=None)
-    print(p_test.shape)
-    print(type(p_test))
-    print(h_test.shape)
-    print(type(h_test))
+    # p_test, h_test, label_test = load_hashed_data('/home/yuting/PycharmProjects/data/dssm_test_train_sub.csv', data_size=None)
+    # print(p_test.shape)
+    # print(type(p_test))
+    # print(h_test.shape)
+    # print(type(h_test))
+
+    p_test = ['estimated __float_3__ united __float_1__ ago economy whole grew healthy pace workforce growth uniform handful industry doubled size shed half workforce nearly industry economy subject powerful unpredictable force free market globalization technological advancement fundamentally changed economic landscape worse industry seemed unassailable appear hanging thread wall st. reviewed annual employment data bureau labor statistic identify fastest dying industry industry list shed worker lower nearly fastest dying industry']
+    h_test = ' '
+    p, h = hashIndex(p_test, h_test)
+    p_array = p.toarray()
+    h_array = h.toarray()
+
+    count_p = 0
+    for i in range(len(p_array)):
+        for j in range(len(p_array[i])):
+            if p_array[i][j] != 0:
+                count_p += 1
+    count_h = 0
+    for i in range(len(h_array)):
+        for j in range(len(h_array[i])):
+            if h_array[i][j] != 0:
+                count_h += 1
+    print(count_p)
+    print(count_h)
+    print(p_array)
+    print(h_array)
 

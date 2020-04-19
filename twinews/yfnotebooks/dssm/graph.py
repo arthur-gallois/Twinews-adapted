@@ -1,5 +1,6 @@
 #-*-coding:utf-8-*-
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from twinews.yfnotebooks.dssm import args
 
 
@@ -56,6 +57,7 @@ class Graph:
 
     def train(self, logits):
         y = tf.one_hot(self.y, args.class_size)
+        self.logits = logits
         loss = tf.nn.softmax_cross_entropy_with_logits(labels=y, logits=logits)
         self.loss = tf.reduce_mean(loss)
         self.train_op = tf.train.AdamOptimizer(args.learning_rate).minimize(self.loss)

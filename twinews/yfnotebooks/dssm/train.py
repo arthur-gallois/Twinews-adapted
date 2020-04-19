@@ -2,15 +2,16 @@
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
+#sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 
 from twinews.yfnotebooks.dssm.graph import Graph
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from twinews.yfnotebooks.dssm.load_data import load_hashed_data
 from twinews.yfnotebooks.dssm import args
 
-p, h, y = load_hashed_data('../input/dssm_test_train.csv', data_size=None)
-p_eval, h_eval, y_eval = load_hashed_data('../input/dssm_test_dev.csv', data_size=None)
+p, h, y = load_hashed_data('/home/yuting/PycharmProjects/data/dssm_test_train_sub.csv', data_size=None)
+p_eval, h_eval, y_eval = load_hashed_data('/home/yuting/PycharmProjects/data/dssm_test_dev_sub.csv', data_size=None)
 
 p_holder = tf.placeholder(dtype=tf.int32, shape=(None, args.seq_length), name='p')
 h_holder = tf.placeholder(dtype=tf.int32, shape=(None, args.seq_length), name='h')
@@ -49,4 +50,5 @@ with tf.Session(config=config)as sess:
                                                   model.keep_prob: 1})
         print('loss_eval: ', loss_eval, ' acc_eval:', acc_eval)
         print('\n')
-        saver.save(sess, f'../output/dssm/dssm_{epoch}.ckpt')
+        saver.save(sess, f'/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/dssm/output/dssm_{epoch}.ckpt')
+
