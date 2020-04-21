@@ -20,6 +20,7 @@ from numpy import asarray
 from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
 import pymongo
 import gridfs
+from twinews.resources import *
 
 def getMongoHost():
 	weAreAtLRI = False
@@ -244,7 +245,7 @@ def getNewsField(urls, field, asDict=False, logger=None, verbose=True):
 		result = []
 	if newsCollectionForGetNewsField is None:
 		newsCollectionForGetNewsField = getNewsCollection(logger=logger, verbose=verbose)
-	for url in pb(urls, logger=logger):
+	for url in pb(urls, logger=logger, verbose=verbose):
 		data = newsCollectionForGetNewsField[url][field]
 		if asDict:
 			result[url] = data
@@ -332,9 +333,15 @@ def addRanking(modelName, ranks, config, logger=None, verbose=True):
 	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
 	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
 	try:
-		twinewsRankings.insert(key, ranks, **config)
+		if rankingExistsButIsNone(modelName, config, logger=logger, verbose=verbose):
+			del twinewsRankings[key]
+			twinewsRankings.insert(key, ranks, **config)
+		elif rankingExists(modelName, config, logger=logger, verbose=verbose):
+			raise Exception(key + " is already in the database.",)
+		else:
+			twinewsRankings.insert(key, ranks, **config)
 	except gridfs.errors.FileExists:
-		logError(key + " is already in the database.", logger, verbose=verbose)
+		logError(key + " is already in the database!", logger, verbose=verbose)
 	except Exception as e:
 		logException(e, logger, verbose=verbose)
 
@@ -346,6 +353,24 @@ def rankingExists(modelName, config, logger=None, verbose=True):
 	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
 	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
 	return key in twinewsRankings
+
+def rankingExistsAndIsNotNone(modelName, config, logger=None, verbose=True):
+	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
+	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
+	if key in twinewsRankings and twinewsRankings.collection.find_one({'id': key, 'length': {'$gt': 100}}) is not None:
+		return True
+	return False
+
+
+def rankingExistsButIsNone(modelName, config, logger=None, verbose=True):
+	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
+	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
+	if key in twinewsRankings and twinewsRankings.collection.find_one({'id': key, 'length': {'$gt': 100}}) is None:
+		return True
+	return False
+
+
+
 
 
 if __name__ == '__main__':
