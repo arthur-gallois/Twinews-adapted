@@ -111,12 +111,13 @@ def addTwinewsScore(modelKey, metric, score, *args, **kwargs):
 		This function allows to add a new score.
 		The primary key is on id (modelKey) and metric so the function can throw a `DuplicateKeyError`.
 	"""
+	score = float(score)
 	if modelKey not in getTwinewsRankings():
 		raise Exception(modelKey + " must be in the twinews-rankings GridFS")
 	s = getTwinewsScores(*args, **kwargs)
 	s.insert({'id': modelKey, 'metric': metric, 'score': score})
 
-def getEvalData(version, maxExtraNews=None, maxUsers=None, logger=None, verbose=True):
+def getEvalData(version, maxExtraNews=0, maxUsers=None, logger=None, verbose=True):
 	"""
 		This function return the evaluation data with the right version in the right folder.
 		Use `maxUsers` to sub-sample the dataset for test purposes.
@@ -212,7 +213,7 @@ def subsampleEvalData(evalData, maxUsers=100):
 	evalData['testNews'] = set([n for n in evalData['testNews'] if n in urls])
 	# We return all sub samples:
 	return evalData
-
+substract
 def getExtraNews(blackNews, limit=None, logger=None, verbose=True):
 	"""
 		This function return a list of urls (primary key of the news collection) that are not in testNews U trainNews
