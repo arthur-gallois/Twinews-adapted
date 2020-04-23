@@ -145,7 +145,7 @@ Finally you add `rankings` in the `twinews-rankings` database:
 
 # How to generate rankings?
 
-In eval data you get candidates for each user (so `evalData['candidates']`:
+In eval data you get candidates for each user (so `evalData['candidates']`):
 
 ```python
 {
@@ -209,9 +209,9 @@ Your rankings must be the same shape but lists (to order items by relevance):
 	'100022528': 
 	[
 		[
-			('http://ow.ly/JHDG', 100548),
+			('http://ow.ly/JHDG', 100548.0),
 			# ...,
-			('https://bit.ly/465JHGV', 845),
+			('https://bit.ly/465JHGV', 845.0),
 		]
 	]
 }

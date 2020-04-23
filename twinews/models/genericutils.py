@@ -45,8 +45,8 @@ genericFields = \
     'doc2vec': 'sentences',
     'bert': 'detokSentences',
     'stylo': 'detokText',
-    'nmf': 'detokSentences',
-    'tfidf': 'detokSentences',
+    'nmf': 'sentences',
+    'tfidf': 'sentences',
     'word2vec': 'sentences',
     'bow': 'detokSentences',
 }

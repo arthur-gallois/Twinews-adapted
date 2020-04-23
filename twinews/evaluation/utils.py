@@ -9,6 +9,20 @@ import pandas as pd
 from IPython.display import display, HTML
 
 
+METRICS_ORDER = \
+[
+    # Ranking accuracy:
+    'ndcg', 'ndcg@10', 'ndcg@100', 'map', 'mrr', 'p@10', 'p@100',
+    # Diversity:
+    'div@100', 'topic-div@100', 'jacc-div@100', 'swjacc-div@100', 'style-div@100',
+    # Novelty:
+    'nov@100', 'topic-nov@100', 'jacc-nov@100', 'swjacc-nov@100', 'style-nov@100',
+    # Strict novelty:
+    'snov@100', 'topic-snov@100', 'jacc-snov@100', 'swjacc-snov@100', 'style-snov@100',
+    # Serendipity:
+    'tfidf-ser@100', 'wtfidf-ser@100', 'bm25-ser@100', 'jacc-ser@100', 'style-ser@100',
+]
+
 def rankingToRelevanceVector(ranking, gtUrls):
 	assert isinstance(gtUrls, set)
 	assert isinstance(ranking, list)
@@ -64,12 +78,20 @@ def printReport\
 	onlyFields=None,
 	splitVersion=None,
 	metaFilter={}, # A dict that map field to mandatory values
-	metricsFilter=None, # A set of allowed metrics
+	allowedMetrics=None, # A set of allowed metrics
+	discardedMetrics=None, # A set of allowed metrics
+	blackMetricPatterns=None,
+	whiteMetricPatterns=None,
 	noSubsampling=True,
 	logger=None,
 	sortBy=None,
 	colorize=True,
 ):
+	global METRICS_ORDER
+	if blackMetricPatterns is not None and isinstance(blackMetricPatterns, str):
+		blackMetricPatterns = {blackMetricPatterns}
+	if whiteMetricPatterns is not None and isinstance(whiteMetricPatterns, str):
+		whiteMetricPatterns = {whiteMetricPatterns}
 	twinewsRankings = getTwinewsRankings(verbose=False)
 	twinewsScores = getTwinewsScores(verbose=False)
 	data = []
@@ -135,15 +157,38 @@ def printReport\
 			key = current['id']
 			scores = twinewsScores.find({'id': key})
 			for score in scores:
-				if metricsFilter is None or score['metric'] in metricsFilter:
-					metrics.add(score['metric'])
-					current[score['metric']] = truncateFloat(score['score'], 5)
+				if (allowedMetrics is None or score['metric'] in allowedMetrics) and (discardedMetrics is None or score['metric'] not in discardedMetrics):
+					isBlack = False
+					if blackMetricPatterns is not None:
+						for key in blackMetricPatterns:
+							if key in score['metric']:
+								isBlack = True
+					isNotWhite = False
+					if whiteMetricPatterns is not None:
+						isNotWhite = True
+						for key in whiteMetricPatterns:
+							if key in score['metric']:
+								isNotWhite = False
+					if not isBlack and not isNotWhite: # ok wtf
+						metrics.add(score['metric'])
+						current[score['metric']] = truncateFloat(score['score'], 5)
+		# We re-order metrics:
+		if metrics is not None and len(metrics) > 0:
+			newMetrics = []
+			for key in METRICS_ORDER:
+				if key in metrics:
+					newMetrics.append(key)
+			metrics = newMetrics
+		# The sortBy is the first metric:
 		if len(metrics) > 0:
-			metrics = sorted(list(metrics))
 			if sortBy is None:
 				sortBy = metrics[0]
 		else:
 			metrics = []
+		# We set the sortBy metric at first:
+		if sortBy is not None and sortBy in metrics:
+			metrics.remove(sortBy)
+			metrics = [sortBy] + metrics
 		df = pd.DataFrame(data)
 		df = reorderDFColumns(df, start=['id'], end=metrics)
 		if sortBy not in df.columns:
@@ -151,6 +196,9 @@ def printReport\
 		if sortBy is not None:
 			df.sort_values(sortBy, ascending=False, inplace=True)
 		if colorize:
-			df = colorise_df_columns(df, grey={'id'}, green=metrics)
+			greenMetrics = metrics
+			if sortBy is not None and sortBy in metrics:
+				greenMetrics.remove(sortBy)
+			df = colorise_df_columns(df, grey={'id'}, green=greenMetrics, blue=sortBy)
 		display(df)
 		return df

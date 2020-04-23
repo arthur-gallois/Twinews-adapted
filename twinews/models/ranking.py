@@ -8,6 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
 from math import log2
 from math import sqrt
 from numpy import asarray
+import numpy as np
 import scipy
 from machinelearning.function import *
 
@@ -303,10 +304,67 @@ def mergeRankings\
 
 
 
+def rankingVariance(x): # Autre nom ? variance des écarts ?
+    """
+        Mesure à quel point l'histogramme d'une liste de scores est plat.
+        0.0 signifie que l'histogramme est très plat (des écatrs de scores constants entre les elements ocnsécutifs), par exemple [0., 0.33, 0.66, 1.]
+        1.0 signifie que l'histogramme est déséquilibré, par exemple [0., 0., 0., 1.]
+        
+        La valeur retournée est normalisé entre la pire variance et la variance idéale
+    """
+    # Min max normalization and making it ascending:
+    x = normalizeRankingScores(x)
+    # Getting every differences:
+    x = [abs(x[i] - x[i+1]) for i in range(len(x) - 1)]
+    # Getting worst and ideal variance:
+    worst = np.var([0.0] * (len(x) - 1) + [1.0])
+    ideal = np.var([0.0] * len(x))
+    # Getting the actual variance:
+    variance = np.var(x)
+    # Returning the normalized variance:
+    return (variance - ideal) / (worst - ideal)
+
+def ranking_variance_test():
+    v1 = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    v2 = [0.0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 1.0]
+    v3 = [0.0, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.0]
+    v4 = [0.0, 0.01, 0.02, 0.5, 0.51, 0.52, 0.8, 0.81, 0.82, 0.83, 1.0]
+    v5 = [0.0, 0.1, 0.5, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 1.0]
+    v6 = [0.0, 0.1, 0.15, 0.35, 0.4, 0.45, 0.7, 0.75, 0.9, 0.95, 1.0]
+    print(ranking_variance(v1))
+    print(ranking_variance(v2))
+    print(ranking_variance(v3))
+    print(ranking_variance(v4))
+    print(ranking_variance(v5))
+    print(ranking_variance(v6))
+
+
+def model_comb_demo():
+    """
+        Cette fonction montre que le modèle r2 est avantagé
+        pour rankAsScore=[False, False]
+        car a des valeurs qui sont plus lisses (à quel point l'histogramme de la liste de scores est plat)
+    """
+    i1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    i2 = ['e', 'b', 'g', 'a', 'd', 'f', 'c']
+    s1 = [0.0, 0.01, 0.02, 0.03, 0.04, 0.05, 1.0]
+    step = 1.0 / 6.0
+    s2 = [0.0, step, 2 * step, 3 * step, 4 * step, 5 * step, 1.0]
+    s2 = [truncateFloat(e, 2) for e in s2]
+    r1 = [(i1[i], s1[i]) for i in range(len(i1))]
+    r2 = [(i2[i], s2[i]) for i in range(len(i2))]
+    print(r1)
+    print(r2)
+    print(mergeRankings([r1, r2], rankAsScore=[True, True]))
+    print(mergeRankings([r1, r2], rankAsScore=[False, False]))
+
+
 if __name__ == '__main__':
-    a = list(range(1))
-    print(a)
-    print(normalizeRankingScores(a))
+    # a = list(range(1))
+    # print(a)
+    # print(normalizeRankingScores(a))
+    ranking_variance_test()
+    # model_comb_demo()
 
 
 
