@@ -13,4 +13,4 @@ class_size = 2
 
 epochs = 10
 
-batch_size = 100  # TODO need to decide a new batch size avoid collapsing
+batch_size = 1000  # TODO need to decide a new batch size avoid collapsing

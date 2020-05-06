@@ -119,7 +119,7 @@ def hashIndex(p_sentences, h_sentences):
 
 
 
-# 加载hash_index训练数据
+# loading hash_index training data
 def load_hashed_data(file, data_size=None):
     #path = os.path.join(os.path.dirname(__file__), '../' + file)
 
