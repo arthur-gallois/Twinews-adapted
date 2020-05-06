@@ -33,9 +33,35 @@ def getMongoHost():
 	else:
 		return '127.0.0.1'
 
+def pruneScores(rk):
+	if rk is None or len(rk) == 0:
+		raise Exception("Rankings not valid")
+	if isinstance(rk[0], tuple):
+		return [e[0] for e in rk]
+	else:
+		return rk
+
 def getMongoAuth(*args, user='student', **kwargs):
 	password = getDataEncryptorSingleton()["mongoauth"]['titanv']
 	return (user, password[user], getMongoHost())
+
+def getDominancesSD(logger=None, verbose=True):
+	(user, password, host) = getMongoAuth(user='hayj')
+	dominancesSD = SerializableDict('twinews-dominances', logger=logger, user=user, password=password, host=host, verbose=verbose, useMongodb=True)
+	return dominancesSD
+
+def getCombinIds(splitVersion=None, noSubsampling=True):
+	twinewsRankings = getTwinewsRankings(verbose=False)
+	combinsSplit = set()
+	for current in twinewsRankings.keys():
+		if current.startswith('combin'):
+			meta = twinewsRankings.getMeta(current)
+			if not noSubsampling or meta['maxUsers'] is None:
+				if splitVersion is None:
+					combinsSplit.add(current)
+				elif meta['splitVersion'] == splitVersion:
+					combinsSplit.add(current)
+	return combinsSplit
 
 def makeMongoCollectionKwargs\
 (
@@ -285,12 +311,12 @@ def getTwinewsRankings(logger=None, verbose=True):
 	)
 
 def pruneRankings(modelKey):
-    twinewsRankings = getTwinewsRankings(verbose=False)
-    meta = twinewsRankings.getMeta(modelKey)
-    key = meta['id']
-    del meta['id']
-    del twinewsRankings[modelKey]
-    twinewsRankings.insert(key, None, **meta)
+	twinewsRankings = getTwinewsRankings(verbose=False)
+	meta = twinewsRankings.getMeta(modelKey)
+	key = meta['id']
+	del meta['id']
+	del twinewsRankings[modelKey]
+	twinewsRankings.insert(key, None, **meta)
 
 def removeRankingsAndScores(modelKey):
 	twinewsRankings = getTwinewsRankings(verbose=False)

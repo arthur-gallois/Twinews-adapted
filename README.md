@@ -225,11 +225,22 @@ Faire `mongopass` sur hjlat puis cette suite de commandes :
 ```bash
 password=<password>
 scriptname="twinews-dump-and-sync" ; scriptlog=~/tmp/nohup-$scriptname.out ; scriptpath=~/tmp/$scriptname.sh
+pew in st-venv python ~/Workspace/Python/Organization/MongoDump/mongodump/dump.py
+cat ~/tmp/twinews-dump-and-sync.sh
 nn -o $scriptlog $scriptpath $password
 tail -f $scriptlog
+lsa /special/hayj/mongodb-dumps
 ```
 
-Dans `vim ~/tmp/twinews-dump-and-sync.sh` sur titanv :
+Puis quand c'est terminé :
+
+```bash
+nn rsync -avhuP /special/hayj/mongodb-dumps/* ~/NoSave/MongoDumps
+rm -rf /special/hayj/mongodb-dumps/*
+nn rsync -avhuP -e "ssh -p 2222" ~/NoSave/MongoDumps/* hayj@octods:~/MongoDumps
+```
+
+Anciennement dans `vim ~/tmp/twinews-dump-and-sync.sh` sur titanv :
 
 ```bash
 #!/bin/bash
