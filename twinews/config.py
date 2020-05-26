@@ -1,0 +1,1 @@
+mongoLocation = 'lri' # lri, octods

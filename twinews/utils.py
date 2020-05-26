@@ -21,6 +21,7 @@ from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
 import pymongo
 import gridfs
 from twinews.resources import *
+from twinews import config as twinewsConf
 
 def getMongoHost():
 	weAreAtLRI = False
@@ -33,6 +34,17 @@ def getMongoHost():
 	else:
 		return '127.0.0.1'
 
+def getMongoHost2():
+	weAreOnOctods = False
+	try:
+		if octods():
+			weAreOnOctods = True
+	except: pass
+	if weAreOnOctods:
+		return '127.0.0.1'
+	else:
+		return '212.129.44.40'
+
 def pruneScores(rk):
 	if rk is None or len(rk) == 0:
 		raise Exception("Rankings not valid")
@@ -42,8 +54,13 @@ def pruneScores(rk):
 		return rk
 
 def getMongoAuth(*args, user='student', **kwargs):
-	password = getDataEncryptorSingleton()["mongoauth"]['titanv']
-	return (user, password[user], getMongoHost())
+	if twinewsConf.mongoLocation == 'lri':
+		password = getDataEncryptorSingleton()["mongoauth"]['titanv']
+		return (user, password[user], getMongoHost())
+	else:
+		user = 'hayj'
+		password = getDataEncryptorSingleton()["mongoauth"]['datascience01']
+		return (user, password[user], getMongoHost2())
 
 def getDominancesSD(logger=None, verbose=True):
 	(user, password, host) = getMongoAuth(user='hayj')
