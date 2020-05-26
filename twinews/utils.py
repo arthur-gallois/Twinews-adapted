@@ -63,9 +63,12 @@ def getMongoAuth(*args, user='student', **kwargs):
 		return (user, password[user], getMongoHost2())
 
 def getDominancesSD(logger=None, verbose=True):
-	(user, password, host) = getMongoAuth(user='hayj')
-	dominancesSD = SerializableDict('twinews-dominances', logger=logger, user=user, password=password, host=host, verbose=verbose, useMongodb=True)
-	return dominancesSD
+	try:
+		(user, password, host) = getMongoAuth(user='hayj')
+		dominancesSD = SerializableDict('twinews-dominances', logger=logger, user=user, password=password, host=host, verbose=verbose, useMongodb=True)
+		return dominancesSD
+	except Exception as e:
+		return dict()
 
 def getCombinIds(splitVersion=None, noSubsampling=True):
 	twinewsRankings = getTwinewsRankings(verbose=False)
