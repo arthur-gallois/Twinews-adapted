@@ -1,15 +1,17 @@
 #-*-coding:utf-8-*-
+import os
+import sys
 
-#sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 
-from twinews.yfnotebooks.dssm.graph import Graph
+from twinews.yfnotebooks.convnet.graph import Graph
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 from twinews.yfnotebooks.load_data import load_char_data
-from twinews.yfnotebooks.dssm import args
+from twinews.yfnotebooks.convnet import args
 
 p, h, y = load_char_data('/home/yuting/PycharmProjects/data/dssm_title_train.csv', data_size=None)
-p_eval, h_eval, y_eval = load_char_data('/home/yuting/PycharmProjects/data/dssm_title_dev.csv', data_size=None)
+p_eval, h_eval, y_eval = load_char_data('/home/yuting/PycharmProjects/data/dssm_title_dev.csv', data_size=args.batch_size)
 
 p_holder = tf.placeholder(dtype=tf.int32, shape=(None, args.seq_length), name='p')
 h_holder = tf.placeholder(dtype=tf.int32, shape=(None, args.seq_length), name='h')
@@ -48,5 +50,4 @@ with tf.Session(config=config)as sess:
                                                   model.keep_prob: 1})
         print('loss_eval: ', loss_eval, ' acc_eval:', acc_eval)
         print('\n')
-        saver.save(sess, f'/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/dssm/output/dssm_{epoch}.ckpt')
-
+        saver.save(sess, f'/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/convnet/output/convnet_{epoch}.ckpt')

@@ -1,8 +1,8 @@
 #-*-coding:utf-8-*-
 import pandas as pd
 import os
-from twinews.yfnotebooks.dssm.data_utils import shuffle, pad_sequences
-from twinews.yfnotebooks.dssm import args
+from twinews.yfnotebooks.data_utils import shuffle, pad_sequences
+from twinews.yfnotebooks.convnet import args
 import jieba
 import re
 from gensim.models import Word2Vec
@@ -38,13 +38,20 @@ def load_ngram_char_vocab():
 # ------------------------------------------------------------------------------------
 
 # 加载字典
+# def load_char_vocab():
+#     path = os.path.join(os.path.dirname(__file__), '../input/vocab.txt')
+#     vocab = [line.strip() for line in open(path, encoding='utf-8').readlines()]
+#     word2idx = {word: index for index, word in enumerate(vocab)}
+#     idx2word = {index: word for index, word in enumerate(vocab)}
+#     return word2idx, idx2word
+
+# load vocab for dssm title
 def load_char_vocab():
-    path = os.path.join(os.path.dirname(__file__), '../input/vocab.txt')
+    path = '/home/yuting/PycharmProjects/data/title_vocab.txt'
     vocab = [line.strip() for line in open(path, encoding='utf-8').readlines()]
     word2idx = {word: index for index, word in enumerate(vocab)}
     idx2word = {index: word for index, word in enumerate(vocab)}
     return word2idx, idx2word
-
 
 # 加载词典
 def load_word_vocab():
@@ -146,8 +153,8 @@ def char_index(p_sentences, h_sentences):
 
     p_list, h_list = [], []
     for p_sentence, h_sentence in zip(p_sentences, h_sentences):
-        p = [word2idx[word.lower()] for word in p_sentence if len(word.strip()) > 0 and word.lower() in word2idx.keys()]
-        h = [word2idx[word.lower()] for word in h_sentence if len(word.strip()) > 0 and word.lower() in word2idx.keys()]
+        p = [word2idx[word.lower()] for word in p_sentence.split() if len(word.strip()) > 0 and word.lower() in word2idx.keys()]
+        h = [word2idx[word.lower()] for word in h_sentence.split() if len(word.strip()) > 0 and word.lower() in word2idx.keys()]
 
         p_list.append(p)
         h_list.append(h)
@@ -187,9 +194,25 @@ def w2v_process(vec):
     return vec
 
 
-# 加载char_index训练数据
+# # 加载char_index训练数据
+# def load_char_data(file, data_size=None):
+#     path = os.path.join(os.path.dirname(__file__), '../' + file)
+#     df = pd.read_csv(path)
+#     p = df['sentence1'].values[0:data_size]
+#     h = df['sentence2'].values[0:data_size]
+#     label = df['label'].values[0:data_size]
+#
+#     p, h, label = shuffle(p, h, label)
+#
+#     # [1,2,3,4,5] [4,1,5,2,0]
+#     p_c_index, h_c_index = char_index(p, h)
+#
+#     return p_c_index, h_c_index, label
+
+
+# load char data for dssm title
 def load_char_data(file, data_size=None):
-    path = os.path.join(os.path.dirname(__file__), '../' + file)
+    path = file
     df = pd.read_csv(path)
     p = df['sentence1'].values[0:data_size]
     h = df['sentence2'].values[0:data_size]
@@ -201,6 +224,8 @@ def load_char_data(file, data_size=None):
     p_c_index, h_c_index = char_index(p, h)
 
     return p_c_index, h_c_index, label
+
+
 
 
 # 加载char_index与静态词向量的训练数据
@@ -299,35 +324,13 @@ def load_all_data(path, data_size=None):
 if __name__ == '__main__':
     # load_all_data('../input/dssm_test_train.csv', data_size=100)
 
-    # n_gram_index_map = {'and': 0, 's#': 1, 'ey#': 2, '#te': 3, 'c#': 4, 'ord': 5, 'ic#': 6, 'atc': 7, 'nti': 8, 't#': 9, 'man': 10, 'od#': 11, 'wor': 12, 'sem': 13, 'ds#': 14, 'y#': 15, 'tch': 16, 'ema': 17, 'tic': 18, 'met': 19, 'tho': 20, 'hin': 21, 'ods': 22, 'ext': 23, 'ing': 24, 'ed#': 25, '#se': 26, 'mat': 27, 'g#': 28, 'xt#': 29, 'ase': 30, 'key': 31, '#ma': 32, 'hod': 33, '#wo': 34, '#me': 35, 'sed': 36, 'tex': 37, 'd#': 38, '#ke': 39, 'rds': 40, 'eth': 41, 'bas': 42, 'nd#': 43, '#an': 44, 'chi': 45, 'ng#': 46, '#ba': 47, 'ant': 48}
-    # a = get_n_gram_count("sematic word", n_gram_index_map)
-    # #print((a.toarray()).shape)
-    # print(a)
+    # p_test = ['estimated __float_3__ united __float_1__ ago economy whole grew healthy pace workforce growth uniform handful industry doubled size shed half workforce nearly industry economy subject powerful unpredictable force free market globalization technological advancement fundamentally changed economic landscape worse industry seemed unassailable appear hanging thread wall st. reviewed annual employment data bureau labor statistic identify fastest dying industry industry list shed worker lower nearly fastest dying industry']
+    # h_test = ' '
+    # p, h = hashIndex(p_test, h_test)
+    # p_array = p.toarray()
+    # h_array = h.toarray()
 
-    # p_test, h_test, label_test = load_hashed_data('/home/yuting/PycharmProjects/data/dssm_test_train_sub.csv', data_size=None)
-    # print(p_test.shape)
-    # print(type(p_test))
-    # print(h_test.shape)
-    # print(type(h_test))
+    p, h, y = load_char_data('/home/yuting/PycharmProjects/data/dssm_title_train.csv', data_size=None)
+    p_eval, h_eval, y_eval = load_char_data('/home/yuting/PycharmProjects/data/dssm_title_dev.csv', data_size=None)
 
-    p_test = ['estimated __float_3__ united __float_1__ ago economy whole grew healthy pace workforce growth uniform handful industry doubled size shed half workforce nearly industry economy subject powerful unpredictable force free market globalization technological advancement fundamentally changed economic landscape worse industry seemed unassailable appear hanging thread wall st. reviewed annual employment data bureau labor statistic identify fastest dying industry industry list shed worker lower nearly fastest dying industry']
-    h_test = ' '
-    p, h = hashIndex(p_test, h_test)
-    p_array = p.toarray()
-    h_array = h.toarray()
-
-    count_p = 0
-    for i in range(len(p_array)):
-        for j in range(len(p_array[i])):
-            if p_array[i][j] != 0:
-                count_p += 1
-    count_h = 0
-    for i in range(len(h_array)):
-        for j in range(len(h_array[i])):
-            if h_array[i][j] != 0:
-                count_h += 1
-    print(count_p)
-    print(count_h)
-    print(p_array)
-    print(h_array)
 
