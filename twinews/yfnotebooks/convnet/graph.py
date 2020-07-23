@@ -65,7 +65,10 @@ class Graph:
         loss = tf.nn.softmax_cross_entropy_with_logits(labels=y, logits=logits)
         self.loss = tf.reduce_mean(loss)
         self.train_op = tf.train.AdamOptimizer(args.learning_rate).minimize(self.loss)
+        # use the logits output(second last) for ranking
         self.logits = logits
         prediction = tf.argmax(logits, axis=1)
+        # use the 0/1 prediction for ranking
+        self.prediction = prediction
         correct_prediction = tf.equal(tf.cast(prediction, tf.int32), self.y)
         self.acc = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))

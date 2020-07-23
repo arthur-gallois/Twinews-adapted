@@ -5,11 +5,11 @@ import numpy as np
 def one_hot(y, nb_classes):
     """ one_hot
 
-    向量转one-hot
+    vector to one-hot
 
     Arguments:
-        y: 带转换的向量
-        nb_classes: int 类别数
+        y: vector
+        nb_classes: int, # of classification
 
     """
     y = np.asarray(y, dtype='int32')
@@ -24,20 +24,21 @@ def pad_sequences(sequences, maxlen=None, dtype='int32', padding='post',
                   truncating='post', value=0.):
     """ pad_sequences
 
-    把序列长度转变为一样长的，如果设置了maxlen则长度统一为maxlen，如果没有设置则默认取
-    最大的长度。填充和截取包括两种方法，post与pre，post指从尾部开始处理，pre指从头部
-    开始处理，默认都是从尾部开始。
+    to set the length of sequence, if maxlen is specified, the length of sequence equals to maxlen,
+    else equals to the maximum length of all sequences.
+    either by padding, or truncating the sequence to keep the length uniformed.
+    padding or truncating from the end(post), or from the beginning (pre)
 
     Arguments:
-        sequences: 序列
-        maxlen: int 最大长度
-        dtype: 转变后的数据类型
-        padding: 填充方法'pre' or 'post'
-        truncating: 截取方法'pre' or 'post'
-        value: float 填充的值
+        sequences: data sequence
+        maxlen: int maximum lendth
+        dtype: datatype
+        padding: 'pre' or 'post'
+        truncating: truncatiing method, from 'pre' or 'post'
+        value: float, the value to fill in
 
     Returns:
-        x: numpy array 填充后的序列维度为 (number_of_sequences, maxlen)
+        x: numpy array sequence after padding (number_of_sequences, maxlen)
 
     """
     lengths = [len(s) for s in sequences]
@@ -69,13 +70,13 @@ def pad_sequences(sequences, maxlen=None, dtype='int32', padding='post',
 def shuffle(*arrs):
     """ shuffle
 
-    Shuffle 数据
+    Shuffle data
 
     Arguments:
-        *arrs: 数组数据
+        *arrs: input array data
 
     Returns:
-        shuffle后的数据
+        shuffled data
 
     """
     arrs = list(arrs)

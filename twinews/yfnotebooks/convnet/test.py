@@ -21,10 +21,10 @@ saver = tf.train.Saver()
 with tf.Session()as sess:
     sess.run(tf.global_variables_initializer())
     saver.restore(sess, '/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/convnet/output/convnet_49.ckpt')
-    loss, acc, logits = sess.run([model.loss, model.acc, model.logits],
+    loss, acc, logits, prediction = sess.run([model.loss, model.acc, model.logits, model.prediction],
                          feed_dict={model.p: p,
                                     model.h: h,
                                     model.y: y,
                                     model.keep_prob: 1})
 
-    print('loss: ', loss, ' acc:', acc, 'logits:', logits[:,1])
+    print('loss: ', loss, ' acc:', acc, 'logits:', logits, 'pre:',prediction)

@@ -37,14 +37,6 @@ def load_ngram_char_vocab():
 
 # ------------------------------------------------------------------------------------
 
-# 加载字典
-# def load_char_vocab():
-#     path = os.path.join(os.path.dirname(__file__), '../input/vocab.txt')
-#     vocab = [line.strip() for line in open(path, encoding='utf-8').readlines()]
-#     word2idx = {word: index for index, word in enumerate(vocab)}
-#     idx2word = {index: word for index, word in enumerate(vocab)}
-#     return word2idx, idx2word
-
 # load vocab for dssm title
 def load_char_vocab():
     path = '/home/yuting/PycharmProjects/data/title_vocab.txt'
@@ -53,7 +45,7 @@ def load_char_vocab():
     idx2word = {index: word for index, word in enumerate(vocab)}
     return word2idx, idx2word
 
-# 加载词典
+# load word vocab
 def load_word_vocab():
     path = os.path.join(os.path.dirname(__file__), '../output/word2vec/word_vocab.tsv')
     vocab = [line.strip() for line in open(path, encoding='utf-8').readlines()]
@@ -62,7 +54,7 @@ def load_word_vocab():
     return word2idx, idx2word
 
 
-# 静态w2v
+# static w2v
 def w2v(word, model):
     try:
         return model.wv[word]
@@ -70,6 +62,7 @@ def w2v(word, model):
         return np.zeros(args.word_embedding_len)
 
 # ------------------------------------------------------------------------------------------
+# this part if for word hashing
 
 # get_n_gram_count
 def get_n_gram_count(sentences, n_gram_index_map):
@@ -142,12 +135,11 @@ def load_hashed_data(file, data_size=None):
 
     return p_c_index.toarray(), h_c_index.toarray(), label
 
-
-
+# this part is for word hashing
 # --------------------------------------------------------------------------------------------------------
 
 
-# 字->index
+# word->index
 def char_index(p_sentences, h_sentences):
     word2idx, idx2word = load_char_vocab()
 
@@ -165,7 +157,7 @@ def char_index(p_sentences, h_sentences):
     return p_list, h_list
 
 
-# 词->index
+# char->index
 def word_index(p_sentences, h_sentences):
     word2idx, idx2word = load_word_vocab()
 
@@ -194,24 +186,9 @@ def w2v_process(vec):
     return vec
 
 
-# # 加载char_index训练数据
-# def load_char_data(file, data_size=None):
-#     path = os.path.join(os.path.dirname(__file__), '../' + file)
-#     df = pd.read_csv(path)
-#     p = df['sentence1'].values[0:data_size]
-#     h = df['sentence2'].values[0:data_size]
-#     label = df['label'].values[0:data_size]
-#
-#     p, h, label = shuffle(p, h, label)
-#
-#     # [1,2,3,4,5] [4,1,5,2,0]
-#     p_c_index, h_c_index = char_index(p, h)
-#
-#     return p_c_index, h_c_index, label
-
-
 # load char data for dssm title
 def load_char_data(file, data_size=None):
+    # path = os.path.join(os.path.dirname(__file__), '../' + file)
     path = file
     df = pd.read_csv(path)
     p = df['sentence1'].values[0:data_size]
@@ -228,7 +205,7 @@ def load_char_data(file, data_size=None):
 
 
 
-# 加载char_index与静态词向量的训练数据
+# load char_index and static word vector
 def load_char_word_static_data(file, data_size=None):
     model = Word2Vec.load('../output/word2vec/word2vec.model')
 
@@ -254,7 +231,7 @@ def load_char_word_static_data(file, data_size=None):
     return p_c_index, h_c_index, p_w_vec, h_w_vec, label
 
 
-# 加载char_index与动态词向量的训练数据
+# load char_index and dynamic word vector
 def load_char_word_dynamic_data(path, data_size=None):
     df = pd.read_csv(path)
     p = df['sentence1'].values[0:data_size]
@@ -273,7 +250,7 @@ def load_char_word_dynamic_data(path, data_size=None):
     return p_char_index, h_char_index, p_word_index, h_word_index, label
 
 
-# 加载char_index、静态词向量、动态词向量的训练数据
+# load char_index, static word vector, dynamic word vector data
 def load_all_data(path, data_size=None):
     model = Word2Vec.load('../output/word2vec/word2vec.model')
     df = pd.read_csv(path)
@@ -299,7 +276,7 @@ def load_all_data(path, data_size=None):
     p_w_vec = list(map(lambda x: w2v_process(x), p_w_vec))
     h_w_vec = list(map(lambda x: w2v_process(x), h_w_vec))
 
-    # 判断是否有相同的词
+    # if there are same words
     same_word = []
     for p_i, h_i in zip(p_w_index, h_w_index):
         dic = {}
