@@ -1,0 +1,6 @@
+model_checkpoint_path: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/dssm/output/dssm_99.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/dssm/output/dssm_95.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/dssm/output/dssm_96.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/dssm/output/dssm_97.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/dssm/output/dssm_98.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/dssm/output/dssm_99.ckpt"

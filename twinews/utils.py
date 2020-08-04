@@ -418,6 +418,8 @@ def rankingExistsButIsNone(modelName, config, logger=None, verbose=True):
 
 
 
+def getNewsTitles(*args, **kwargs):
+	return getNewsField(*args, field='title', **kwargs)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,6 @@
+model_checkpoint_path: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/convnet/output/convnet_49.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/convnet/output/convnet_45.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/convnet/output/convnet_46.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/convnet/output/convnet_47.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/convnet/output/convnet_48.ckpt"
+all_model_checkpoint_paths: "/home/yuting/PycharmProjects/Twinews/twinews/yfnotebooks/convnet/output/convnet_49.ckpt"
