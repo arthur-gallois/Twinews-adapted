@@ -1,3 +1,9 @@
+*.data-00000-of-00001
+*.out
+*.log
+output/
+
+
 # Dirs:
 *.egg-info/
 build/
