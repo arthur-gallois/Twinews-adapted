@@ -20,8 +20,8 @@ METRICS_ORDER = \
 	# Strict novelty:
 	'snov@100', 'topic-snov@100', 'jacc-snov@100', 'swjacc-snov@100', 'style-snov@100',
 	# Serendipity:
-	'tfidf-ser@100', 'wtfidf-ser@100', 'bm25-ser@100', 'jacc-ser@100', 'style-ser@100',
 	'avg-ser@100',
+	'tfidf-ser@100', 'wtfidf-ser@100', 'bm25-ser@100', 'jacc-ser@100', 'style-ser@100',
 ]
 
 # See evaluation/metrics-normalization
@@ -240,6 +240,7 @@ def printReport\
 	blackMetrics=None, # This are patterns
 	sortBy=None,
 	colorize=True,
+	metricsDigits=None,
 	logger=None,
 	verbose=True,
 	**kwargs,
@@ -317,6 +318,13 @@ def printReport\
 	for current in data:
 		if 'dominance' in current:
 			current['dominance'] = truncateFloat(current['dominance'], 2)
+	# We pad and truncate floats:
+	if metricsDigits is not None:
+		for current in data:
+			for currentMetric in METRICS_ORDER:
+				if currentMetric in current:
+					if isinstance(current[currentMetric], float):
+						current[currentMetric] = padAndTruncateFloat(current[currentMetric], metricsDigits)
 	# We re-order metrics:
 	metrics = set()
 	for row in data:

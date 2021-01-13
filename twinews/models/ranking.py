@@ -307,7 +307,7 @@ def mergeRankings\
 def rankingVariance(x): # Autre nom ? variance des écarts ?
     """
         Mesure à quel point l'histogramme d'une liste de scores est plat.
-        0.0 signifie que l'histogramme est très plat (des écatrs de scores constants entre les elements ocnsécutifs), par exemple [0., 0.33, 0.66, 1.]
+        0.0 signifie que l'histogramme est très plat (des écatrs de scores constants entre les elements consécutifs), par exemple [0., 0.33, 0.66, 1.]
         1.0 signifie que l'histogramme est déséquilibré, par exemple [0., 0., 0., 1.]
         
         La valeur retournée est normalisé entre la pire variance et la variance idéale

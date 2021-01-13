@@ -2,6 +2,10 @@
 
 Use this script to install all dependencies : <https://github.com/hayj/Bash/blob/master/hjupdate.sh>
 
+# Getting data (**do not share**)
+
+The dataset (i.e. "splits" explained below) is available at <http://212.129.44.40/Twinews/twinews-splits.7z> (**do not share**, password: `hjthesis2021`).
+
 # Collections
 
  * **twinews**: A mongo database containing the following collections.
@@ -10,7 +14,6 @@ Use this script to install all dependencies : <https://github.com/hayj/Bash/blob
    * **scores**: Corresponds to all results scores of rankings. Folders are the same as folders in `rankings`.
  * **twinews-splits**: A GridFS mongo database. Corresponds to dataset splits for the evaluation of models.
  * **twinews-rankings**: A GridFS mongo database. Corresponds to models outputs. Keys are lda-RHG9H-v1 first 5 letters of the hash of the config of the model instance following by the evaluation split version. The data inside must follow the same guideline.
-
 
 # How to get the text of a news?
 
