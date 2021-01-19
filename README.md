@@ -120,7 +120,7 @@ Version of splits are the following:
 }
 ```
 
-# How the continuous evaluation work?
+# How the continuous evaluation works?
 
 A **model** is a particular algorithm which is intended to rank items. A **model instance** is a model with particular parameters definined in `config`. For example `nmf-9cd4f` is the `nmf` model with a config that gave the hash `9cd4f`. A **model instance**'s rankings is a unique *entry* (or a unique *row*) of the `twinews-rankings` database.
 
