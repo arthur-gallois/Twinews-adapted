@@ -293,11 +293,18 @@ def getNewsField(urls, field, asDict=False, logger=None, verbose=True):
 	if newsCollectionForGetNewsField is None:
 		newsCollectionForGetNewsField = getNewsCollection(logger=logger, verbose=verbose)
 	for url in pb(urls, logger=logger, verbose=verbose):
-		data = newsCollectionForGetNewsField[url][field]
-		if asDict:
-			result[url] = data
-		else:
-			result.append(data)
+		try:
+			assert newsCollectionForGetNewsField is not None
+			data = newsCollectionForGetNewsField[url]
+			data = data[field]
+			if asDict:
+				result[url] = data
+			else:
+				result.append(data)
+		except Exception as e:
+			logError(url + " not found.", logger, verbose=verbose)
+			logException(e, logger, verbose=verbose)
+			result.append([])
 	if isUnique:
 		return result[0]
 	else:
@@ -403,10 +410,16 @@ def rankingExists(modelName, config, logger=None, verbose=True):
 
 def rankingExistsAndIsNotNone(modelName, config, logger=None, verbose=True):
 	(key, config) = parseRankingConfig(modelName, config, logger=logger, verbose=verbose)
+	log("Checking if " + str(key) + " exists...", logger, verbose=verbose)
 	twinewsRankings = getTwinewsRankings(logger=logger, verbose=verbose)
+	actuallyExists = False
 	if key in twinewsRankings and twinewsRankings.collection.find_one({'id': key, 'length': {'$gt': 100}}) is not None:
-		return True
-	return False
+		actuallyExists = True
+	if actuallyExists:
+		log(str(key) + " exists.", logger, verbose=verbose)
+	else:
+		log(str(key) + " does not exist.", logger, verbose=verbose)
+	return actuallyExists
 
 
 def rankingExistsButIsNone(modelName, config, logger=None, verbose=True):

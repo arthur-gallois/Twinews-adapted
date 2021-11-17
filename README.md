@@ -1,12 +1,34 @@
-# Requirements
+# Twinews
+
+A news and Twitter users dataset for the news recommendation task (offline evaluation of recommender systems).
+
+## Licence
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work (code and data) is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+## Cite
+
+Cite my [PhD thesis](http://www.theses.fr/2021UPASG010) using this Bibtex:
+
+```bibtex
+@PHDTHESIS{Hay2021,
+url = "http://www.theses.fr/2021UPASG010",
+title = "Apprentissage de la représentation du style écrit, application à la recommandation d’articles d’actualité",
+author = "Hay, Julien",
+year = "2021",
+url = "http://www.theses.fr/2021UPASG010/document"
+}
+```
+
+## Requirements
 
 Use this script to install all dependencies : <https://github.com/hayj/Bash/blob/master/hjupdate.sh>
 
-# Getting data (**do not share**)
+## Getting data
 
-The dataset (i.e. "splits" explained below) is available at <http://212.129.44.40/Twinews/twinews-splits.7z> (**do not share**, password: `hjthesis2021`).
+The dataset (i.e. "splits" explained below) is available at <http://212.129.44.40/Twinews/twinews-splits.7z> (password: `hjthesis2021`). Ask for additional content.
 
-# Collections
+## Collections
 
  * **twinews**: A mongo database containing the following collections.
    * **users**: Corresponds to all users with all tweets. You will find the field `news` a list of url (primary key in the `news` collection) and `timestamps` all timestamps when the user shared the news.
@@ -15,11 +37,11 @@ The dataset (i.e. "splits" explained below) is available at <http://212.129.44.4
  * **twinews-splits**: A GridFS mongo database. Corresponds to dataset splits for the evaluation of models.
  * **twinews-rankings**: A GridFS mongo database. Corresponds to models outputs. Keys are lda-RHG9H-v1 first 5 letters of the hash of the config of the model instance following by the evaluation split version. The data inside must follow the same guideline.
 
-# How to get the text of a news?
+## How to get the text of a news?
 
 Use `twinews.utils.getNewsText(url)` to get the text (which correspond to the field `detokText`) and `twinews.utils.getNewsSentences(url)` to get the text (which correspond to the field `detokSentences`) that is already tokenized by word and sentences.
 
-# Splits (evaluation data)
+## Splits (evaluation data)
 
 Splits corresponds to all dataset splits with candidates to rank and stats.
 All splits are in the mongo database twinews-splits.
@@ -29,7 +51,7 @@ Version of splits are the following:
  1. The train / test split over the whole dataset with minimum 8 train news per users and 2 test news per user. Candidates are 1000 for each user. 
  2. The train / validation split over the train set of the split version 1 with minimum 8 train news per users and 2 test news per user. Candidates are 1000 for each user.
 
-# Evaluation data shape
+## Evaluation data shape
 
 ```python
 {
@@ -120,7 +142,7 @@ Version of splits are the following:
 }
 ```
 
-# How the continuous evaluation works?
+## How the continuous evaluation works?
 
 A **model** is a particular algorithm which is intended to rank items. A **model instance** is a model with particular parameters definined in `config`. For example `nmf-9cd4f` is the `nmf` model with a config that gave the hash `9cd4f`. A **model instance**'s rankings is a unique *entry* (or a unique *row*) of the `twinews-rankings` database.
 
@@ -146,7 +168,7 @@ Finally you add `rankings` in the `twinews-rankings` database:
 	addRanking('nmf', rankings, config)
 
 
-# How to generate rankings?
+## How to generate rankings?
 
 In eval data you get candidates for each user (so `evalData['candidates']`):
 
@@ -219,107 +241,3 @@ Your rankings must be the same shape but lists (to order items by relevance):
 	]
 }
 ```
-
-
-# Faire un dump de la base de donnée
-
-Faire `mongopass` sur hjlat puis cette suite de commandes :
-
-```bash
-password=<password>
-scriptname="twinews-dump-and-sync" ; scriptlog=~/tmp/nohup-$scriptname.out ; scriptpath=~/tmp/$scriptname.sh
-pew in st-venv python ~/Workspace/Python/Organization/MongoDump/mongodump/dump.py
-cat ~/tmp/twinews-dump-and-sync.sh
-nn -o $scriptlog $scriptpath $password
-tail -f $scriptlog
-lsa /special/hayj/mongodb-dumps
-```
-
-Puis quand c'est terminé :
-
-```bash
-nn rsync -avhuP /special/hayj/mongodb-dumps/* ~/NoSave/MongoDumps
-rm -rf /special/hayj/mongodb-dumps/*
-nn rsync -avhuP -e "ssh -p 2222" ~/NoSave/MongoDumps/* hayj@octods:~/MongoDumps
-```
-
-Anciennement dans `vim ~/tmp/twinews-dump-and-sync.sh` sur titanv :
-
-```bash
-#!/bin/bash
-source ~/.bash_profile
-source ~/.hjbashrc
-shopt -s expand_aliases
-source ~/.bash_aliases
-dockerName=hjmongo1 ; username=hayj ; password=$1
-dockerRootDir=/dumps
-realRootDir=/special/hayj/mongodb-dumps
-for db in "twinews-rankings" "twinews-splits" "twinews" "serializabledict"
-do
-	echo "Dumping the $db database"
-	rm -rf $dockerRootDir/$db
-	# Remove the `-it` option because it say "the input device is not a TTY" under nohup
-	docker exec $dockerName mongodump --gzip --host 127.0.0.1 --db $db --out $dockerRootDir --username $username --password $password --authenticationDatabase admin
-done
-rsync --delete-after -avhuP -e "ssh -p 2222" $realRootDir hayj@212.129.44.40:~/twinews-dumps
-rm -rf $realRootDir/*
-```
-
-# TODO
-
- * https://stackoverflow.com/questions/6861184/is-there-any-option-to-limit-mongodb-memory-usage
-
-
- Problème avec la distance kl_divergence :
-
-```
-return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-Traceback (most recent call last):
-File "/users/modhel/hayj/notebooks/twinews/hjmodels/topicmodels.ipynb.py", line 530, in <module>
-File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 148, in usersRankingsByHistoryDistance
-kwargs,
-File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 89, in userRankingsByHistoryDistance
-distances = getDistances(xvectors, yvectors, metric=distanceMetric, logger=logger)
-File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 31, in getDistances
-distances = pairwise_distances(xvectors, yvectors, metric=metric)
-File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1752, in pairwise_distances
-return _parallel_pairwise(X, Y, func, n_jobs, kwds)
-File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1348, in parallel_pairwise
-return func(X, Y, kwds)
-File "/users/modhel/hayj/.local/share/virtualenvs/st-venv/lib/python3.6/site-packages/sklearn/metrics/pairwise.py", line 1392, in _pairwise_callable
-out[i, j] = metric(X[i], Y[j], kwds)
-File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 19, in kl_divergence
-return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-File "/users/modhel/hayj/Workspace/Python/Datasets/Twinews/twinews/ranking.py", line 19, in <genexpr>
-return sum(p[i] * log2(p[i]/q[i]) for i in range(len(p)))
-ValueError: math domain error
-```
-
-Essayer de faire des colonnes verticales :
-
-```python
-# Tentative de header vertical:
-# https://stackoverflow.com/questions/46715736/rotating-the-column-name-for-a-panda-dataframe
-df.style.hide_index().set_table_styles(
-    [dict(selector="th",props=[('max-width', '3px')]),
-        dict(selector="th.col_heading",
-                 props=[("writing-mode", "vertical-rl"),
-                        # ("height", "1px"),
-                        # ("position", "relative"),
-                        # ("left", "10px"),
-                        ("text-align", "left"),
-                        ("padding-bottom", "0px"),
-                        # ("margin-top", "200px"),
-                        # ("margin", "0"),
-                        # ("margin-top", "150px"),
-                        # ("bottom", "0"),
-                        ('transform', 'rotate(-50deg)'),
-                        ("transform-origin", "top left"),
-                        ])]
-)
-```
-
-
-
-
-

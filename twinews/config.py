@@ -1,1 +1,1 @@
-mongoLocation = 'lri' # lri, octods
+mongoLocation = 'lri' # lri, octods
