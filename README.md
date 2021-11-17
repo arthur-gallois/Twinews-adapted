@@ -8,7 +8,7 @@ A news and Twitter users dataset for the news recommendation task (offline evalu
 
 ## Cite
 
-Cite my [PhD thesis](http://www.theses.fr/2021UPASG010) using this Bibtex:
+You can cite my [PhD thesis](http://www.theses.fr/2021UPASG010) using this Bibtex:
 
 ```bibtex
 @PHDTHESIS{Hay2021,
@@ -26,7 +26,7 @@ Use this script to install all dependencies : <https://github.com/hayj/Bash/blob
 
 ## Getting data
 
-The dataset (i.e. "splits" explained below) is available at <http://212.129.44.40/Twinews/twinews-splits.7z> (password: `hjthesis2021`). Ask for additional content.
+The dataset (licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/fr/">Creative Commons Attribution-ShareAlike 2.0 France License</a>) corresponding to "splits" explained below is available at <http://212.129.44.40/Twinews/twinews-splits.7z> (password: `hjthesis2021`). Ask for additional content.
 
 ## Collections
 
